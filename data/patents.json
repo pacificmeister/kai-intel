@@ -1,0 +1,83 @@
+[
+  {
+    "id": "pat-001",
+    "title": "WaveDrive Propulsion System (ENAUTIC)",
+    "assignee": "ENAUTIC / Electro Nautic",
+    "country": "Australia",
+    "filingDate": "~2022",
+    "status": "Granted (patented)",
+    "description": "Core propulsion and foil control technology powering WaveFlyer Volaré. Enables autonomous stabilization and efficient hydrofoiling. Claims cover the integrated drive-and-foil-control approach.",
+    "relevance": "HIGH — direct competitor tech. ENAUTIC's core IP. Defines what Kai Concepts cannot copy.",
+    "url": "https://enautic.co",
+    "tags": ["enautic", "propulsion", "foil-control"]
+  },
+  {
+    "id": "pat-002",
+    "title": "Hydrofoil Boat with Counter-Rotating Motor Pod (Candela)",
+    "assignee": "Candela / related entity",
+    "number": "WO2022010402A1",
+    "country": "International (WIPO)",
+    "filingDate": "2021",
+    "status": "Granted",
+    "description": "Covers a boat with two hydrofoils where the rear strut carries a motor pod with counter-rotating propellers, which is turnable for steering. This is essentially the C-Pod system architecture.",
+    "relevance": "MEDIUM — Candela's core drivetrain patent. Relevant if Kai Concepts uses similar pod-on-strut approach.",
+    "url": "https://patents.google.com/patent/WO2022010402A1/en",
+    "tags": ["candela", "c-pod", "motor-pod", "counter-rotating"]
+  },
+  {
+    "id": "pat-003",
+    "title": "Multi-Purpose Electric Hydrofoil",
+    "assignee": "Unknown",
+    "number": "US20230312061A1",
+    "country": "USA",
+    "filingDate": "2023",
+    "status": "Published (pending)",
+    "description": "A hydrofoil assembly adapted to be removably attached to a watercraft. Covers modular hydrofoil attachment systems. Published 2023.",
+    "relevance": "LOW — broad modular attachment claim. Monitor for grant.",
+    "url": "https://patents.google.com/patent/US20230312061A1/en",
+    "tags": ["modular", "attachment", "general"]
+  },
+  {
+    "id": "pat-004",
+    "title": "Hydrofoil Vessel (Norwegian PCT)",
+    "assignee": "Unknown (Norwegian entity)",
+    "number": "WO2025089965A1",
+    "country": "International (WIPO / PCT)",
+    "filingDate": "2024-10-14",
+    "status": "Pending",
+    "description": "New WIPO PCT application from Norway for a hydrofoil vessel design. Filed October 2024. Details limited as still pending publication.",
+    "relevance": "LOW — monitor for claims as it publishes.",
+    "url": "https://patents.google.com/patent/WO2025089965A1/en",
+    "tags": ["norway", "wipo", "pending", "monitor"]
+  },
+  {
+    "id": "pat-005",
+    "title": "Watercraft with Hydrofoil (SubSeaSail)",
+    "assignee": "SubSeaSail, Inc.",
+    "inventors": ["Chris Todter", "Mark Timothy Ott", "Michael B. Jones"],
+    "number": "US11897583",
+    "country": "USA",
+    "filingDate": "2023-05-05",
+    "grantDate": "2024-07-02",
+    "status": "Granted",
+    "description": "A watercraft including a board with top/bottom surface and a hydrofoil attached to a strut. Covers hydrofoil board attachment geometries.",
+    "relevance": "LOW — covers board-style craft, not seated platforms. Monitor for reissue/continuation.",
+    "url": "https://patents.justia.com/patents-by-us-classification/114/274",
+    "tags": ["board-style", "usa", "strut-attachment"]
+  },
+  {
+    "id": "pat-006",
+    "title": "Electric Watercraft Design (UNI Electric Watercraft Group)",
+    "assignee": "UNI ELECTRIC WATERCRAFT GROUP INC",
+    "inventor": "Jerry Colin Mcarthur",
+    "number": "D design patent",
+    "country": "USA",
+    "filingDate": "2022",
+    "grantDate": "2024-01-16",
+    "status": "Granted",
+    "description": "Design patent for an electric watercraft — covers ornamental design.",
+    "relevance": "LOW — design patent, doesn't block functional innovation.",
+    "url": "https://patents.justia.com/patents-by-us-classification/D12/309",
+    "tags": ["design-patent", "usa", "watercraft"]
+  }
+]

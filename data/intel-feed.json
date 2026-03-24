@@ -1,0 +1,92 @@
+[
+  {
+    "id": "intel-001",
+    "date": "2026-03-24",
+    "title": "ENAUTIC WaveFlyer Rogue-X revealed — 2-seat foiling PWC",
+    "summary": "ENAUTIC (Australia) revealed two new WaveFlyer Rogue models in March 2024. The Rogue and Rogue-X use the same hull/foil package as the Volaré but with different ergonomics. Max speed 20 knots. Targets family fun and thrill-seekers respectively. Based on patented WaveDrive technology.",
+    "source": "futurride.com",
+    "url": "https://futurride.com/2024/03/13/enautic-reveals-two-electric-hydrofoil-personal-watercraft-based-on-wavedrive/",
+    "tags": ["enautic", "new-product", "2-person"],
+    "priority": "HIGH"
+  },
+  {
+    "id": "intel-002",
+    "date": "2026-03-24",
+    "title": "Valo Hyperfoil prototype launches — speed claims revised down",
+    "summary": "Boundary Layer Technologies launched its Valo Hyperfoil prototype in June 2025. Top speed revised from claimed 50 knots to 36.5 knots (42 mph) — roughly matching a base-level jet ski. ~60 orders at $59K. Shipping 2025. Company has $7.1M raised and $124M in ferry LOIs.",
+    "source": "newatlas.com",
+    "url": "https://newatlas.com/marine/valo-hyperfoil-prototype",
+    "tags": ["valo", "prototype", "speed-revision"],
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "intel-003",
+    "date": "2026-03-24",
+    "title": "Navier N30 Pioneer II edition launched — targeting superyacht tender market",
+    "summary": "Navier launched the N30 Pioneer II edition in late 2025. The 30-ft hydrofoiler can carry 9 passengers, reaches 30+ knots, and has 70 nmi range. Starting at ~$850K for cabin model. Being marketed as superyacht tender. Twin 90kW motors with active foil control.",
+    "source": "megayachtnews.com",
+    "url": "https://megayachtnews.com/2025/12/navier-n30-electric-hydrofoiling-boat/",
+    "tags": ["navier", "new-product", "superyacht-tender"],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-004",
+    "date": "2026-03-24",
+    "title": "Foil.One Pegasus unveiled — $151K Finnish single-seat hydrofoiler",
+    "summary": "Finnish startup Foil.One revealed the Pegasus in October 2024. Single-seat electric hydrofoil with 18.8kW motor and swappable Torqeedo 5kWh battery packs. Priced at $151,355. Striking minimalist design. Coverage in Electrek.",
+    "source": "electrek.co",
+    "url": "https://electrek.co/2024/10/21/foil-one-new-single-passenger-electric-hydrofoil-boat-sure-to-turn-heads/",
+    "tags": ["foilone", "new-product", "single-seat"],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-005",
+    "date": "2026-03-24",
+    "title": "Propel Foil launches 5-in-1 modular watercraft with seated Jet Kart mode",
+    "summary": "Startup Propel Foil launched crowdfunding in May 2025 for a modular 5-in-1 electric watercraft. Includes eFoil, e-SUP, e-Scooter, and the Jet Kart seated mode. $4,797 pledge. Founded by Jason Toth (ex-pro snowboarder). IP68 waterproofing, jet drive, 3hr battery life.",
+    "source": "newatlas.com",
+    "url": "https://newatlas.com/marine/propel-modular-five-in-one-electric-watercraft",
+    "tags": ["propel", "crowdfunding", "modular", "seated-mode"],
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "intel-006",
+    "date": "2026-03-24",
+    "title": "Candela C-8 Polestar edition in production — C-Pod drivetrain key IP",
+    "summary": "Candela's C-8 continues in production with the Polestar collaboration edition at $450K+. The C-Pod motor (50kW, torpedo-shaped) is the key IP — enabling other boat makers to add hydrofoil propulsion. 8 passengers, 57 nmi range, 22kt cruise speed. Watch their C-Pod licensing strategy.",
+    "source": "boatingmag.com",
+    "url": "https://boatingmag.com/boats/2024-candela-c-8-open-daycruiser-boat-test/",
+    "tags": ["candela", "production", "c-pod", "drivetrain"],
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "intel-007",
+    "date": "2026-03-24",
+    "title": "Quadrofoil Q2S: €3M investment (2021) — status uncertain 2024-25",
+    "summary": "Slovenia's Quadrofoil received €3M in 2021 to scale production of the Q2S two-seater electric hydrofoil. Top speed 21 knots, range ~100km, motorcycle-style 2-up seating. Priced ~€20K originally. Current production status unclear — limited online activity in 2024-25.",
+    "source": "plugboats.com",
+    "url": "https://plugboats.com/two-seater-hydrofoil-big-investment/",
+    "tags": ["quadrofoil", "funding", "2-person"],
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "intel-008",
+    "date": "2026-03-24",
+    "title": "WIPO patent WO2025089965A1 filed — Norwegian hydrofoil vessel design",
+    "summary": "New WIPO patent WO2025089965A1 filed Oct 2024 (PCT/NO2024/050216) for a hydrofoil vessel from Norway. Still pending. Worth monitoring for any claims relevant to small electric foiling craft.",
+    "source": "patents.google.com",
+    "url": "https://patents.google.com/patent/WO2025089965A1/en",
+    "tags": ["patent", "wipo", "norway"],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-009",
+    "date": "2026-03-24",
+    "title": "Market gap confirmed: no direct 'flying couch' product exists yet",
+    "summary": "Extensive research confirms NO product directly matches the Kai Concepts flying couch concept: a comfortable, sofa/bench-style 2-person electric foiling platform. WaveFlyer Volaré is closest (2-seat side-by-side), but uses jet-ski ergonomics. The true luxury relaxed-seating electric foiler at accessible price points remains unclaimed.",
+    "source": "internal research",
+    "url": null,
+    "tags": ["market-gap", "opportunity", "kai-concepts"],
+    "priority": "HIGH"
+  }
+]
