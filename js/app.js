@@ -23,7 +23,7 @@ let state = {
 // ─── Boot ─────────────────────────────────────
 async function init() {
   try {
-    const [competitors, intelFeed, patents, joysticks, controls, teardowns, wireReduction] = await Promise.all([
+    const [competitors, intelFeed, patents, joysticks, controls, teardowns, wireReduction, circuitDesign] = await Promise.all([
       fetchJSON('./data/competitors.json'),
       fetchJSON('./data/intel-feed.json'),
       fetchJSON('./data/patents.json'),
