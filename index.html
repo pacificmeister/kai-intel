@@ -67,6 +67,7 @@
           <button class="nav-tab" data-section="craft-competitors">🏢 Competitors <span class="count" id="count-competitors">—</span></button>
           <button class="nav-tab" data-section="craft-intel">📡 Intel Feed <span class="count" id="count-intel">—</span></button>
           <button class="nav-tab" data-section="craft-patents">📜 Patents <span class="count" id="count-patents">—</span></button>
+          <button class="nav-tab" data-section="craft-controls">🎮 Controls Analysis <span class="count" id="count-controls">—</span></button>
           <button class="nav-tab" data-section="craft-table">📊 Comparison <span class="count" id="count-table">—</span></button>
         </nav>
 
@@ -130,6 +131,41 @@
             <div><div class="section-title">📜 Patent Tracker</div><div class="section-desc">Relevant patent filings to monitor. Focus on foil control, propulsion, and small-craft designs.</div></div>
           </div>
           <div class="patents-list" id="patents-list"></div>
+        </div>
+
+        <!-- CONTROLS ANALYSIS -->
+        <div id="section-craft-controls" class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">🎮 Competitor Controls Analysis</div>
+              <div class="section-desc">How each competitor controls their craft — steering, throttle, flight control, and joystick details with images and links</div>
+            </div>
+          </div>
+
+          <!-- Summary Box -->
+          <div style="background:linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(6,182,212,0.05) 100%); border:1px solid rgba(59,130,246,0.25); border-radius:var(--radius); padding:24px; margin-bottom:32px;">
+            <div style="font-size:16px; font-weight:800; color:var(--accent-cyan); margin-bottom:12px;">🎯 Control System Landscape</div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
+              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
+                <div style="font-size:24px; font-weight:800; color:var(--accent-blue); font-family:var(--font-mono);" id="ctrl-joystick-count">—</div>
+                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Use Joystick</div>
+              </div>
+              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
+                <div style="font-size:24px; font-weight:800; color:var(--accent-yellow); font-family:var(--font-mono);" id="ctrl-wheel-count">—</div>
+                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Steering Wheel</div>
+              </div>
+              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
+                <div style="font-size:24px; font-weight:800; color:var(--accent-green); font-family:var(--font-mono);" id="ctrl-fbw-count">—</div>
+                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Fly-by-Wire</div>
+              </div>
+              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
+                <div style="font-size:24px; font-weight:800; color:var(--accent-orange); font-family:var(--font-mono);" id="ctrl-other-count">—</div>
+                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Other (Yoke/Handles)</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="controls-feed"></div>
         </div>
 
         <!-- COMPARISON TABLE -->

@@ -10,6 +10,7 @@ let state = {
   intelFeed: [],
   patents: [],
   joysticks: [],
+  controls: [],
   activeDomain: 'craft',
   activeSection: { craft: 'craft-overview', joystick: 'joy-overview' },
   threatFilter: 'all',
@@ -19,17 +20,19 @@ let state = {
 // ─── Boot ─────────────────────────────────────
 async function init() {
   try {
-    const [competitors, intelFeed, patents, joysticks] = await Promise.all([
+    const [competitors, intelFeed, patents, joysticks, controls] = await Promise.all([
       fetchJSON('./data/competitors.json'),
       fetchJSON('./data/intel-feed.json'),
       fetchJSON('./data/patents.json'),
-      fetchJSON('./data/joysticks.json')
+      fetchJSON('./data/joysticks.json'),
+      fetchJSON('./data/competitor-controls.json')
     ]);
 
     state.competitors = competitors;
     state.intelFeed = intelFeed;
     state.patents = patents;
     state.joysticks = joysticks;
+    state.controls = controls;
 
     setLastUpdated();
     renderAll();
@@ -87,6 +90,7 @@ function renderAll() {
   renderCompetitors();
   renderIntelFeed();
   renderPatents();
+  renderControls();
   renderComparisonTable();
   renderJoyOverview();
   renderJoyProducts();
@@ -229,6 +233,132 @@ function renderComparisonTable() {
       <td>${c.length ? esc(c.length) : '<span class="table-na">—</span>'}</td>
       <td class="table-threat"><span class="threat-dot ${esc(c.threatLevel)}">${esc(c.threatLevel)}</span></td>
     </tr>`).join('');
+}
+
+// ═══════════════════════════════════════════════
+//  CONTROLS ANALYSIS
+// ═══════════════════════════════════════════════
+
+function renderControls() {
+  const feed = document.getElementById('controls-feed');
+  if (!feed) return;
+
+  // Count control types
+  const joystickUsers = state.controls.filter(c => c.controlType.toLowerCase().includes('joystick'));
+  const wheelUsers = state.controls.filter(c => c.controlType.toLowerCase().includes('steering wheel'));
+  const fbwUsers = state.controls.filter(c => c.controlType.toLowerCase().includes('fly-by-wire') || c.controlType.toLowerCase().includes('flight'));
+  const otherUsers = state.controls.filter(c => c.controlType.toLowerCase().includes('yoke') || c.controlType.toLowerCase().includes('handle') || c.controlType.toLowerCase().includes('remote'));
+
+  setEl('ctrl-joystick-count', joystickUsers.length);
+  setEl('ctrl-wheel-count', wheelUsers.length);
+  setEl('ctrl-fbw-count', fbwUsers.length);
+  setEl('ctrl-other-count', otherUsers.length);
+  setEl('count-controls', state.controls.length);
+
+  // Sort: most relevant to Kai first
+  const relevanceOrder = { HIGH: 0, MEDIUM: 1, LOW: 2 };
+  const sorted = [...state.controls].sort((a, b) => {
+    const aRel = a.relevanceToKai.startsWith('MOST') ? -1 : a.relevanceToKai.startsWith('HIGH') ? 0 : a.relevanceToKai.startsWith('MEDIUM') ? 1 : 2;
+    const bRel = b.relevanceToKai.startsWith('MOST') ? -1 : b.relevanceToKai.startsWith('HIGH') ? 0 : b.relevanceToKai.startsWith('MEDIUM') ? 1 : 2;
+    return aRel - bRel;
+  });
+
+  feed.innerHTML = sorted.map(c => {
+    const relColor = c.relevanceToKai.startsWith('MOST') ? 'var(--accent-red)' :
+      c.relevanceToKai.startsWith('HIGH') ? 'var(--accent-orange)' :
+      c.relevanceToKai.startsWith('MEDIUM') ? 'var(--accent-yellow)' : 'var(--text-muted)';
+
+    const isJoystick = c.controlType.toLowerCase().includes('joystick');
+    const typeIcon = isJoystick ? '🕹️' :
+      c.controlType.toLowerCase().includes('yoke') ? '✈️' :
+      c.controlType.toLowerCase().includes('wheel') ? '🎡' :
+      c.controlType.toLowerCase().includes('handle') ? '🚲' :
+      c.controlType.toLowerCase().includes('remote') ? '📡' : '⚙️';
+
+    const imagesHtml = (c.images || []).map(img => `
+      <div style="margin:12px 0;">
+        <img src="${esc(img.url)}" alt="${esc(img.caption)}" style="max-width:100%; max-height:300px; border-radius:var(--radius-sm); border:1px solid var(--border); object-fit:cover;" onerror="this.parentElement.style.display='none'">
+        <div style="font-size:11px; color:var(--text-muted); margin-top:4px; font-style:italic;">${esc(img.caption)}</div>
+      </div>`).join('');
+
+    const sourcesHtml = (c.sources || []).map(s => `<a href="${esc(s.url)}" target="_blank" class="link-btn" style="font-size:10px;">↗ ${esc(s.title)}</a>`).join(' ');
+
+    const detailsHtml = (c.controlDetails || []).map(d => `<li style="font-size:12px; color:var(--text-secondary); margin-bottom:4px; padding-left:4px;">${esc(d)}</li>`).join('');
+
+    return `
+      <div class="control-card" style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:20px; overflow:hidden; border-top:3px solid ${relColor};">
+        
+        <div style="padding:20px 24px 16px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:250px;">
+            <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">${esc(c.company)}</div>
+            <div style="font-size:18px; font-weight:800; color:var(--text-primary); letter-spacing:-0.3px;">${esc(c.product)}</div>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center; flex-shrink:0;">
+            <span style="font-size:24px;">${typeIcon}</span>
+            <div>
+              <div style="font-size:13px; font-weight:700; color:var(--accent-blue);">${esc(c.controlType)}</div>
+              <div style="font-size:10px; color:${relColor}; font-weight:600; margin-top:2px;">Relevance: ${esc(c.relevanceToKai.split('—')[0].trim())}</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:0 24px 16px;">
+          <div style="font-size:14px; color:var(--text-primary); font-weight:600; line-height:1.5; margin-bottom:12px;">${esc(c.controlSummary)}</div>
+        </div>
+
+        ${imagesHtml ? `<div style="padding:0 24px;">${imagesHtml}</div>` : ''}
+
+        <div style="padding:0 24px 16px;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+
+            <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px;">
+              <div style="font-size:11px; font-weight:700; color:var(--accent-blue); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;">🏎️ Steering</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">${esc(c.steeringMechanism)}</div>
+            </div>
+
+            <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px;">
+              <div style="font-size:11px; font-weight:700; color:var(--accent-green); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;">⚡ Throttle</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">${esc(c.throttleMechanism)}</div>
+            </div>
+
+            <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px;">
+              <div style="font-size:11px; font-weight:700; color:var(--accent-cyan); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;">✈️ Flight Control</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">${esc(c.flightControl)}</div>
+            </div>
+
+            ${c.joystickDetails ? `
+            <div style="background:rgba(59,130,246,0.08); border:1px solid rgba(59,130,246,0.25); border-radius:var(--radius-sm); padding:14px;">
+              <div style="font-size:11px; font-weight:700; color:var(--accent-blue); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;">🕹️ Joystick Details</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">${esc(c.joystickDetails)}</div>
+            </div>` : ''}
+          </div>
+        </div>
+
+        <div style="padding:0 24px 16px;">
+          <details style="cursor:pointer;">
+            <summary style="font-size:12px; font-weight:600; color:var(--text-primary); padding:8px 0;">📋 Full Control Details (${c.controlDetails.length} points)</summary>
+            <ul style="list-style:disc; padding-left:20px; margin-top:8px;">${detailsHtml}</ul>
+          </details>
+        </div>
+
+        <div style="padding:0 24px 16px;">
+          <div style="font-size:12px; color:var(--text-secondary); padding:10px 12px; background:rgba(255,255,255,0.02); border-left:3px solid ${relColor}; border-radius:0 var(--radius-sm) var(--radius-sm) 0; line-height:1.6;">
+            <strong style="color:var(--text-primary);">Relevance to Kai Concepts:</strong> ${esc(c.relevanceToKai)}
+          </div>
+        </div>
+
+        ${c.userExperience ? `
+        <div style="padding:0 24px 16px;">
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">
+            <strong style="color:var(--text-primary);">User Experience:</strong> ${esc(c.userExperience)}
+          </div>
+        </div>` : ''}
+
+        <div style="padding:12px 24px; border-top:1px solid var(--border); display:flex; gap:6px; flex-wrap:wrap;">
+          ${sourcesHtml}
+        </div>
+      </div>`;
+  }).join('');
 }
 
 // ═══════════════════════════════════════════════

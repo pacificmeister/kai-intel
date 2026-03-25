@@ -1,0 +1,316 @@
+[
+  {
+    "competitorId": "enautic-waveflyer",
+    "company": "ENAUTIC",
+    "product": "WaveFlyer Volaré",
+    "controlType": "Joystick (Fly-by-Wire)",
+    "controlSummary": "Single joystick positioned center-console between the two seats. Configurable fly-by-wire system — the joystick commands are interpreted by software that manages the WaveDrive propulsion and foil control autonomously.",
+    "controlDetails": [
+      "Single joystick mounted center between the two side-by-side seats",
+      "Fly-by-wire: software interprets rider input and controls both motors + foil angles",
+      "Configurable control mapping — can adjust responsiveness",
+      "7-inch high-resolution daylight-visible digital display shows parameters",
+      "Auto-stabilizing, semi-autonomous flight control — the WaveDrive system handles foiling stability",
+      "Safety lanyard — cuts power if rider falls off, enabling reboard",
+      "Anhedral A-tail rear wing provides additional control authority",
+      "Twin electric WaveDrive propulsion — differential thrust for steering"
+    ],
+    "steeringMechanism": "Joystick controls differential thrust on twin WaveDrive motors + foil servo angles via fly-by-wire software",
+    "throttleMechanism": "Joystick forward/backward for speed, software manages power distribution to twin motors",
+    "flightControl": "Fully autonomous stabilization — WaveDrive flight controller handles ride height, pitch, roll, and yaw automatically",
+    "joystickType": "Single-axis or multi-axis center-mounted joystick — exact model/manufacturer unknown, likely custom or OEM integration",
+    "joystickDetails": "The joystick appears to be a compact, single-hand operated unit. It sits on a raised center pedestal between the two seats. Likely proportional (not on/off). The fly-by-wire system adds a software layer between rider input and craft response.",
+    "userExperience": "Described as intuitive — single joystick for all control functions. Accessible to all skill levels. The autonomous stabilization means riders don't need to manually balance foiling.",
+    "relevanceToKai": "MOST RELEVANT — This is the closest competitor to the Flying Couch concept and uses a JOYSTICK, not handlebars. Their center-mounted joystick between two seats is almost exactly what ThumbJoy aims to be. Key difference: WaveFlyer joystick appears to be a simpler proportional stick (no thumbwheel throttle), with more reliance on software stabilization.",
+    "images": [
+      {
+        "url": "https://electronautic.com.au/cdn/shop/products/WaveFlyer-Cockpit-View.jpg",
+        "caption": "WaveFlyer Volaré cockpit — joystick center-mounted between two seats with 7\" digital display"
+      }
+    ],
+    "sources": [
+      {"title": "MikeShouts review", "url": "https://mikeshouts.com/enautic-waveflyer-volare-electric-hydrofoil-watercraft/"},
+      {"title": "New Atlas coverage", "url": "https://newatlas.com/marine/electronautic-waveflyer-volare"},
+      {"title": "ENAUTIC official", "url": "https://enautic.co/waveflyer_volar"},
+      {"title": "autoevolution", "url": "https://www.autoevolution.com/news/waveflyer-volare-is-a-two-seater-electric-hydrofoil-that-will-smoothly-cut-through-waves-211604.html"}
+    ]
+  },
+  {
+    "competitorId": "quadrofoil",
+    "company": "Quadrofoil",
+    "product": "Q2S Electric",
+    "controlType": "Steering Wheel (F1-Inspired)",
+    "controlSummary": "Formula 1-inspired steering wheel with integrated color touchscreen display, acceleration and brake controls mounted on the wheel itself. Automotive-style ergonomics.",
+    "controlDetails": [
+      "F1-inspired steering wheel — compact, sporty, yoke-style",
+      "Color touchscreen display integrated INTO the steering wheel",
+      "Acceleration and braking controls on the wheel (paddle-style or buttons)",
+      "All basic functions within hands-reach — no separate throttle lever",
+      "Ergonomic cockpit designed from automotive principles (car interior benchmarks)",
+      "Foil retraction/deployment controlled via steering wheel display",
+      "C-Foils (c-shaped hydrofoils) provide inherent passive steering stability",
+      "Straddle seating (motorcycle-style) — not side-by-side"
+    ],
+    "steeringMechanism": "Mechanical steering wheel connected to front C-foil for directional control. Turn the wheel = turn the foil = turn the craft.",
+    "throttleMechanism": "Steering-wheel-mounted controls — likely paddle triggers or buttons on the wheel grip for acceleration/deceleration",
+    "flightControl": "Passive stability from C-foil geometry — no active electronic flight controller reported. The C-shaped foils provide inherent stability without complex software.",
+    "joystickType": "N/A — uses steering wheel, not a joystick",
+    "joystickDetails": null,
+    "userExperience": "Described as car-like driving experience. Cockpit designed to protect back and knees. Very intuitive for anyone who can drive a car. The integrated touchscreen on the steering wheel puts everything at your fingertips.",
+    "relevanceToKai": "LOW — Uses a steering wheel, not a joystick. The automotive approach is interesting as a UX reference but doesn't solve the same engineering problems as ThumbJoy. The C-foil passive stability approach is a contrast to active fly-by-wire.",
+    "images": [
+      {
+        "url": "https://www.designboom.com/wp-content/uploads/2016/12/quadrofoil-Q2S-electric-limited-edition-personal-watercraft-designboom-07.jpg",
+        "caption": "Quadrofoil Q2S cockpit with F1-style steering wheel featuring integrated touchscreen"
+      }
+    ],
+    "sources": [
+      {"title": "Designboom coverage", "url": "https://www.designboom.com/technology/quadrofoil-q2s-electric-limited-edition-personal-watercraft-12-14-2016/"},
+      {"title": "WIRED review", "url": "https://www.wired.com/2014/11/quadrofoil-q2s-electric/"},
+      {"title": "Quadrofoil official", "url": "https://quadrofoil.com/q2s.html"}
+    ]
+  },
+  {
+    "competitorId": "valo-hyperfoil",
+    "company": "Valo (Boundary Layer Technologies)",
+    "product": "Valo Hyperfoil",
+    "controlType": "Aircraft Yoke-Style Steering + Throttle",
+    "controlSummary": "Aircraft yoke-style control system (not handlebars). Proprietary Skyride flight control software manages active stabilization between rider inputs and foil surfaces. Rider controls steering and throttle; software handles foiling stability.",
+    "controlDetails": [
+      "Aircraft yoke-style steering — NOT traditional handlebar/handlebars",
+      "Proprietary 'Skyride' flight control software — active stabilization",
+      "Fly-by-wire: software sits between rider input and control surfaces",
+      "Controls steering (yaw), banking (roll), and throttle",
+      "Software manages altitude (ride height) and stability automatically",
+      "Aims for balance between agility and safety (prevents faceplanting in turns)",
+      "Rider input is 'heavily weighted' — feels responsive, not autonomous-feeling",
+      "Straddle/sit-on seating — PWC-style for 1-2 riders",
+      "Twin-foil canard system (front + rear foils) for control surfaces"
+    ],
+    "steeringMechanism": "Yoke controls input to fly-by-wire system → software commands aileron flaps on rear foils + differential thrust for turns. Up to 30° lean in Sport mode.",
+    "throttleMechanism": "Likely thumb throttle or twist grip on yoke — exact mechanism not publicly detailed. 45kW electric motor, 0-45mph in 8 seconds.",
+    "flightControl": "Active fly-by-wire with Skyride software. The Flight Control System manages ride height, stability, pitch, roll. In 'Sport' mode, more authority given to rider with higher lean angles. Ed Kearney: 'It's not like cruise control — it's heavily weighted to rider inputs but maintains full stability.'",
+    "joystickType": "N/A — uses aircraft yoke, not a traditional joystick",
+    "joystickDetails": null,
+    "userExperience": "Team says the ride is smoother than a traditional PWC with handlebars. The yoke-style control is described as intuitive. Yachting Magazine notes the aircraft-yoke is distinctive from typical PWC handlebars.",
+    "relevanceToKai": "MEDIUM — Not a joystick, but the fly-by-wire approach and Skyride flight control philosophy is very relevant. Shows that active stabilization + rider input weighting is the industry direction. The yoke-style is closer to ThumbJoy's single-hand concept than full handlebars.",
+    "images": [
+      {
+        "url": "https://www.ridevalo.com/images/hyperfoil-cockpit.jpg",
+        "caption": "Valo Hyperfoil with aircraft yoke-style controls (not traditional PWC handlebars)"
+      }
+    ],
+    "sources": [
+      {"title": "Electrify News deep dive", "url": "https://electrifynews.com/news/air-water/how-the-valo-hyperfoil-electric-hydrofoil-watercraft-is-revolutionizing-marine-emobility/"},
+      {"title": "Yachting Magazine", "url": "https://www.yachtingmagazine.com/gear/valo-hyperfoil-personal-watercraft/"},
+      {"title": "New Atlas prototype review", "url": "https://newatlas.com/marine/valo-hyperfoil-prototype"},
+      {"title": "Valo official", "url": "https://www.ridevalo.com/home"}
+    ]
+  },
+  {
+    "competitorId": "candela-c8",
+    "company": "Candela",
+    "product": "Candela C-8",
+    "controlType": "Steering Wheel + Fly-by-Wire + Joystick (Docking)",
+    "controlSummary": "Traditional helm steering wheel with true fly-by-wire. The Flight Controller automatically adjusts foils. Autopilot for long distance. PLUS a separate joystick at the helm for precision docking maneuvers.",
+    "controlDetails": [
+      "Traditional boat steering wheel at helm station",
+      "True fly-by-wire steering — industry first for leisure boats",
+      "Autopilot: let go of wheel → boat maintains set heading automatically",
+      "Separate Flight Controller adjusts foils in all conditions (pitch, roll, heave)",
+      "Sensors measure position, speed, and acceleration in 6 degrees of freedom",
+      "C-POD drivetrain — integrated motor, steering, and propulsion in one unit",
+      "Steering motor + wire transmits wheel to rudder",
+      "Throttle at helm (standard marine throttle lever)",
+      "15.4\" Garmin touchscreen for navigation and boat data",
+      "Joystick at helm for precision docking (like Mercury Joystick Piloting)"
+    ],
+    "steeringMechanism": "Steering wheel → steering motor → C-POD rudder. Fly-by-wire layer adds software corrections. When foiling, Flight Controller overrides as needed for stability.",
+    "throttleMechanism": "Standard marine throttle lever at helm. C-POD motor (patented) provides propulsion.",
+    "flightControl": "State-of-the-art 6-DOF Flight Controller. Uses accelerometers, gyroscopes, GPS, height sensors to maintain stable foiling. Continuously adjusts all foil surfaces. The most sophisticated foil control system in any leisure boat on the market.",
+    "joystickType": "Joystick for docking only — standard marine helm-mounted unit. Not the primary control.",
+    "joystickDetails": "The docking joystick allows translational and rotational movements for precision maneuvering in tight spaces. Similar to Mercury Joystick Piloting concept. Not used during normal operation or foiling — only for low-speed docking.",
+    "userExperience": "Feels like driving a luxury car. Autopilot and fly-by-wire make it extremely easy. The Flight Controller removes 90% of the wave impact. Passengers barely feel waves even in choppy conditions.",
+    "relevanceToKai": "HIGH (for flight control reference) — Candela's Flight Controller is the gold standard for foil stabilization software. Their 6-DOF sensor suite and automatic foil adjustment is what any serious foiling craft should aim for. The docking joystick is a nice ergonomic reference. The C-POD drivetrain integration is worth studying.",
+    "images": [
+      {
+        "url": "https://candela.com/wp-content/uploads/2022/03/C-8-helm-steering-1.jpg",
+        "caption": "Candela C-8 helm with steering wheel, Garmin displays, and docking joystick"
+      }
+    ],
+    "sources": [
+      {"title": "Candela C-8 introduction", "url": "https://candela.com/newsroom/introducing-the-candela-c-8/"},
+      {"title": "Plugboats review", "url": "https://plugboats.com/breakthrough-candela-8-electric-general-boat-buyers/"},
+      {"title": "Candela Support docs", "url": "https://help.candela.com/docs/c8-overview/"},
+      {"title": "SE Yachts overview", "url": "https://seyachts.com/new-yachts/candela-c-8/"}
+    ]
+  },
+  {
+    "competitorId": "navier-n30",
+    "company": "Navier",
+    "product": "Navier N30",
+    "controlType": "Steering Wheel + Joystick (Docking) + FCS",
+    "controlSummary": "Traditional steering wheel at helm with advanced Flight Control System (FCS). Independently steerable twin motors enable joystick-controlled docking. FCS translates wheel inputs into foil servo commands during flight.",
+    "controlDetails": [
+      "Steering wheel at helm — standard boat driving position",
+      "Proprietary Flight Control System (FCS) — translates steering inputs to foil movements",
+      "Three foils with aileron flaps (like airplane wings): front foil controls pitch/height, rear two control steering",
+      "Each foil has an aileron flap on the rear trailing edge",
+      "Joystick at helm for manual docking mode — enables pure translational and turning movements",
+      "Independently steerable twin motors — can perform maneuvers single/fixed-engine boats cannot",
+      "Active position hold — system keeps boat fixed at dock while securing",
+      "Sport mode: higher speed limit (35 knots), more rider authority, up to 30° lean angles",
+      "Normal mode: software limits more, smoother ride"
+    ],
+    "steeringMechanism": "Steering wheel → FCS → aileron flaps on rear foils for directional control. Differential thrust from twin motors for additional yaw. At dock speed: joystick direct control of twin motors for translation.",
+    "throttleMechanism": "Helm throttle lever → FCS manages power to twin motors",
+    "flightControl": "Proprietary FCS — described as 'best-in-class flight control.' Front foil aileron controls pitch (height off water). Rear two foil ailerons control steering/banking. Software manages all foil angles hundreds of times per second. Sport vs Normal modes change authority split between rider and software.",
+    "joystickType": "Docking joystick at helm — leverages independently steerable twin motors for translation/rotation",
+    "joystickDetails": "The docking joystick enables pure sideways movement (translation) and zero-radius turns that single-motor foilers can't do. This is a significant advantage over competitors with single propulsion. Used only at low speed / in-harbor.",
+    "userExperience": "CleanTechnica first ride: 'The onboard control system does all of the balancing from that point forward, translating steering inputs from the steering wheel in the cockpit into agile movements through the water.' Described as feeling like flying. Sport mode delivers aggressive cornering at 30° lean.",
+    "relevanceToKai": "HIGH (for flight control and docking joystick) — Navier's 3-foil aileron system is architecturally interesting. The docking joystick leveraging twin steerable motors is a great reference for precision control. Their FCS is built by ex-aerospace engineers. The dual-motor differential steering concept could be adapted.",
+    "images": [
+      {
+        "url": "https://www.navierboat.com/images/n30-cockpit-helm.jpg",
+        "caption": "Navier N30 helm with steering wheel, displays, and docking joystick"
+      }
+    ],
+    "sources": [
+      {"title": "Navier N30 official", "url": "https://www.navierboat.com/n30"},
+      {"title": "CleanTechnica first ride", "url": "https://cleantechnica.com/2024/10/24/a-first-ride-in-the-navier-n30-electric-flying-boat/"},
+      {"title": "Futurride launch", "url": "https://futurride.com/2022/12/08/navier-n30-first-electric-hydrofoil-boat-built-in-america-takes-flight/"},
+      {"title": "Powerboat & RIB review", "url": "https://powerboatandrib.com/reviews/overview-navier-n30/"}
+    ]
+  },
+  {
+    "competitorId": "foilone-pegasus",
+    "company": "Foil.One",
+    "product": "Foilone Pegasus",
+    "controlType": "Dual Push-Pull Handles + Foot Throttle",
+    "controlSummary": "Two steering handles mimicking bicycle handlebars — push one hand, pull the other to steer. Throttle via foot pedal. Automatic foiling stabilization handles ride height.",
+    "controlDetails": [
+      "Two side-mounted steering handles in the cockpit",
+      "Push-pull steering: push with one hand + pull with the other for turns",
+      "Mimics bicycle handlebar feel — intuitive muscle memory",
+      "Throttle pedal (foot-operated) — separate from steering",
+      "Automatic foil stabilization — pilot only steers, software handles height/pitch",
+      "Microadjustments for keeping boat upright and stable while foiling",
+      "Simple and precise — especially effective at foiling speeds",
+      "Enclosed kayak-style cockpit — single seat, cocoon-like"
+    ],
+    "steeringMechanism": "Dual push-pull handles mechanically connected to foil control surfaces. Direct, analog feel. No fly-by-wire — the handles ARE the steering.",
+    "throttleMechanism": "Foot pedal throttle — 18.8kW electric motor powered by dual 5kWh Torqeedo battery packs",
+    "flightControl": "Automatic — described as 'completely automatic' foil height control. Pilot focuses only on steering direction; the system maintains ride height and pitch stability.",
+    "joystickType": "N/A — uses dual push-pull handles, not a joystick",
+    "joystickDetails": null,
+    "userExperience": "Described as 'fighter jet' feeling. The push-pull system is natural for anyone who rides bikes. Automatic foiling means low learning curve. Single-person, immersive cockpit experience.",
+    "relevanceToKai": "LOW — Very different control paradigm (dual handles vs single joystick). Interesting for the foot throttle concept — separating throttle from steering is a design choice worth noting. The automatic height control is standard.",
+    "images": [
+      {
+        "url": "https://foil.one/wp-content/uploads/2024/09/pegasus-cockpit-handles.jpg",
+        "caption": "Foil.One Pegasus cockpit — dual push-pull steering handles with foot throttle"
+      }
+    ],
+    "sources": [
+      {"title": "Foil.One official", "url": "https://foil.one/pegasus/"},
+      {"title": "New Atlas review", "url": "https://newatlas.com/marine/foil-one-pegasus-single-seat-electric-hydrofoil"},
+      {"title": "BlessThisStuff", "url": "https://www.blessthisstuff.com/stuff/vehicles/boats/pegasus-electric-hydrofoil-boat/"}
+    ]
+  },
+  {
+    "competitorId": "propel-foil",
+    "company": "Propel Foil",
+    "product": "Propel 5-in-1 Electric Watercraft",
+    "controlType": "Wireless Handheld Remote + Body Steering",
+    "controlSummary": "Dual-purpose wireless remote control with multiple throttle profiles. Vector steering via QuietJet thruster. In seated Jet Kart mode, likely handlebar or tiller steering.",
+    "controlDetails": [
+      "Dual-purpose wireless remote — Bluetooth handheld controller",
+      "Multiple throttle profiles — start slow, unlock power as skills progress",
+      "QuietJet™ thruster provides vector steering for directional control",
+      "In eFoil mode: handheld remote (like standard eFoil controllers)",
+      "In Jet Kart™ seated mode: handlebar or tiller steering (details limited)",
+      "In SUP mode: paddle + remote throttle",
+      "Modular system — controls change with configuration",
+      "CFD-tested Kort Nozzle Jet drive"
+    ],
+    "steeringMechanism": "In eFoil/SUP modes: body weight shifting + remote throttle. In Jet Kart: likely handlebar-connected to jet nozzle direction. QuietJet provides vectored thrust.",
+    "throttleMechanism": "Wireless Bluetooth remote with variable trigger. Multiple throttle curves available.",
+    "flightControl": "Minimal — standard eFoil-level. No advanced flight controller mentioned. The rider manages balance manually in foil mode.",
+    "joystickType": "N/A — uses wireless handheld remote (similar to Lift/Fliteboard eFoil controllers)",
+    "joystickDetails": null,
+    "userExperience": "Accessible — the multi-mode approach means beginners start in easier configurations (e-SUP, e-Scooter) before progressing to foiling. The wireless remote is standard for the eFoil industry.",
+    "relevanceToKai": "LOW — Mass-market eFoil with standard wireless remote. Different segment entirely. The Jet Kart seated mode is novel but at $4,797 it's a toy, not a competitor. The progressive skill unlock via throttle profiles is a neat UX idea.",
+    "images": [],
+    "sources": [
+      {"title": "Propel official", "url": "https://propelfoil.com/"},
+      {"title": "Backercrew review", "url": "https://backercrew.com/propel-the-only-5-in-1-electric-watercraft/"},
+      {"title": "GearJunkie", "url": "https://gearjunkie.com/boats-water/propel-e-foil-five-modes"}
+    ]
+  },
+  {
+    "competitorId": "envgo-nv1",
+    "company": "ENVGO",
+    "product": "NV1",
+    "controlType": "Steering Wheel + Joystick (Docking) + AI Flight Controls",
+    "controlSummary": "Premium cockpit with brushed aluminum/Alcantara steering wheel, dual throttle controls, and a separate joystick for docking. AI-native flight controls with 360-degree surround view system. Autonomous navigation and collision avoidance.",
+    "controlDetails": [
+      "Brushed aluminum and Alcantara steering wheel — luxury automotive feel",
+      "Multiple screens at helm for navigation and boat data",
+      "Dual throttle controls — for twin motors",
+      "Separate joystick for docking maneuvers",
+      "Touchscreen controls paired with physical wheel",
+      "360-degree surround view system for safe docking",
+      "Autonomous navigation capabilities",
+      "Collision avoidance system",
+      "AI-native flight controls — machine learning approach",
+      "DC fast charging capable (80kWh battery)"
+    ],
+    "steeringMechanism": "Steering wheel → AI flight control system → foil servos. The AI layer interprets driver intent and manages foil surfaces for optimal response. At dock speed: joystick for precision maneuvering with 360° camera assist.",
+    "throttleMechanism": "Dual throttle levers — 125kW continuous / 245kW peak. Standard marine throttle ergonomics.",
+    "flightControl": "Most technically sophisticated new entrant. AI-native (machine learning-based) flight controls — goes beyond traditional PID controllers. Aerospace-grade foil engineering. The AI system learns and adapts to conditions.",
+    "joystickType": "Docking joystick — used with 360° surround cameras for precision maneuvering",
+    "joystickDetails": "Docking joystick works in conjunction with the 360° surround view system, giving the operator camera-assisted precision control during close-quarters maneuvering. Similar concept to automotive self-parking assist.",
+    "userExperience": "Luxury sports car meets boat. The multi-screen cockpit and Alcantara wheel make it feel premium. AI-assisted controls aim to make foiling effortless even in challenging conditions.",
+    "relevanceToKai": "MEDIUM — The AI-native flight control approach is the most interesting aspect. If ENVGO delivers on ML-based foil control, it sets a new bar. The docking joystick + 360° camera system is a nice UX reference. Different market segment ($400K+) but tech is worth monitoring.",
+    "images": [
+      {
+        "url": "https://www.envgo.com/images/nv1-cockpit-interior.jpg",
+        "caption": "ENVGO NV1 cockpit — steering wheel, screens, dual throttles, and docking joystick"
+      }
+    ],
+    "sources": [
+      {"title": "Boatmart deep dive", "url": "https://www.boatmart.com/blog/2026/01/16/envgo-nv1-provides-a-glimpse-into-the-future/"},
+      {"title": "New Atlas", "url": "https://newatlas.com/marine/envgo-nv1-electric-hydrofoil/"},
+      {"title": "ENVGO official", "url": "https://www.envgo.com/nv1"},
+      {"title": "Gadget Review", "url": "https://www.gadgetreview.com/envgo-nv1-400000-electric-hydrofoil-promises-50-mph-flying-experience"}
+    ]
+  },
+  {
+    "competitorId": "iguana-foiler",
+    "company": "Iguana Yachts",
+    "product": "Iguana Foiler",
+    "controlType": "Steering Wheel + Touchscreen + Track Controls",
+    "controlSummary": "Standard boat helm with steering wheel and touchscreen control panel. Additional controls for the amphibious retractable track system. EVOY 300HP electric outboard.",
+    "controlDetails": [
+      "Standard boat steering wheel at helm",
+      "Touchscreen control panel on dash for boat systems",
+      "Controls for retractable amphibious tracks (land locomotion)",
+      "EVOY 300HP electric outboard for water propulsion",
+      "Surface-piercing foils — likely passive stability (not active flight control)",
+      "Hydraulic hardtop operation (power-retractable)",
+      "Shock-dampened captain's chairs"
+    ],
+    "steeringMechanism": "Steering wheel → cable/hydraulic → outboard motor direction. Standard boat steering. Foils appear to be fixed geometry (surface-piercing), not servo-controlled.",
+    "throttleMechanism": "Standard marine throttle lever for EVOY outboard",
+    "flightControl": "Minimal — surface-piercing foils provide passive lift and stability. No active flight controller reported. The foil geometry (surface-piercing) inherently self-stabilizes by adjusting lift as the hull rises and falls.",
+    "joystickType": "N/A — standard boat controls",
+    "joystickDetails": null,
+    "userExperience": "Luxury tender experience. The amphibious capability (drive from water directly onto beach via tracks) is the unique selling point, not the foiling control system. Cockpit is luxurious with multiple seating options.",
+    "relevanceToKai": "LOW — Standard boat controls. The foiling is secondary to the amphibious capability. No advanced control system to study. However, the retractable track system for land-to-water transition is an interesting engineering reference.",
+    "images": [],
+    "sources": [
+      {"title": "Iguana Yachts official", "url": "https://www.iguana-yachts.com/models/iguana-foiler/"},
+      {"title": "Boat International test drive", "url": "https://www.boatinternational.com/yachts/editorial-features/iguana-commuter-test-driving-the-amphibious-tender--36973"}
+    ]
+  }
+]
