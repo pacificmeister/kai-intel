@@ -377,12 +377,18 @@ function renderJoystickCard(j) {
 
   const suitColor = { HIGH: 'var(--accent-green)', MEDIUM: 'var(--accent-yellow)', LOW: 'var(--accent-red)' }[j.suitability] || 'var(--text-muted)';
 
-  const imgHtml = j.image ? `<div class="joy-image-wrap"><img src="${esc(j.image)}" alt="${esc(j.name)}" class="joy-image" onerror="this.parentElement.style.display='none'"></div>` : '';
+  const thumbSrc = j.thumbnail || j.image;
+  const imgHtml = thumbSrc ? `<div class="joy-image-wrap"><img src="${esc(thumbSrc)}" alt="${esc(j.name)}" class="joy-image" onerror="this.parentElement.style.display='none'"></div>` : '';
+
+  const videosHtml = (j.videos && j.videos.length) ? `
+    <div style="padding:0 20px 12px; display:flex; gap:6px; flex-wrap:wrap;">
+      ${j.videos.map(v => `<a href="${esc(v.url)}" target="_blank" class="link-btn" style="font-size:10px; background:rgba(239,68,68,0.08); border-color:rgba(239,68,68,0.3); color:var(--accent-red);">▶ ${esc(v.title)}</a>`).join('')}
+    </div>` : '';
 
   return `
     <div class="joystick-card" style="border-top:3px solid ${statusColor};">
       ${imgHtml}
-      <div class="card-header" style="padding-top:${j.image ? '12px' : '20px'};">
+      <div class="card-header" style="padding-top:${thumbSrc ? '12px' : '20px'};">
         <div class="card-company" style="flex:1;">
           <div class="company-name">${esc(j.name)}</div>
           <div class="company-location">🏭 ${esc(j.manufacturer)} · 📍 ${esc(j.country)}</div>
@@ -425,6 +431,7 @@ function renderJoystickCard(j) {
         </div>
       </div>
 
+      ${videosHtml}
       <div class="card-footer">
         <div class="card-tags">${(j.tags || []).slice(0, 5).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
         <div class="card-links">
