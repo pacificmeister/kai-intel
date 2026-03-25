@@ -30,8 +30,8 @@ async function init() {
       fetchJSON('./data/joysticks.json'),
       fetchJSON('./data/competitor-controls.json'),
       fetchJSON('./data/teardowns.json'),
-      fetchJSON('./data/wire-reduction.json'),
-      fetchJSON('./data/circuit-design.json')
+      fetchJSON('./data/wire-reduction.json', null),
+      fetchJSON('./data/circuit-design.json', null)
     ]);
 
     state.competitors = competitors;
@@ -55,10 +55,12 @@ async function init() {
   }
 }
 
-async function fetchJSON(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-  return res.json();
+async function fetchJSON(url, fallback) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) { console.warn(`Failed to fetch ${url}: ${res.status}`); return fallback !== undefined ? fallback : []; }
+    return res.json();
+  } catch (e) { console.warn(`Fetch error for ${url}:`, e); return fallback !== undefined ? fallback : []; }
 }
 
 function setLastUpdated() {
