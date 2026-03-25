@@ -104,13 +104,13 @@
     "length": "8 m (26 ft)",
     "price": "$450,000+ USD",
     "pricingModel": "direct purchase",
-    "fundingStatus": "Well-funded; $24M+ raised",
-    "fundingAmount": "$24M+",
+    "fundingStatus": "Well-funded; €129M total (incl. €30M round March 2026 with World Bank IFC)",
+    "fundingAmount": "€129M total",
     "keyTeam": ["Gustav Hasselskog (CEO)"],
     "patents": ["C-Pod motor system patent", "Proprietary foil flight control"],
     "threatLevel": "LOW",
     "threatReason": "Much larger, more expensive luxury boat — 8 pax, $450K+. Different market. Their C-Pod drivetrain tech is relevant IP to watch.",
-    "latestNews": "2024: C-8 in production, Polestar edition. C-Pod motor powering multiple platforms. Expanding globally.",
+    "latestNews": "March 2026: Raised €30M (World Bank IFC + existing investors) — total €129M. Second factory planned. Global ferry deployments expanding to Mumbai, Maldives, NEOM. C-Pod drivetrain becoming platform play.",
     "mediaLinks": [
       "https://candela.com/leisure-boats/candela-c-8/",
       "https://boatingmag.com/boats/2024-candela-c-8-open-daycruiser-boat-test/",
@@ -207,6 +207,36 @@
       "https://www.mby.com/specials/this-startup-is-crowdfunding-the-worlds-first-5-in-1-electric-watercraft-135519"
     ],
     "tags": ["modular", "affordable", "seated-mode", "crowdfunding", "mass-market"]
+  },
+  {
+    "id": "envgo-nv1",
+    "company": "ENVGO",
+    "location": "Canada",
+    "website": "https://www.envgo.com",
+    "founded": null,
+    "product": "NV1",
+    "tagline": "25-ft AI-native electric hydrofoiling cruiser — aerospace-grade engineering",
+    "passengers": 6,
+    "topSpeed": "43 knots (80 kph)",
+    "range": "100 km",
+    "battery": "80 kWh (DC fast charge capable)",
+    "weight": null,
+    "length": "25 ft (7.6 m)",
+    "price": "TBD (pre-order, sea trial request)",
+    "pricingModel": "pre-order",
+    "fundingStatus": "Early stage startup",
+    "fundingAmount": null,
+    "keyTeam": [],
+    "patents": [],
+    "threatLevel": "LOW",
+    "threatReason": "6-passenger, 25-ft luxury cruiser — well outside the 2-person couch category. However, their AI-native flight control and aerospace-grade foil engineering is the most technically sophisticated we've seen in a new entrant. Worth monitoring for tech/IP.",
+    "latestNews": "March 2026: US debut at Palm Beach International Boat Show. 125kW continuous / 245kW peak power. DC fast charging. AI flight controls.",
+    "mediaLinks": [
+      "https://powerboat.news/envgo-makes-us-debut-with-nv1-electric-hydrofoil-at-palm-beach/",
+      "https://electrek.co/2024/08/27/envgo-launches-flagship-nv1-electric-hydrofoiling-boat-with-80-miles-of-range-and-dc-charging/",
+      "https://www.electrive.com/2025/05/21/envgo-demonstrates-hydrofoil-with-119km-range/"
+    ],
+    "tags": ["6-passenger", "ai-controls", "aerospace", "canada", "new-entrant-2026"]
   },
   {
     "id": "iguana-foiler",

@@ -1,5 +1,35 @@
 [
   {
+    "id": "intel-010",
+    "date": "2026-03-25",
+    "title": "Candela raises €30M — now €129M total, building second factory",
+    "summary": "Candela closed a €30M funding round (March 18-23, 2026), bringing total funding to €129M. World Bank IFC joined existing investors. Money goes toward a second manufacturing facility to scale P-12 ferry production. Global deployments expanding to Mumbai, Maldives, Saudi NEOM, Thailand. Not direct competition to Flying Couch, but signals massive investor confidence in electric hydrofoil sector and validates the market.",
+    "source": "electrek.co / thedriven.io / electrive.com",
+    "url": "https://electrek.co/2026/03/18/candela-raises-more-cash-scaling-their-flying-electric-ferries-as-global-demand-surges/",
+    "tags": ["candela", "funding", "market-signal", "p-12"],
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "intel-011",
+    "date": "2026-03-25",
+    "title": "Hydroflyer Gen 2 FF launches — world's most powerful eFoil, $18,995, Aug 2026",
+    "summary": "Canadian startup Hydroflyer unveiled the Gen 2 FF eFoil — 10,000W motor (nearly 2x typical eFoils), top speed 60 km/h (37 mph). Handlebar control for 4-point stance, built on Unifoil foils. FF starts at $18,995 with 20% deposit; AL (entry) from $9,995. Pre-orders open, August 2026 delivery. Single-seat eFoil — not a Flying Couch competitor — but the power/price benchmark is notable. Shows eFoil performance is racing ahead.",
+    "source": "newatlas.com",
+    "url": "https://newatlas.com/marine/hydroflyer-gen2-ff-at-efoil/",
+    "tags": ["hydroflyer", "efoil", "new-product", "performance", "canada"],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-012",
+    "date": "2026-03-25",
+    "title": "ENVGO NV1 makes US debut at Palm Beach — 6-seat Canadian electric hydrofoiler",
+    "summary": "ENVGO (Canada) debuted the NV1 electric hydrofoil at the Palm Beach boat show (~March 2026). 25-foot, 6-passenger vessel. Dual-motor 330HP electric drivetrain, 80 kWh battery, AI-native flight controls, 80 kph / 100 km range. DC fast charging capable. Aerospace-grade engineering focus. Not a 2-person craft — too large for direct Flying Couch comparison — but their AI flight control system is worth watching. New entrant not previously tracked.",
+    "source": "powerboat.news / electrek.co",
+    "url": "https://powerboat.news/envgo-makes-us-debut-with-nv1-electric-hydrofoil-at-palm-beach/",
+    "tags": ["envgo", "new-entrant", "canada", "ai-controls", "6-seat"],
+    "priority": "LOW"
+  },
+  {
     "id": "intel-001",
     "date": "2026-03-24",
     "title": "ENAUTIC WaveFlyer Rogue-X revealed — 2-seat foiling PWC",
