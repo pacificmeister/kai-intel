@@ -13,6 +13,7 @@ let state = {
   controls: [],
   teardowns: [],
   wireReduction: null,
+  circuitDesign: null,
   activeDomain: 'craft',
   activeSection: { craft: 'craft-overview', joystick: 'joy-overview' },
   threatFilter: 'all',
@@ -29,7 +30,8 @@ async function init() {
       fetchJSON('./data/joysticks.json'),
       fetchJSON('./data/competitor-controls.json'),
       fetchJSON('./data/teardowns.json'),
-      fetchJSON('./data/wire-reduction.json')
+      fetchJSON('./data/wire-reduction.json'),
+      fetchJSON('./data/circuit-design.json')
     ]);
 
     state.competitors = competitors;
@@ -39,6 +41,7 @@ async function init() {
     state.controls = controls;
     state.teardowns = teardowns;
     state.wireReduction = wireReduction;
+    state.circuitDesign = circuitDesign;
 
     setLastUpdated();
     renderAll();
@@ -474,6 +477,115 @@ function renderJoyProducts() {
   grid.innerHTML = filtered.length ? filtered.map(renderJoystickCard).join('') : `<div class="empty-state"><div class="empty-state-icon">🔍</div><div class="empty-state-text">No joysticks match this filter.</div></div>`;
 }
 
+function renderCircuitDesign() {
+  const cd = state.circuitDesign;
+  if (!cd) return '';
+
+  const pinoutRows = cd.schematic.gripSide.mcu.pinout.map(p => `
+    <tr>
+      <td style="font-family:var(--font-mono); font-weight:700; color:var(--accent-cyan); text-align:center;">${p.pin}</td>
+      <td style="font-weight:600; color:var(--text-primary);">${esc(p.name)}</td>
+      <td style="color:var(--text-secondary);">${esc(p.function)}</td>
+      <td style="color:var(--text-muted); font-size:11px;">${esc(p.connection)}</td>
+    </tr>`).join('');
+
+  const passivesHtml = cd.schematic.gripSide.passives.map(p => `
+    <div style="font-size:11px; color:var(--text-secondary); margin-bottom:4px; padding-left:8px; border-left:2px solid var(--accent-cyan)33;">
+      <strong style="color:var(--accent-blue);">${esc(p.part)}</strong> — ${esc(p.function)}
+    </div>`).join('');
+
+  const shaftWires = cd.schematic.shaftWiring.wires.map(w => `
+    <div style="display:flex; gap:10px; align-items:center; margin-bottom:6px;">
+      <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:${w.color === 'Red' ? '#ef4444' : w.color === 'Black' ? '#333' : '#eab308'}; border:1px solid var(--border);"></span>
+      <span style="font-size:13px; font-weight:600; color:var(--text-primary); min-width:80px;">Wire ${w.wire}</span>
+      <span style="font-size:13px; color:var(--accent-cyan); font-family:var(--font-mono);">${esc(w.signal)}</span>
+      <span style="font-size:11px; color:var(--text-muted);">${esc(w.gauge)}</span>
+    </div>`).join('');
+
+  const testSteps = cd.testing.breadboardPrototype.steps.map(s =>
+    `<div style="font-size:12px; color:var(--text-secondary); margin-bottom:4px; padding-left:8px; border-left:2px solid var(--accent-green)33;">${esc(s)}</div>`).join('');
+
+  const risks = Object.values(cd.riskMitigation).map(r => `
+    <div style="background:rgba(0,0,0,0.15); border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px; margin-bottom:8px;">
+      <div style="font-size:12px; font-weight:600; color:var(--accent-red);">⚠️ ${esc(r.risk)}</div>
+      <div style="font-size:11px; color:var(--text-secondary); margin-top:4px;">✅ ${esc(r.mitigation)}</div>
+    </div>`).join('');
+
+  return `
+    <!-- CIRCUIT DESIGN SECTION -->
+    <div style="margin-top:40px; padding-top:24px; border-top:2px solid var(--accent-blue);">
+      <div style="font-size:22px; font-weight:800; color:var(--accent-blue); margin-bottom:6px;">📐 Full Circuit Design: ${esc(cd.title)}</div>
+      <div style="font-size:13px; color:var(--text-secondary); margin-bottom:24px;">${esc(cd.overview)}</div>
+
+      <!-- ASCII Schematic -->
+      <div style="background:#0d1117; border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:24px; overflow-x:auto;">
+        <div style="font-size:11px; font-weight:700; color:var(--accent-green); margin-bottom:12px;">📋 SCHEMATIC</div>
+        <pre style="font-family:var(--font-mono); font-size:11px; color:var(--accent-green); line-height:1.4; white-space:pre; margin:0;">${esc(cd.asciiSchematic)}</pre>
+      </div>
+
+      <!-- ATtiny85 Pinout Table -->
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:24px;">
+        <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:4px;">🔌 ATtiny85 Pinout (${esc(cd.schematic.gripSide.mcu.package)})</div>
+        <div style="font-size:11px; color:var(--text-muted); margin-bottom:12px;">${esc(cd.schematic.gripSide.mcu.part)} · ${esc(cd.schematic.gripSide.mcu.voltage)} · ${esc(cd.schematic.gripSide.mcu.clock)} · ${esc(cd.schematic.gripSide.mcu.cost)}</div>
+        <div class="table-wrapper">
+          <table class="comparison-table" style="font-size:12px;">
+            <thead><tr><th>Pin</th><th>Name</th><th>Function</th><th>Connection</th></tr></thead>
+            <tbody>${pinoutRows}</tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Passive Components -->
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:24px;">
+        <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">🔧 Passive Components (Total BOM: ${esc(cd.schematic.gripSide.totalBOM)})</div>
+        ${passivesHtml}
+        <div style="font-size:12px; color:var(--text-muted); margin-top:12px;">Board: ${esc(cd.schematic.gripSide.boardDimensions)}</div>
+      </div>
+
+      <!-- Shaft Wiring -->
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:24px;">
+        <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">🔌 Through-Shaft Wiring (3 Wires)</div>
+        ${shaftWires}
+        <div style="font-size:12px; color:var(--text-muted); margin-top:12px; padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">${esc(cd.schematic.shaftWiring.recommendedProtocol)}</div>
+      </div>
+
+      <!-- Firmware -->
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:24px;">
+        <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">💻 Firmware (Ready to Flash)</div>
+        
+        <details style="margin-bottom:16px;">
+          <summary style="font-size:13px; font-weight:600; color:var(--accent-blue); cursor:pointer; padding:8px 0;">ATtiny85 Grip Firmware (I2C Slave) — ${esc(cd.firmware.gripFirmware.flashUsage)}</summary>
+          <pre style="background:#0d1117; border:1px solid var(--border); border-radius:var(--radius-sm); padding:16px; margin-top:8px; font-family:var(--font-mono); font-size:11px; color:var(--accent-green); overflow-x:auto; white-space:pre; line-height:1.5;">${esc(cd.firmware.gripFirmware.code)}</pre>
+        </details>
+
+        <details style="margin-bottom:16px;">
+          <summary style="font-size:13px; font-weight:600; color:var(--accent-yellow); cursor:pointer; padding:8px 0;">Alternative: ATtiny85 UART Firmware (even simpler)</summary>
+          <pre style="background:#0d1117; border:1px solid var(--border); border-radius:var(--radius-sm); padding:16px; margin-top:8px; font-family:var(--font-mono); font-size:11px; color:var(--accent-green); overflow-x:auto; white-space:pre; line-height:1.5;">${esc(cd.firmware.gripFirmware.codeUART)}</pre>
+        </details>
+
+        <details>
+          <summary style="font-size:13px; font-weight:600; color:var(--accent-cyan); cursor:pointer; padding:8px 0;">Teensy 4.1 Integration Code — ~${esc(cd.firmware.teensyFirmware.linesOfCodeChange)}</summary>
+          <pre style="background:#0d1117; border:1px solid var(--border); border-radius:var(--radius-sm); padding:16px; margin-top:8px; font-family:var(--font-mono); font-size:11px; color:var(--accent-green); overflow-x:auto; white-space:pre; line-height:1.5;">${esc(cd.firmware.teensyFirmware.codeI2C)}</pre>
+        </details>
+      </div>
+
+      <!-- Testing Plan -->
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:24px;">
+        <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">🧪 Testing Plan</div>
+        <div style="font-size:13px; font-weight:600; color:var(--accent-green); margin-bottom:8px;">Step 1: Breadboard Validation (${esc(cd.testing.breadboardPrototype.time)})</div>
+        ${testSteps}
+        <div style="font-size:11px; font-weight:700; color:var(--text-primary); margin-top:12px; margin-bottom:6px;">✅ Success Criteria:</div>
+        ${cd.testing.breadboardPrototype.successCriteria.map(c => `<div style="font-size:11px; color:var(--accent-green); margin-bottom:3px;">• ${esc(c)}</div>`).join('')}
+      </div>
+
+      <!-- Risk Mitigation -->
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px;">
+        <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">🛡️ Risk Mitigation</div>
+        ${risks}
+      </div>
+    </div>`;
+}
+
 function renderWireReduction() {
   const el = document.getElementById('wirereduction-content');
   if (!el || !state.wireReduction) return;
@@ -588,7 +700,8 @@ function renderWireReduction() {
       <div style="font-size:11px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Steps:</div>
       ${protoSteps}
       <div style="font-size:12px; color:var(--text-muted); margin-top:12px; font-style:italic;">Fallback: ${esc(wr.recommendation.alternativeIfI2CFailsDueToEMI)}</div>
-    </div>`;
+    </div>
+    ${renderCircuitDesign()}`;
 }
 
 function renderTeardowns() {
