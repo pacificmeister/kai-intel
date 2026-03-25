@@ -1,5 +1,15 @@
 [
   {
+    "id": "intel-013",
+    "date": "2026-03-25",
+    "title": "ENAUTIC Group pivots to commercial hydrofoil ops — partners with Vessev for Perth ferry service",
+    "summary": "ENAUTIC Group (makers of the WaveFlyer — our #1 direct competitor) announced a major strategic pivot: partnering with NZ's Vessev to bring commercial electric hydrofoil passenger vessels to Perth's Swan River via their AquaFlights brand. The VS-9s (25-knot, 9-pax) will initially run premium tourism experiences (wine cruises, twilight sailings, private charters) with plans for commuter routes. Led by Josh Portlock, founder of Enautic Group. Key takeaway: ENAUTIC is building a two-track strategy — WaveFlyer consumer product + AquaFlights commercial operations. This means they're better-capitalized and more strategically diversified than previously tracked. Their consumer WaveFlyer focus may actually slow down vs. the ferry revenue opportunity.",
+    "source": "cyprusshippingnews.com / marinelink.com / econews.com.au",
+    "url": "https://cyprusshippingnews.com/2026/03/20/electric-hydrofoiling-passenger-vessels-set-for-perth-as-vessev-enters-australian-market/",
+    "tags": ["enautic", "strategic-pivot", "commercial-ops", "vessev", "australia", "aquaflights"],
+    "priority": "HIGH"
+  },
+  {
     "id": "intel-010",
     "date": "2026-03-25",
     "title": "Candela raises €30M — now €129M total, building second factory",
