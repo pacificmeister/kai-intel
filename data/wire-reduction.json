@@ -1,0 +1,240 @@
+{
+  "title": "Wire Reduction: 6→3 Signal Multiplexing for HF55 Shaft",
+  "status": "ACTIVE RESEARCH",
+  "lastUpdated": "2026-03-25",
+  "problem": {
+    "summary": "The Melexis thumbwheel in the ThumbJoy grip needs 6 wires routed through the HF55 hollow shaft, but the shaft is too tight. The HF55 already has 3 wires going through its shaft for the original buttons (which are NOT used by ThumbJoy). If we can multiplex the 6 Melexis signals down to 3 or fewer wires, we can reuse the existing shaft wire path.",
+    "currentWires": 6,
+    "targetWires": 3,
+    "existingPath": "HF55 has 3 wires already routed through shaft (for original buttons, currently unused)",
+    "constraints": [
+      "Circuit must physically fit inside the top grip housing next to the Melexis sensor",
+      "Must be extremely small — grip housing is tight (custom Melexis bracket screws into handle bosses)",
+      "Power available: VCC and GND come up through the shaft (2 of the 3 existing wires)",
+      "Only 1 remaining wire for data (or repurpose all 3 for VCC + GND + DATA)",
+      "Must not interfere with Melexis magnet or Z-axis Hall sensing",
+      "Teensy 4.1 at the bottom can support SPI, I2C, UART, or analog input"
+    ]
+  },
+  "melexisInfo": {
+    "currentSensor": "Melexis Hall effect sensor (specific model TBD — likely MLX90316 or MLX90333)",
+    "currentOutput": "Likely dual analog (2 analog outputs for thumbwheel position), which requires: VCC, GND, OUT1, OUT2, and possibly 2 more for a second sensor = 6 wires total",
+    "spiCapability": "Both MLX90316 and MLX90333 natively support a 3-wire SPI protocol (/SS, SCLK, MOSI-MISO combined). This means the sensor ITSELF can output digitally on just 3 signal wires.",
+    "keyInsight": "If the Melexis sensor can be configured for SPI output instead of analog, the entire 6-wire problem may be solvable at the sensor level — no additional MCU needed."
+  },
+  "approaches": [
+    {
+      "id": "approach-1",
+      "name": "Option A: Use Melexis SPI Mode Directly",
+      "difficulty": "LOW",
+      "cost": "$0 (configuration change only)",
+      "wireCount": 5,
+      "wireBreakdown": "VCC + GND + /SS + SCLK + MOSI/MISO (combined) = 5 wires total",
+      "description": "Both MLX90316 and MLX90333 have a built-in 3-wire SPI serial protocol mode. Instead of using analog outputs (which need separate wires per axis), configure the Melexis for SPI output. The SPI protocol uses /SS (chip select), SCLK (clock), and a combined MOSI-MISO line — that's 3 signal wires + VCC + GND = 5 total.",
+      "pros": [
+        "ZERO additional hardware — just a configuration change on the existing Melexis sensor",
+        "Melexis natively supports this (documented in datasheet)",
+        "SPI is well-supported by Teensy 4.1 (multiple SPI buses available)",
+        "Higher resolution digital data vs. analog (12-bit typical)",
+        "No EMI/noise issues from analog wire runs through magnetically active zone",
+        "No additional power consumption"
+      ],
+      "cons": [
+        "Still 5 wires (3 signal + VCC + GND) — may still be too many for shaft",
+        "Requires reprogramming Melexis via PTC-04 programmer (Melexis programming tool)",
+        "Alec Korver would need to update the ThumbJoy PCB firmware to read SPI instead of analog",
+        "If using dual Melexis (ThumbThumb version), need 2 separate /SS lines = 6 wires again"
+      ],
+      "feasibility": "HIGH — but only saves 1 wire (6→5). May not be enough.",
+      "nextSteps": [
+        "Confirm exact Melexis model used in current ThumbJoy",
+        "Check if Melexis can share SCLK and MOSI/MISO lines (SPI bus) with separate /SS for dual sensors",
+        "Ask Alec Korver about Melexis programming capability"
+      ]
+    },
+    {
+      "id": "approach-2",
+      "name": "Option B: Tiny MCU in Grip — ADC + Serial Bus (BEST OPTION)",
+      "difficulty": "MEDIUM",
+      "cost": "$2-5 (ATtiny85 or similar)",
+      "wireCount": 3,
+      "wireBreakdown": "VCC + GND + DATA = 3 wires (reuse existing HF55 shaft wiring exactly)",
+      "description": "Place a tiny microcontroller (ATtiny85, ATtiny412, or similar) inside the grip housing next to the Melexis sensor. The MCU reads the Melexis analog outputs locally, digitizes them via its built-in ADC, and sends the data down a single-wire serial bus (UART, I2C, or one-wire protocol) to the Teensy 4.1 in the base. Total wiring through shaft: VCC + GND + DATA = exactly 3 wires.",
+      "circuitDesign": {
+        "components": [
+          {
+            "part": "ATtiny85 (or ATtiny412/ATtiny1614)",
+            "role": "MCU — reads Melexis analog, transmits digital serial",
+            "size": "8-pin SOIC = 5mm x 4mm (ATtiny85) or even smaller QFN",
+            "cost": "$0.50-1.50",
+            "notes": "ATtiny85: 8 pins, 4 ADC channels, USI for I2C/SPI, UART via software. ATtiny412: even smaller, native UART, 3 ADC. Both run at 3.3V or 5V."
+          },
+          {
+            "part": "2x decoupling capacitors (100nF + 10µF)",
+            "role": "Power filtering",
+            "size": "0402 or 0603 SMD = 1mm each",
+            "cost": "$0.02"
+          },
+          {
+            "part": "Pull-up resistor (4.7kΩ for I2C) or none for UART",
+            "role": "Bus pull-up if using I2C",
+            "size": "0402 SMD",
+            "cost": "$0.01"
+          }
+        ],
+        "totalBoardSize": "~8mm x 5mm (smaller than a fingernail)",
+        "totalCost": "$1-2 BOM",
+        "protocol": "I2C (2-wire + power) or UART (1-wire + power)",
+        "dataRate": "Thumbwheel position needs ~100Hz update rate max. I2C at 100kHz or UART at 9600 baud is MORE than enough.",
+        "powerDraw": "ATtiny85 at 8MHz: ~5mA. Negligible vs. system budget."
+      },
+      "firmwareSketch": {
+        "gripMCU": "ATtiny85 reads 2 analog Melexis outputs via ADC every 10ms, packs into 2-byte message, sends via I2C (as slave) or UART TX. Total code: ~50 lines of Arduino.",
+        "teensySide": "Teensy reads I2C slave or UART RX. Gets 2 bytes = thumbwheel position. Replace existing analogRead() with I2C/UART read. ~10 lines of code change."
+      },
+      "pros": [
+        "EXACTLY 3 wires through shaft — perfect reuse of existing HF55 wiring path",
+        "Tiny board (< 8mm x 5mm) fits next to Melexis in existing grip housing",
+        "BOM cost ~$2",
+        "ATtiny85 is extremely well-documented (Arduino compatible)",
+        "No changes needed to the Melexis sensor itself — still uses analog output",
+        "Digital transmission = immune to EMI/noise through magnetically active shaft zone",
+        "Can easily extend to read additional sensors (buttons, kill switch) if needed",
+        "Alec Korver could design this into the next ThumbJoy PCB revision as an option"
+      ],
+      "cons": [
+        "Adds a component to maintain (firmware on ATtiny)",
+        "Needs programming tool (USBasp or Arduino as ISP) for ATtiny",
+        "Small latency addition (~1-2ms) — negligible for throttle control",
+        "Requires small custom PCB (or dead-bug soldering for prototype)"
+      ],
+      "feasibility": "VERY HIGH — proven technique, trivial firmware, tiny footprint. This is the recommended approach.",
+      "nextSteps": [
+        "Confirm exact Melexis output pin count and voltage levels",
+        "Prototype on breadboard: ATtiny85 + 2 potentiometers (simulating Melexis) → I2C → Teensy 4.1",
+        "Design tiny PCB (8mm x 5mm, 2-layer, JLCPCB ~$2/5pcs)",
+        "Test fit inside grip housing alongside Melexis bracket"
+      ]
+    },
+    {
+      "id": "approach-3",
+      "name": "Option C: Analog Multiplexer Chip (No MCU)",
+      "difficulty": "LOW-MEDIUM",
+      "cost": "$1-2",
+      "wireCount": 4,
+      "wireBreakdown": "VCC + GND + Analog MUX output + Select line = 4 wires",
+      "description": "Use an analog multiplexer IC (CD4051, CD4052, or 74HC4052) to time-share multiple analog signals over a single wire. The Teensy toggles a SELECT line, and the MUX switches between Melexis output 1 and output 2. Both signals share one analog wire.",
+      "pros": [
+        "No firmware needed in the grip — purely analog solution",
+        "Very simple circuit (1 IC + 2 caps)",
+        "CD4051/4052 are dirt cheap ($0.20) and widely available",
+        "Teensy controls the switching — deterministic timing"
+      ],
+      "cons": [
+        "Still needs 4 wires (VCC + GND + Analog + Select) — one more than target",
+        "Analog signal still susceptible to EMI/noise through shaft",
+        "Multiplexing halves the effective sample rate per channel",
+        "SELECT line timing adds complexity to Teensy firmware"
+      ],
+      "feasibility": "MEDIUM — works but 4 wires may still be too tight in shaft. Option B is better.",
+      "nextSteps": [
+        "Only pursue if Option B (MCU) is rejected for complexity reasons"
+      ]
+    },
+    {
+      "id": "approach-4",
+      "name": "Option D: Replace Melexis with Digital-Output Sensor",
+      "difficulty": "MEDIUM",
+      "cost": "$3-8",
+      "wireCount": 3,
+      "wireBreakdown": "VCC + GND + I2C_SDA (SCL can be shared with SDA using SMBus) = 3 wires, or VCC + GND + SDA + SCL = 4 wires",
+      "description": "Replace the current analog Melexis sensor with a digital-output variant (MLX90363 or MLX90393) that communicates via I2C or SPI natively. This eliminates the need for an intermediary MCU — the sensor talks directly to the Teensy via a digital bus running through the shaft.",
+      "sensorOptions": [
+        {
+          "part": "MLX90363",
+          "interface": "SPI (3-wire: /SS, SCLK, MOSI/MISO combined)",
+          "wires": "5 (VCC + GND + 3 SPI)",
+          "notes": "High-speed SPI, programmable via Melexis PTC-04. 3D joystick mode available."
+        },
+        {
+          "part": "MLX90393",
+          "interface": "I2C or SPI (selectable)",
+          "wires": "4 (VCC + GND + SDA + SCL) via I2C",
+          "notes": "I2C is 2-wire data. Breakout boards available from SparkFun/Adafruit for prototyping. 3D magnetometer."
+        },
+        {
+          "part": "AS5600 (AMS/ams-OSRAM)",
+          "interface": "I2C",
+          "wires": "4 (VCC + GND + SDA + SCL)",
+          "notes": "12-bit rotary position sensor. Very popular in DIY. Tiny SOIC-8 package. I2C output. Could replace Melexis thumbwheel sensor entirely."
+        }
+      ],
+      "pros": [
+        "Cleanest long-term solution — sensor IS the digitizer",
+        "No additional MCU board needed",
+        "I2C sensors need only 4 wires total (some can share bus)",
+        "MLX90393 breakout boards available for instant prototyping",
+        "AS5600 is extremely popular with massive community support"
+      ],
+      "cons": [
+        "Requires changing the sensor, which means new Melexis bracket and PCB modifications",
+        "Alec Korver's double Melexis PCB would need redesign",
+        "Still 4 wires for I2C (unless using one-wire variant)",
+        "MLX90363 needs 5 wires (SPI)"
+      ],
+      "feasibility": "MEDIUM — clean but requires more hardware changes. Option B is faster to prototype.",
+      "nextSteps": [
+        "Order MLX90393 or AS5600 breakout board for benchtop testing",
+        "Test I2C read from Teensy 4.1 through 30cm wire (simulating shaft length)"
+      ]
+    },
+    {
+      "id": "approach-5",
+      "name": "Option E: Single-Wire Protocol (Dallas 1-Wire / UART)",
+      "difficulty": "MEDIUM",
+      "cost": "$2-3",
+      "wireCount": 2,
+      "wireBreakdown": "Power (parasitic from data line) + DATA = 2 wires, or VCC + DATA + GND = 3",
+      "description": "Use a single-wire protocol to send data. ATtiny in grip reads Melexis, transmits via software UART on one pin. Even more extreme: use Dallas 1-Wire protocol with parasitic power — needs only 2 physical wires (GND + DATA, power derived from data line). Teensy reads via OneWire library.",
+      "pros": [
+        "Absolute minimum wire count — 2 or 3 wires",
+        "Parasitic power mode needs only GND + DATA",
+        "OneWire is well-supported on Arduino/Teensy"
+      ],
+      "cons": [
+        "Parasitic power is unreliable for MCU (designed for sensors, not MCU)",
+        "Single-wire protocols are slower — fine for 100Hz thumbwheel but marginal",
+        "More complex firmware than I2C",
+        "Debugging single-wire protocols is painful"
+      ],
+      "feasibility": "LOW-MEDIUM — technically possible but over-engineering for this use case. Option B (I2C) is simpler and only needs 3 wires.",
+      "nextSteps": [
+        "Only pursue if shaft can't fit 3 wires"
+      ]
+    }
+  ],
+  "recommendation": {
+    "bestOption": "Option B: Tiny MCU in Grip (ATtiny85 + I2C)",
+    "reason": "Exactly 3 wires (VCC + GND + SDA). Reuses existing HF55 shaft wiring. Board smaller than a fingernail (~8mm x 5mm). BOM ~$2. Trivial Arduino firmware. No changes to the Melexis sensor. No changes to the grip mechanics. Teensy firmware change is ~10 lines. Prototype possible in one afternoon with breadboard + ATtiny85 dev board.",
+    "quickPrototype": {
+      "parts": [
+        "ATtiny85 DIP-8 (~$1.50 from DigiKey)",
+        "Sparkfun Tiny AVR Programmer or Arduino Uno as ISP",
+        "2x 10kΩ potentiometers (simulate Melexis analog)",
+        "Breadboard + jumper wires",
+        "Teensy 4.1 (already in ThumbJoy)"
+      ],
+      "steps": [
+        "1. Wire ATtiny85 on breadboard with 2 pots on ADC pins",
+        "2. Flash ATtiny85 with I2C slave firmware (reads 2 ADC channels, responds to master)",
+        "3. Connect ATtiny85 I2C (SDA pin) to Teensy 4.1 I2C bus (SDA/SCL + GND)",
+        "4. Write Teensy sketch to poll ATtiny85 every 10ms for 2-byte thumbwheel position",
+        "5. Verify latency < 5ms and position accuracy matches direct analog read",
+        "6. If works: design tiny PCB (8mm x 5mm), order from JLCPCB",
+        "7. Test fit PCB inside grip housing next to Melexis bracket"
+      ],
+      "timeEstimate": "1-2 hours for breadboard prototype, 1 week for PCB"
+    },
+    "alternativeIfI2CFailsDueToEMI": "Use UART (software serial) instead of I2C. Single TX wire from ATtiny to Teensy RX. Still 3 wires total. UART is more noise-tolerant than I2C over short runs."
+  }
+}

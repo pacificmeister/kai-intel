@@ -12,6 +12,7 @@ let state = {
   joysticks: [],
   controls: [],
   teardowns: [],
+  wireReduction: null,
   activeDomain: 'craft',
   activeSection: { craft: 'craft-overview', joystick: 'joy-overview' },
   threatFilter: 'all',
@@ -21,13 +22,14 @@ let state = {
 // ─── Boot ─────────────────────────────────────
 async function init() {
   try {
-    const [competitors, intelFeed, patents, joysticks, controls, teardowns] = await Promise.all([
+    const [competitors, intelFeed, patents, joysticks, controls, teardowns, wireReduction] = await Promise.all([
       fetchJSON('./data/competitors.json'),
       fetchJSON('./data/intel-feed.json'),
       fetchJSON('./data/patents.json'),
       fetchJSON('./data/joysticks.json'),
       fetchJSON('./data/competitor-controls.json'),
-      fetchJSON('./data/teardowns.json')
+      fetchJSON('./data/teardowns.json'),
+      fetchJSON('./data/wire-reduction.json')
     ]);
 
     state.competitors = competitors;
@@ -36,6 +38,7 @@ async function init() {
     state.joysticks = joysticks;
     state.controls = controls;
     state.teardowns = teardowns;
+    state.wireReduction = wireReduction;
 
     setLastUpdated();
     renderAll();
@@ -97,6 +100,7 @@ function renderAll() {
   renderComparisonTable();
   renderJoyOverview();
   renderJoyProducts();
+  renderWireReduction();
   renderTeardowns();
   renderJoyComparison();
   updateCounts();
@@ -468,6 +472,123 @@ function renderJoyProducts() {
   if (!grid) return;
   const filtered = state.joyFilter === 'all' ? state.joysticks : state.joysticks.filter(j => j.status === state.joyFilter);
   grid.innerHTML = filtered.length ? filtered.map(renderJoystickCard).join('') : `<div class="empty-state"><div class="empty-state-icon">🔍</div><div class="empty-state-text">No joysticks match this filter.</div></div>`;
+}
+
+function renderWireReduction() {
+  const el = document.getElementById('wirereduction-content');
+  if (!el || !state.wireReduction) return;
+  const wr = state.wireReduction;
+
+  const approachCards = wr.approaches.map(a => {
+    const diffColor = a.difficulty === 'LOW' ? 'var(--accent-green)' :
+      a.difficulty === 'MEDIUM' ? 'var(--accent-yellow)' :
+      a.difficulty === 'LOW-MEDIUM' ? 'var(--accent-green)' : 'var(--accent-orange)';
+    const isBest = wr.recommendation.bestOption.includes(a.name.split(':')[0]);
+
+    return `
+      <div style="background:var(--bg-card); border:1px solid ${isBest ? 'var(--accent-green)' : 'var(--border)'}; border-radius:var(--radius); padding:20px 24px; margin-bottom:16px; ${isBest ? 'border-width:2px; box-shadow:0 0 20px rgba(16,185,129,0.1);' : ''}">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; margin-bottom:12px;">
+          <div>
+            <div style="font-size:16px; font-weight:700; color:var(--text-primary);">${esc(a.name)}</div>
+            <div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+              <span style="font-size:10px; font-weight:700; padding:3px 10px; border-radius:20px; background:${diffColor}22; border:1px solid ${diffColor}55; color:${diffColor}; text-transform:uppercase;">${esc(a.difficulty)} difficulty</span>
+              <span style="font-size:10px; font-weight:700; padding:3px 10px; border-radius:20px; background:var(--accent-cyan)22; border:1px solid var(--accent-cyan)55; color:var(--accent-cyan);">${a.wireCount} wires</span>
+              <span style="font-size:10px; font-weight:700; padding:3px 10px; border-radius:20px; background:var(--accent-yellow)22; border:1px solid var(--accent-yellow)55; color:var(--accent-yellow);">~${esc(a.cost)}</span>
+              ${isBest ? '<span style="font-size:10px; font-weight:700; padding:3px 10px; border-radius:20px; background:var(--accent-green)22; border:1px solid var(--accent-green)55; color:var(--accent-green);">⭐ RECOMMENDED</span>' : ''}
+            </div>
+          </div>
+          <div style="font-size:28px; font-weight:800; color:var(--accent-cyan); font-family:var(--font-mono);">${a.wireCount}</div>
+        </div>
+        <div style="font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;">${esc(a.description)}</div>
+        <div style="font-size:12px; color:var(--text-muted); margin-bottom:12px;"><strong style="color:var(--text-primary);">Wire breakdown:</strong> ${esc(a.wireBreakdown)}</div>
+
+        ${a.circuitDesign ? `
+        <details style="margin-bottom:12px;">
+          <summary style="font-size:12px; font-weight:600; color:var(--accent-blue); cursor:pointer; padding:6px 0;">📐 Circuit Design Details</summary>
+          <div style="margin-top:8px; padding:12px; background:rgba(0,0,0,0.2); border-radius:var(--radius-sm);">
+            <div style="font-size:12px; color:var(--text-secondary); margin-bottom:8px;"><strong style="color:var(--text-primary);">Board size:</strong> ${esc(a.circuitDesign.totalBoardSize)}</div>
+            <div style="font-size:12px; color:var(--text-secondary); margin-bottom:8px;"><strong style="color:var(--text-primary);">BOM cost:</strong> ${esc(a.circuitDesign.totalCost)}</div>
+            <div style="font-size:12px; color:var(--text-secondary); margin-bottom:8px;"><strong style="color:var(--text-primary);">Protocol:</strong> ${esc(a.circuitDesign.protocol)}</div>
+            <div style="font-size:12px; color:var(--text-secondary); margin-bottom:8px;"><strong style="color:var(--text-primary);">Data rate:</strong> ${esc(a.circuitDesign.dataRate)}</div>
+            <div style="font-size:11px; font-weight:700; color:var(--text-primary); margin-top:12px; margin-bottom:6px;">Components:</div>
+            ${a.circuitDesign.components.map(c => `<div style="font-size:11px; color:var(--text-secondary); margin-bottom:4px; padding-left:8px; border-left:2px solid var(--border);">
+              <strong style="color:var(--accent-blue);">${esc(c.part)}</strong> — ${esc(c.role)} <span style="color:var(--text-muted);">(${esc(c.size)}, ${esc(c.cost)})</span>
+            </div>`).join('')}
+          </div>
+        </details>` : ''}
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div>
+            <div style="font-size:10px; font-weight:700; color:var(--accent-green); text-transform:uppercase; margin-bottom:4px;">✅ Pros</div>
+            ${a.pros.slice(0, 5).map(p => `<div style="font-size:11px; color:var(--text-secondary); margin-bottom:3px; padding-left:6px; border-left:2px solid var(--accent-green)33;">${esc(p)}</div>`).join('')}
+          </div>
+          <div>
+            <div style="font-size:10px; font-weight:700; color:var(--accent-red); text-transform:uppercase; margin-bottom:4px;">⚠️ Cons</div>
+            ${a.cons.slice(0, 5).map(c => `<div style="font-size:11px; color:var(--text-secondary); margin-bottom:3px; padding-left:6px; border-left:2px solid var(--accent-red)33;">${esc(c)}</div>`).join('')}
+          </div>
+        </div>
+
+        <div style="font-size:12px; color:var(--text-secondary); margin-top:12px; padding:8px 12px; background:rgba(255,255,255,0.02); border-left:3px solid ${diffColor}; border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
+          <strong style="color:var(--text-primary);">Feasibility:</strong> ${esc(a.feasibility)}
+        </div>
+      </div>`;
+  }).join('');
+
+  const protoSteps = wr.recommendation.quickPrototype.steps.map(s =>
+    `<div style="font-size:12px; color:var(--text-secondary); margin-bottom:6px; padding-left:8px; border-left:2px solid var(--accent-green)33;">${esc(s)}</div>`).join('');
+
+  const protoParts = wr.recommendation.quickPrototype.parts.map(p =>
+    `<span class="tag" style="margin-right:4px; margin-bottom:4px;">${esc(p)}</span>`).join('');
+
+  el.innerHTML = `
+    <!-- Problem Statement -->
+    <div class="market-gap" style="margin-top:0; margin-bottom:24px;">
+      <div class="gap-icon">🔌</div>
+      <div>
+        <div class="gap-title">The Problem: 6 Wires, Only Room for 3</div>
+        <div class="gap-text">${esc(wr.problem.summary)}</div>
+      </div>
+    </div>
+
+    <!-- Key Insight -->
+    <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.3); border-radius:var(--radius); padding:20px; margin-bottom:24px;">
+      <div style="font-size:14px; font-weight:700; color:var(--accent-green); margin-bottom:8px;">💡 Key Melexis Insight</div>
+      <div style="font-size:13px; color:var(--text-secondary); line-height:1.6;">${esc(wr.melexisInfo.spiCapability)}</div>
+      <div style="font-size:13px; color:var(--text-primary); line-height:1.6; margin-top:8px; font-weight:600;">${esc(wr.melexisInfo.keyInsight)}</div>
+    </div>
+
+    <!-- Wire Count Visual -->
+    <div style="display:flex; gap:16px; margin-bottom:32px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:140px; background:var(--bg-card); border:1px solid rgba(239,68,68,0.3); border-radius:var(--radius); padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:var(--accent-red); font-family:var(--font-mono);">6</div>
+        <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Current Wires</div>
+      </div>
+      <div style="display:flex; align-items:center; font-size:24px; color:var(--text-muted);">→</div>
+      <div style="flex:1; min-width:140px; background:var(--bg-card); border:1px solid rgba(16,185,129,0.3); border-radius:var(--radius); padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:var(--accent-green); font-family:var(--font-mono);">3</div>
+        <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Target Wires</div>
+      </div>
+      <div style="display:flex; align-items:center; font-size:24px; color:var(--text-muted);">=</div>
+      <div style="flex:1; min-width:140px; background:var(--bg-card); border:1px solid rgba(59,130,246,0.3); border-radius:var(--radius); padding:20px; text-align:center;">
+        <div style="font-size:36px; font-weight:800; color:var(--accent-blue); font-family:var(--font-mono);">✓</div>
+        <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Reuse Existing HF55 Path</div>
+      </div>
+    </div>
+
+    <!-- Approaches -->
+    <div style="font-size:18px; font-weight:700; color:var(--text-primary); margin-bottom:16px;">📋 5 Approaches Evaluated</div>
+    ${approachCards}
+
+    <!-- Quick Prototype Plan -->
+    <div style="background:linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(59,130,246,0.05) 100%); border:1px solid rgba(16,185,129,0.3); border-radius:var(--radius); padding:24px; margin-top:32px;">
+      <div style="font-size:16px; font-weight:700; color:var(--accent-green); margin-bottom:6px;">⚡ Quick Prototype Plan (${esc(wr.recommendation.quickPrototype.timeEstimate)})</div>
+      <div style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">${esc(wr.recommendation.reason)}</div>
+      <div style="font-size:11px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Parts needed:</div>
+      <div style="margin-bottom:16px; display:flex; flex-wrap:wrap; gap:4px;">${protoParts}</div>
+      <div style="font-size:11px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Steps:</div>
+      ${protoSteps}
+      <div style="font-size:12px; color:var(--text-muted); margin-top:12px; font-style:italic;">Fallback: ${esc(wr.recommendation.alternativeIfI2CFailsDueToEMI)}</div>
+    </div>`;
 }
 
 function renderTeardowns() {
