@@ -1,0 +1,106 @@
+[
+  {
+    "id": "ifixit-hall-effect",
+    "title": "Hall-Effect Joysticks: How They Work (iFixit Deep Dive)",
+    "type": "TECHNICAL REFERENCE",
+    "source": "iFixit",
+    "url": "https://www.ifixit.com/Wiki/Hall-Effect_Joysticks",
+    "description": "Comprehensive technical explanation of how Hall effect joysticks work internally. Shows the conductive pin replaced by a magnet, resistive strip replaced by a Hall element sensitive to magnetic fields. Explains why Hall effect eliminates drift — no mechanical contact wear. Key insight: the magnets on the wiper are tiny squares confirmed ferrous. Flexible PCB has both left and right variants.",
+    "findings": [
+      "Hall effect replaces mechanical potentiometer wiper with magnet + Hall element sensor",
+      "No physical contact between moving parts → zero drift over time",
+      "Magnet moves above Hall element, sensor reads X and Y field components independently",
+      "Spring mechanism provides return-to-center — this is the only wear component",
+      "Smaller magnets = more precise but weaker signal-to-noise",
+      "PS5/VR controller teardown confirms tiny magnets attached to wiper assembly"
+    ],
+    "relevanceToThumbJoy": "Directly applicable. The APEM HF55 and Melexis thumbwheel both use this principle. Understanding the magnet-to-sensor geometry helps with the through-wall sensing approach (moving Melexis below grip). Key: magnet orientation and distance-to-sensor tolerance define resolution.",
+    "tags": ["hall-effect", "mechanism", "technical", "iFixit"]
+  },
+  {
+    "id": "psvr-hall-effect-teardown",
+    "title": "Hall Effect Joystick Teardown — Reddit/PSVR (Photos + Findings)",
+    "type": "TEARDOWN",
+    "source": "Reddit r/PSVR",
+    "url": "https://www.reddit.com/r/PSVR/comments/1f977hb/hall_effect_joystick_teardownthey_are_legit/",
+    "description": "User teardown of Hall effect gaming joystick with photos. Confirms: ICs as sensors with no mechanical connection to the flex PCB. The little metal squares on the wiper are tiny magnets (confirmed with ferrous test). Flexible PCB has left and right variants.",
+    "findings": [
+      "Hall sensor ICs mounted on flex PCB — no mechanical linkage to read position",
+      "Tiny magnets embedded in the wiper/stick assembly",
+      "Magnets confirmed ferrous via physical test",
+      "Flex PCB carries only sensor signals — no power wires near the stick",
+      "This is the exact same sensing principle used in the APEM HF55 and Melexis sensors"
+    ],
+    "relevanceToThumbJoy": "Validates that Hall effect sensing works through non-contact. The Melexis thumbwheel uses the same principle — magnet rotates, sensor reads angle. If the magnet-to-sensor gap can tolerate 1-3mm of housing wall, through-wall sensing eliminates all wires.",
+    "tags": ["teardown", "hall-effect", "photos", "reddit"]
+  },
+  {
+    "id": "hall-effect-fix-drift",
+    "title": "Using Hall Effect Magnetic Joystick to Fix Stick Drift (YouTube Teardown)",
+    "type": "TEARDOWN VIDEO",
+    "source": "YouTube",
+    "url": "https://www.youtube.com/watch?v=PrjKbw-F6zU",
+    "description": "Detailed video showing Hall effect joystick module replacement. Shows internal mechanism: spring cup, magnet holder, PCB with Hall sensors, and how they assemble. Clear view of the contact-free sensing.",
+    "findings": [
+      "Video shows complete disassembly of a Hall effect joystick module",
+      "Clear view of magnet holder above PCB sensor — no contact between them",
+      "Spring mechanism visible — coil spring in X and Y providing return-to-center",
+      "PCB has two Hall sensor ICs positioned at 90° for X and Y reading",
+      "Soldering the new module requires desoldering old one — analog output pins"
+    ],
+    "relevanceToThumbJoy": "Shows the mechanical simplicity of Hall sensing. The APEM HF55 uses a similar but larger-scale version. The spring is the only part that determines feel — explains why HF55 spring force is the primary complaint.",
+    "tags": ["teardown", "video", "hall-effect", "module-replacement"]
+  },
+  {
+    "id": "logitech-x56-teardown",
+    "title": "Logitech X56 HOTAS Joystick Disassembly Guide (iFixit)",
+    "type": "TEARDOWN",
+    "source": "iFixit",
+    "url": "https://www.ifixit.com/Guide/Logitech+G+X56+HOTAS+Joystick+Disassembly/185032",
+    "description": "Step-by-step disassembly of a multi-axis HOTAS joystick. Shows internal gimbal mechanism, spring assemblies, sensor boards, and wiring. The X56 has twist axis (Z-axis) for rudder — same concept as HF55 Z-twist.",
+    "findings": [
+      "Multi-axis gimbal uses ball-and-socket with magnetic sensors at each axis",
+      "Z-axis twist uses a separate sensor at the base of the stick",
+      "Springs are replaceable — stiffness mod is common in the flight sim community",
+      "Wiring runs through the stick center (hollow shaft concept) to buttons/hats at the top",
+      "The twist mechanism has a centering spring separate from X/Y springs"
+    ],
+    "relevanceToThumbJoy": "Most relevant teardown available. The X56 twist axis is conceptually identical to HF55 Z-twist. Its hollow shaft for button wiring is exactly the ThumbJoy wire routing challenge. The flight sim spring-mod community has decades of experience tuning joystick feel — worth mining for ideas.",
+    "tags": ["teardown", "HOTAS", "twist-axis", "hollow-shaft", "iFixit"]
+  },
+  {
+    "id": "volvo-penta-no-teardown",
+    "title": "Volvo Penta EVC Joystick — No Public Teardown Available",
+    "type": "NOTE",
+    "source": "Research",
+    "url": null,
+    "description": "No public teardown exists for the Volvo Penta EVC joystick. The unit is a sealed, proprietary OEM component. However, the unit found at the Kai Concepts shop (P/N 24011, EVC2 AQ/IPS) CAN be physically disassembled for internal study — this would provide unique teardown data not available anywhere else.",
+    "findings": [
+      "No YouTube, iFixit, or forum teardowns found for Volvo Penta joystick",
+      "Unit is sealed for marine environment — likely O-ring sealed base plate",
+      "Internal mechanism likely: Hall effect sensors for X/Y/twist, proportional output to EVC CAN bus",
+      "The physical unit at Kai Concepts (2023 manufacture) is available for hands-on examination",
+      "RECOMMENDATION: Consider doing an internal teardown of the P/N 24011 unit and documenting — would be the FIRST public teardown of a Volvo Penta marine joystick"
+    ],
+    "relevanceToThumbJoy": "HIGHEST VALUE — If Don/team opens up the Volvo Penta EVC2 joystick from the shop, they'd see exactly how the world's best marine joystick maker solved: spring force, sealing, twist mechanism, wiring, and hall sensor placement. No one else has published this. Would be enormous competitive intelligence.",
+    "tags": ["volvo-penta", "opportunity", "recommendation", "first-teardown"]
+  },
+  {
+    "id": "marine-joystick-no-teardowns",
+    "title": "Marine/Industrial Joystick Teardowns — Market Gap",
+    "type": "NOTE",
+    "source": "Research",
+    "url": null,
+    "description": "After extensive searching: NO public teardowns exist for ANY of the marine or industrial joystick brands evaluated (APEM HF55, JR Merritt CS3, Elobau J4F, OTTO JHM, Penny+Giles JC6000, Dockmate TWIST, Mercury Joystick Piloting). These are proprietary OEM products with sealed designs. The only Hall effect teardowns available are from the gaming/consumer sector (PS5, VR controllers, HOTAS flight sticks).",
+    "findings": [
+      "Zero marine joystick teardowns found publicly",
+      "Zero industrial joystick teardowns found (APEM, Elobau, JR Merritt, OTTO, P&G)",
+      "Gaming HOTAS teardowns (Logitech X56, Thrustmaster) show similar Hall effect mechanisms but lighter duty",
+      "The gaming community extensively mods spring forces — relevant technique knowledge",
+      "Marine joystick manufacturers guard their IP tightly",
+      "OPPORTUNITY: A custom teardown of the in-house Volvo Penta unit would fill a massive knowledge gap"
+    ],
+    "relevanceToThumbJoy": "The absence of teardown data means Kai Concepts must either: (1) buy samples and tear them down internally, or (2) contact manufacturers directly for cross-section drawings. The Volvo Penta unit already in the shop is free intelligence waiting to be opened.",
+    "tags": ["market-gap", "opportunity", "no-teardowns-exist"]
+  }
+]

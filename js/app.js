@@ -11,6 +11,7 @@ let state = {
   patents: [],
   joysticks: [],
   controls: [],
+  teardowns: [],
   activeDomain: 'craft',
   activeSection: { craft: 'craft-overview', joystick: 'joy-overview' },
   threatFilter: 'all',
@@ -20,12 +21,13 @@ let state = {
 // ─── Boot ─────────────────────────────────────
 async function init() {
   try {
-    const [competitors, intelFeed, patents, joysticks, controls] = await Promise.all([
+    const [competitors, intelFeed, patents, joysticks, controls, teardowns] = await Promise.all([
       fetchJSON('./data/competitors.json'),
       fetchJSON('./data/intel-feed.json'),
       fetchJSON('./data/patents.json'),
       fetchJSON('./data/joysticks.json'),
-      fetchJSON('./data/competitor-controls.json')
+      fetchJSON('./data/competitor-controls.json'),
+      fetchJSON('./data/teardowns.json')
     ]);
 
     state.competitors = competitors;
@@ -33,6 +35,7 @@ async function init() {
     state.patents = patents;
     state.joysticks = joysticks;
     state.controls = controls;
+    state.teardowns = teardowns;
 
     setLastUpdated();
     renderAll();
@@ -94,6 +97,7 @@ function renderAll() {
   renderComparisonTable();
   renderJoyOverview();
   renderJoyProducts();
+  renderTeardowns();
   renderJoyComparison();
   updateCounts();
 }
@@ -464,6 +468,60 @@ function renderJoyProducts() {
   if (!grid) return;
   const filtered = state.joyFilter === 'all' ? state.joysticks : state.joysticks.filter(j => j.status === state.joyFilter);
   grid.innerHTML = filtered.length ? filtered.map(renderJoystickCard).join('') : `<div class="empty-state"><div class="empty-state-icon">🔍</div><div class="empty-state-text">No joysticks match this filter.</div></div>`;
+}
+
+function renderTeardowns() {
+  const feed = document.getElementById('teardowns-feed');
+  if (!feed) return;
+  setEl('count-teardowns', state.teardowns.length);
+
+  feed.innerHTML = state.teardowns.map(t => {
+    const typeColor = t.type === 'TEARDOWN' || t.type === 'TEARDOWN VIDEO' ? 'var(--accent-red)' :
+      t.type === 'TECHNICAL REFERENCE' ? 'var(--accent-blue)' :
+      t.type === 'NOTE' ? 'var(--accent-orange)' : 'var(--text-muted)';
+
+    const typeIcon = t.type === 'TEARDOWN VIDEO' ? '▶️' :
+      t.type === 'TEARDOWN' ? '🔧' :
+      t.type === 'TECHNICAL REFERENCE' ? '📖' :
+      t.type === 'NOTE' ? '📝' : '📄';
+
+    const findingsHtml = (t.findings || []).map(f => `
+      <li style="font-size:12px; color:var(--text-secondary); margin-bottom:6px; padding-left:4px; line-height:1.5;">${esc(f)}</li>`).join('');
+
+    return `
+      <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:16px; overflow:hidden; border-left:4px solid ${typeColor};">
+        <div style="padding:20px 24px 12px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:250px;">
+            <div style="display:flex; gap:8px; align-items:center; margin-bottom:6px;">
+              <span style="font-size:18px;">${typeIcon}</span>
+              <span style="font-size:10px; font-weight:700; padding:3px 10px; border-radius:20px; background:${typeColor}22; border:1px solid ${typeColor}55; color:${typeColor}; text-transform:uppercase; letter-spacing:0.5px;">${esc(t.type)}</span>
+              <span style="font-size:11px; color:var(--text-muted);">via ${esc(t.source)}</span>
+            </div>
+            <div style="font-size:16px; font-weight:700; color:var(--text-primary);">${esc(t.title)}</div>
+          </div>
+          ${t.url ? `<a href="${esc(t.url)}" target="_blank" class="link-btn">↗ View Source</a>` : ''}
+        </div>
+
+        <div style="padding:0 24px 16px;">
+          <div style="font-size:13px; color:var(--text-secondary); line-height:1.6;">${esc(t.description)}</div>
+        </div>
+
+        <div style="padding:0 24px 16px;">
+          <div style="font-size:11px; font-weight:700; color:var(--text-primary); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;">🔍 Key Findings</div>
+          <ul style="list-style:disc; padding-left:20px; margin:0;">${findingsHtml}</ul>
+        </div>
+
+        <div style="padding:0 24px 16px;">
+          <div style="font-size:12px; color:var(--text-secondary); padding:10px 12px; background:rgba(59,130,246,0.05); border-left:3px solid var(--accent-blue); border-radius:0 var(--radius-sm) var(--radius-sm) 0; line-height:1.6;">
+            <strong style="color:var(--accent-blue);">Relevance to ThumbJoy:</strong> ${esc(t.relevanceToThumbJoy)}
+          </div>
+        </div>
+
+        <div style="padding:8px 24px 16px; display:flex; gap:4px; flex-wrap:wrap;">
+          ${(t.tags || []).map(tag => `<span class="tag">${esc(tag)}</span>`).join('')}
+        </div>
+      </div>`;
+  }).join('');
 }
 
 function renderJoyComparison() {

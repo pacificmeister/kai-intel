@@ -214,6 +214,7 @@
         <nav class="domain-nav">
           <button class="nav-tab active" data-section="joy-overview">🗺 Overview</button>
           <button class="nav-tab" data-section="joy-products">🕹️ Products <span class="count" id="count-joysticks">—</span></button>
+          <button class="nav-tab" data-section="joy-teardowns">🔧 Teardowns <span class="count" id="count-teardowns">—</span></button>
           <button class="nav-tab" data-section="joy-comparison">📊 Comparison</button>
         </nav>
 
@@ -320,6 +321,26 @@
             <button class="joy-filter-btn" data-joyfilter="REFERENCE">📚 Reference</button>
           </div>
           <div class="joystick-grid" id="joy-products-grid"></div>
+        </div>
+
+        <!-- JOY TEARDOWNS -->
+        <div id="section-joy-teardowns" class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">🔧 Teardowns & Internal Mechanism Research</div>
+              <div class="section-desc">Teardown findings, internal mechanism analysis, and engineering references. Marine/industrial joystick teardowns don't exist publicly — gaming teardowns provide the closest reference.</div>
+            </div>
+          </div>
+
+          <div class="market-gap" style="margin-top:0; margin-bottom:24px; border-color:rgba(249,115,22,0.4); background:linear-gradient(135deg, rgba(249,115,22,0.08) 0%, rgba(239,68,68,0.05) 100%);">
+            <div class="gap-icon">🎯</div>
+            <div>
+              <div class="gap-title" style="color:var(--accent-orange);">Opportunity: First-Ever Volvo Penta Marine Joystick Teardown</div>
+              <div class="gap-text">The Volvo Penta EVC2 unit (P/N 24011) found in the Kai Concepts shop could be the FIRST public teardown of a premium marine joystick. No one has ever documented the internal mechanism of a Volvo Penta, Mercury, Dockmate, or any other marine joystick. Opening this unit would reveal how the world's #1 marine joystick maker solved spring force, sealing, twist axis, and hall sensor placement.</div>
+            </div>
+          </div>
+
+          <div id="teardowns-feed"></div>
         </div>
 
         <!-- JOY COMPARISON -->
