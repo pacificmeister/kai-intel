@@ -1,5 +1,25 @@
 [
   {
+    "id": "intel-014",
+    "date": "2026-03-26",
+    "title": "🚨 NEW COMPETITOR: Awake NAVI — seated 2-person electric foiler, €39,990, ships August 2026",
+    "summary": "Awake Boards (Stockholm, established eFoil maker) launched the NAVI — a seated electric hydrofoiler that directly overlaps with Flying Couch territory. Key specs: 55 km/h top speed, up to 3 hr ride time (XR battery), rigid carbon composite hull, reverse gear, built-in display. With detachable inflatable tube floats it carries 2 passengers; remove them for solo. Priced at €39,990 (~$46,800 USD) excluding VAT/shipping. Pre-orders open, August 2026 delivery. This is the most important new competitor to emerge since ENAUTIC WaveFlyer — same price band, overlapping use case, but waterbike/straddle ergonomics vs Flying Couch's relaxed bench/sofa seating. Awake has existing distribution, brand awareness, and supply chain (RAVIK jetboards and VINGA eFoils already shipping). The market gap for couch-style seating remains intact, but the seated foiler space just got more crowded.",
+    "source": "newatlas.com / yachting-pages.com / uncrate.com",
+    "url": "https://newatlas.com/boats-watersports/awake-navi-electric-foiler/",
+    "tags": ["awake", "navi", "new-competitor", "2-person", "seated", "august-2026", "priority-HIGH"],
+    "priority": "HIGH"
+  },
+  {
+    "id": "intel-015",
+    "date": "2026-03-26",
+    "title": "ENAUTIC product line expands — WaveFlyer RIB310 listed on website",
+    "summary": "ENAUTIC's website now lists three consumer products: WaveFlyer RIB310 (new), WaveFlyer Volaré, and WaveFlyer Rogue. The RIB310 appears to be a rigid inflatable hull variant of their hydrofoil platform — not yet publicly detailed or covered in press. Combined with their AquaFlights commercial arm and Vessev ferry partnership (announced last week), ENAUTIC is building a comprehensive electric hydrofoil platform play. The consumer side is evolving faster than previously tracked.",
+    "source": "enautic.co (website product listing)",
+    "url": "https://enautic.co/",
+    "tags": ["enautic", "new-product", "rib310", "product-expansion"],
+    "priority": "MEDIUM"
+  },
+  {
     "id": "intel-013",
     "date": "2026-03-25",
     "title": "ENAUTIC Group pivots to commercial hydrofoil ops — partners with Vessev for Perth ferry service",

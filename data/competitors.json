@@ -1,5 +1,35 @@
 [
   {
+    "id": "awake-navi",
+    "company": "Awake Boards",
+    "location": "Stockholm, Sweden",
+    "website": "https://awakeboards.com",
+    "founded": 2017,
+    "product": "NAVI Electric Foiler",
+    "tagline": "Seated 2-person electric hydrofoiler — waterbike-style, foils above the surface",
+    "passengers": 2,
+    "topSpeed": "55 km/h (~30 knots)",
+    "range": "~3 hr ride time (XR battery config)",
+    "battery": "2× XR4 swappable (or LR4 for ~1.5 hr)",
+    "weight": null,
+    "length": null,
+    "price": "€39,990 (~$46,800 USD) excl. VAT/shipping",
+    "pricingModel": "direct purchase; deliveries August 2026",
+    "fundingStatus": "Established — previously shipped RAVIK jetboards and VINGA eFoils",
+    "fundingAmount": null,
+    "keyTeam": [],
+    "patents": [],
+    "threatLevel": "MEDIUM-HIGH",
+    "threatReason": "NEW competitor — seated foiler in Flying Couch price range (~$47K) with optional 2-passenger mode via detachable inflatable tubes. Waterbike ergonomics vs couch-style, but same market positioning. August 2026 delivery means real inventory arriving before Kai Concepts ships. First established brand (not a startup) to compete in this exact space.",
+    "latestNews": "January 2026: Awake (makers of RAVIK jetboards and VINGA eFoils) unveiled the NAVI — a new seated electric hydrofoiler. Can carry 2 with detachable inflatable tube floats, or solo without. Rigid carbon composite hull, motorcycle-style throttle, reverse gear, built-in display. €39,990 pre-order, August 2026 delivery. Positioned as quieter, smoother alternative to jet skis.",
+    "mediaLinks": [
+      "https://newatlas.com/boats-watersports/awake-navi-electric-foiler/",
+      "https://www.yachting-pages.com/articles/awake-unveils-navi-news.html",
+      "https://uncrate.com/awake-navi-hydrofoil/"
+    ],
+    "tags": ["2-person", "seated", "new-entrant-2026", "established-brand", "waterbike", "august-2026"]
+  },
+  {
     "id": "enautic-waveflyer",
     "company": "ENAUTIC (Electro Nautic)",
     "location": "Sydney, Australia",
@@ -21,7 +51,7 @@
     "patents": ["WaveDrive (patented propulsion tech)"],
     "threatLevel": "HIGH",
     "threatReason": "Closest direct competitor — 2-seat, side-by-side, fully stabilized electric foiler. Same use case as the flying couch.",
-    "latestNews": "March 2026: ENAUTIC Group pivots to dual strategy — WaveFlyer consumer product + AquaFlights commercial operations brand. Partnered with NZ's Vessev to bring electric hydrofoil ferry service to Perth (Swan River). Josh Portlock (Founder, aerospace engineer) leading. Previously: March 2024 revealed WaveFlyer Rogue and Rogue-X PWC concepts.",
+    "latestNews": "March 2026: ENAUTIC Group pivots to dual strategy — WaveFlyer consumer product + AquaFlights commercial operations brand. Partnered with NZ's Vessev to bring electric hydrofoil ferry service to Perth (Swan River). Josh Portlock (Founder, aerospace engineer) leading. NEW: Product line now includes WaveFlyer RIB310 (rigid inflatable hydrofoil variant — not yet detailed publicly). Previously: March 2024 revealed WaveFlyer Rogue and Rogue-X PWC concepts.",
     "mediaLinks": [
       "https://newatlas.com/marine/electronautic-waveflyer-volare",
       "https://futurride.com/2024/03/13/enautic-reveals-two-electric-hydrofoil-personal-watercraft-based-on-wavedrive/",
