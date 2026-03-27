@@ -1,5 +1,25 @@
 [
   {
+    "id": "intel-016",
+    "date": "2026-03-27",
+    "title": "NEW ENTRANT: Roxen Innovations (Sweden) — electric PWC, production starts April 2026, 200 units",
+    "summary": "Swedish startup Roxen Innovations announced production of its electric personal watercraft (PWC), beginning April 2026 with an initial run of 200 units (40 already pre-sold). The Roxen is NOT a hydrofoil — it's a 22kW jet-drive PWC. Key specs: 55 km/h top speed, 20 nmi range, 5.25 kWh swappable battery, 93 kg total weight (one of the lightest PWCs on the market). ABS hull, 2.49m length. Single-seat. Priced for European market. Relevance to Kai Concepts: LOW as a competitor (wrong category — no foil, single seat), but signals that the European electric PWC market is maturing rapidly. More competition for Awake NAVI customers. Notable: article explicitly links to Awake NAVI, suggesting the press is connecting these two products as part of the same 'sustainable PWC' narrative.",
+    "source": "newatlas.com",
+    "url": "https://newatlas.com/marine/roxen-electric-personal-watercraft/",
+    "tags": ["roxen", "new-entrant", "sweden", "electric-pwc", "non-foil", "production-2026"],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-017",
+    "date": "2026-03-27",
+    "title": "Candela P-12 completes 160-nmi voyage — proof of hydrofoil range and real-world readiness",
+    "summary": "Candela's P-12 electric hydrofoil ferry completed a 160-nautical-mile voyage from Gothenburg to Oslo over three days — the longest electric ship journey to date. Not a direct Kai Concepts competitor, but a powerful market signal: the press and public are now associating electric hydrofoils with practical, long-range transport. This kind of headline drives overall sector credibility and investor/buyer interest. Notably, the P-12 can achieve 25-30 knots while foiling, and uses existing shore charging infrastructure with no special swapping required. Raises the 'what is possible with electric foils' bar in media narrative.",
+    "source": "newatlas.com",
+    "url": "https://newatlas.com/marine/p12-hydrofoiling-electric-ferry-160-nautical-miles/",
+    "tags": ["candela", "p-12", "market-signal", "range", "media-narrative"],
+    "priority": "LOW"
+  },
+  {
     "id": "intel-014",
     "date": "2026-03-26",
     "title": "🚨 NEW COMPETITOR: Awake NAVI — seated 2-person electric foiler, €39,990, ships August 2026",
