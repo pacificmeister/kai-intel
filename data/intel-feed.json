@@ -1,5 +1,25 @@
 [
   {
+    "id": "intel-019",
+    "date": "2026-03-28",
+    "title": "Valo Hyperfoil delivery slipping — 'Shipping 2025' still on website in March 2026",
+    "summary": "Boundary Layer Technologies' Valo Hyperfoil website continues to advertise 'Shipping 2025' as of March 28, 2026 — with no press coverage of actual deliveries, no customer photos, and no updated timeline. Despite ~60 orders at $59K each ($3.5M+ in deposits), the product appears to have missed its own stated timeline. No new funding or press releases since the June 2025 prototype launch. The company's larger ferry bet ($124M LOI pipeline) may be diverting engineering resources. Relevance: Valo is NOT a direct Flying Couch competitor (single-seat PWC), but their delivery struggles illustrate the execution risk that all early-stage hydrofoil startups face — and validate Kai Concepts' focus on building something manufacturable at accessible price points.",
+    "source": "ridevalo.com (website review) / newatlas.com archive",
+    "url": "https://www.ridevalo.com/",
+    "tags": ["valo", "delivery-delay", "execution-risk", "market-signal"],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-018",
+    "date": "2026-03-28",
+    "title": "🚨 PATENT WATCH: BRP (Sea-Doo) files electric hydrofoil surfboard patent — major OEM entering foil space",
+    "summary": "BRP, the Canadian powersports giant behind Sea-Doo, filed a US patent titled 'Lift-Propulsion System for a Watercraft and Watercraft Having Same' (published April 2025). The patent depicts a surfboard-shaped hull with a hydrofoil below — clearly an electric eFoil-style craft. Notably, BRP just sold off all its boat brands (Alumacraft, Manitou, Telwater) to 'focus on powersports' — and Sea-Doo is one of the three brands they kept (along with Ski-Doo and Can-Am). This patent signals BRP/Sea-Doo is actively developing an electric foiling product. They have global distribution, manufacturing scale, and instant brand recognition. If they ship an electric foiler — even a solo-rider version — it legitimizes the entire segment for the mass market. More importantly, if they eventually move into 2-person seated foilers, their scale advantage would be enormous. Not an immediate threat to Kai Concepts' niche, but a 12-24 month market development signal that OEMs are now watching this space.",
+    "source": "rideapart.com / US Patent and Trademark Office",
+    "url": "https://www.rideapart.com/news/757391/brp-sea-doo-electric-ev-hydrofoil-surfboard/",
+    "tags": ["brp", "sea-doo", "patent", "oem-entry", "market-signal", "eFoil"],
+    "priority": "MEDIUM"
+  },
+  {
     "id": "intel-016",
     "date": "2026-03-27",
     "title": "NEW ENTRANT: Roxen Innovations (Sweden) — electric PWC, production starts April 2026, 200 units",

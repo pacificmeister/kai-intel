@@ -66,6 +66,18 @@
     "tags": ["board-style", "usa", "strut-attachment"]
   },
   {
+    "id": "pat-007",
+    "title": "Lift-Propulsion System for a Watercraft and Watercraft Having Same (BRP/Sea-Doo)",
+    "assignee": "BRP Inc. / Bombardier Recreational Products",
+    "country": "USA",
+    "filingDate": "~2024 (published April 2025)",
+    "status": "Published / Pending",
+    "description": "Patent covers a hydrofoil watercraft with integrated lift-propulsion system, depicted as a surfboard-shaped hull with foil below. Appears to be an eFoil-category design. Part of BRP/Sea-Doo's push into electric powersports.",
+    "relevance": "MEDIUM — BRP is the largest PWC OEM globally. If they commercialize this, it signals full mainstream legitimacy for electric hydrofoiling and creates a mass-market reference point. Unlikely to threaten Kai Concepts' couch niche directly, but watch for subsequent patents covering larger or multi-person configurations.",
+    "url": "https://www.rideapart.com/news/757391/brp-sea-doo-electric-ev-hydrofoil-surfboard/",
+    "tags": ["brp", "sea-doo", "oem", "efoil", "usa", "large-incumbent"]
+  },
+  {
     "id": "pat-006",
     "title": "Electric Watercraft Design (UNI Electric Watercraft Group)",
     "assignee": "UNI ELECTRIC WATERCRAFT GROUP INC",
