@@ -1,5 +1,25 @@
 [
   {
+    "id": "intel-021",
+    "date": "2026-03-30",
+    "title": "🚨 Valo/Boundary Layer Technologies appears DEFUNCT — ridevalo.com domain hijacked by gambling spam",
+    "summary": "Critical update: ridevalo.com/hyperfoil now serves Indonesian gambling spam ('TAMBANG888') instead of product content. The main boundarylayer.tech domain now redirects to ridevalo.com (which still shows some legacy marketing copy on the homepage, but subpages are gambling content). The /hyperfoil product page — where customers would configure and order the Valo — is completely replaced. No press releases, no social media activity, no updated timeline since the June 2025 prototype launch. Combined with the 'Shipping 2025' deadline that passed with zero confirmed deliveries, this strongly suggests Boundary Layer Technologies has shut down or gone dormant, and let their domain registration lapse. Their Wefunder page still shows $3.5M in pre-sales deposits. Relevance: Valo was never a direct Flying Couch competitor (single-seat PWC), but their apparent failure removes one player from the broader electric hydrofoil PWC market and serves as a cautionary tale about execution risk in this space. The ~60 customers who placed $500-$1,000 deposits may be out of luck.",
+    "source": "ridevalo.com (direct verification) / boundarylayer.tech (redirect test) / wefunder.com/valo",
+    "url": "https://ridevalo.com/hyperfoil",
+    "tags": ["valo", "boundary-layer", "defunct", "domain-hijacked", "market-signal", "execution-risk"],
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "intel-020",
+    "date": "2026-03-30",
+    "title": "ENAUTIC AquaFlights expanding — multiple press outlets confirm Vessev VS-9 fleet for Perth Swan River",
+    "summary": "Follow-up on the ENAUTIC/Vessev partnership: at least 5 major outlets (Plugboats, The DCN, Boating NZ, Have a Go News, EcoNews AU) covered the story in the past two weeks. Key new detail: operations will be led by Kevyn Townley, founder of the Little Ferry Company, which ran solar-electric ferries on Perth's Swan River for nearly a decade — so this isn't just a startup play, they're hiring experienced ferry operators. AquaFlights brand already offers 'e-foil scooter and WaveFlyer boat hire', suggesting the consumer WaveFlyer is being used operationally in Perth already. The commercial pivot is gaining significant momentum. Consumer WaveFlyer product development may slow as ferry revenue takes priority.",
+    "source": "plugboats.com / thedcn.com.au / boatingnz.co.nz / haveagonews.com.au",
+    "url": "https://plugboats.com/australia-electric-flying-ferries/",
+    "tags": ["enautic", "aquaflights", "vessev", "perth", "commercial-ops", "experienced-operator"],
+    "priority": "MEDIUM"
+  },
+  {
     "id": "intel-019",
     "date": "2026-03-28",
     "title": "Valo Hyperfoil delivery slipping — 'Shipping 2025' still on website in March 2026",
