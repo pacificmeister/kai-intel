@@ -39,8 +39,8 @@
     "manufacturer": "JR Merritt Controls",
     "country": "USA (Merrifield, MN)",
     "category": "Heavy Duty Multi-Axis",
-    "status": "TOP CANDIDATE",
-    "statusNote": "Marine-rated, configurable springs, twist + thumbwheel options",
+    "status": "❌ UNSUITABLE",
+    "statusNote": "REJECTED: IP65 only — does NOT meet IP67 requirement for marine use (confirmed 2026-03-31)",
     "image": "https://jrmerritt.com/wp-content/uploads/2020/07/CS3-SERIES.png",
     "thumbnail": "https://jrmerritt.com/wp-content/uploads/2020/07/CS3-SERIES.png",
     "website": "https://jrmerritt.com/multi-axis-joysticks/cs3/",
@@ -63,9 +63,9 @@
     "price": "RFQ (industrial pricing, ~$400-800 est.)",
     "pros": ["Explicitly designed for marine/boat applications", "Twist handle AND thumbwheel options — both available", "Configurable spring forces — can get stiff feel", "CAN bus output option", "Hall effect paddle-style thumbwheel sold separately", "US manufacturer — easier communication, faster shipping", "Industrial-grade build quality"],
     "cons": ["Hollow shaft availability unknown — CRITICAL to verify", "Industrial/heavy appearance — may need grip customization", "Lead times for custom configs unknown", "Price likely higher than APEM"],
-    "suitability": "HIGH",
-    "suitabilityReason": "Best overall candidate. Marine-designed, configurable springs, twist + thumbwheel. Need to confirm hollow shaft for Melexis wire routing.",
-    "tags": ["top-candidate", "marine", "configurable", "heavy-duty", "US-made"]
+    "suitability": "UNSUITABLE",
+    "suitabilityReason": "REJECTED — IP65 only, does not meet mandatory IP67 waterproofing requirement. Per Merten (2026-03-31).",
+    "tags": ["rejected", "IP65-only", "marine", "configurable", "heavy-duty", "US-made"]
   },
   {
     "id": "jr-merritt-vcs2",
@@ -73,8 +73,8 @@
     "manufacturer": "JR Merritt Controls",
     "country": "USA (Merrifield, MN)",
     "category": "Versatile Multi-Axis (Compact)",
-    "status": "CANDIDATE",
-    "statusNote": "Smaller footprint version of CS3 concept",
+    "status": "❌ UNSUITABLE",
+    "statusNote": "REJECTED: No confirmed IP67 rating — fails mandatory waterproofing requirement (2026-03-31)",
     "image": "https://jrmerritt.com/wp-content/uploads/2020/07/vcs2.png",
     "thumbnail": "https://jrmerritt.com/wp-content/uploads/2020/07/vcs2.png",
     "website": "https://jrmerritt.com/multi-axis-joysticks/vcs2/",
@@ -95,9 +95,9 @@
     "price": "RFQ (~$300-600 est.)",
     "pros": ["Smaller footprint than CS3 — may fit ThumbJoy housing better", "Same configurability as CS3", "Multi-axis with twist/thumbwheel option"],
     "cons": ["Less force feedback than full-size CS3", "Hollow shaft unconfirmed", "Less marine-specific documentation"],
-    "suitability": "MEDIUM",
-    "suitabilityReason": "Compact alternative to CS3. Worth getting specs alongside CS3 inquiry. May fit ThumbJoy beer-can housing better.",
-    "tags": ["candidate", "compact", "configurable"]
+    "suitability": "UNSUITABLE",
+    "suitabilityReason": "REJECTED — No confirmed IP67 rating. Fails mandatory waterproofing requirement. Per Merten (2026-03-31).",
+    "tags": ["rejected", "no-IP67", "compact", "configurable"]
   },
   {
     "id": "elobau-j4f",
@@ -105,8 +105,8 @@
     "manufacturer": "Elobau",
     "country": "Germany (Leutkirch)",
     "category": "Heavy Duty Industrial/Outdoor",
-    "status": "TOP CANDIDATE",
-    "statusNote": "True IP67, modular handles, German engineering",
+    "status": "🔬 ACTIVE EVALUATION",
+    "statusNote": "Merten actively configuring in Elobau online configurator (2026-03-31). IP67, CAN J1939, multiaxial ±20°, thumbwheel, capacitive presence detection.",
     "image": "https://www.elobau.com/fileadmin/_processed_/a/5/csm_J4F_product_f2c4d4b5e6.png",
     "thumbnail": "https://www.elobau.com/fileadmin/_processed_/a/5/csm_J4F_product_f2c4d4b5e6.png",
     "website": "https://www.elobau.com/en/products/operator-controls/operate-control/multi-axis-joysticks/heavy-duty-joystick-j4f/",
@@ -130,7 +130,7 @@
     "pros": ["Genuinely IP67 — designed for harsh outdoor conditions", "Modular handle construction — application-specific mods possible", "Hall effect + reed contactless = no corrosion failure mode", "CAN bus output", "Micro push buttons for outdoor use built into handles", "Ergonomic — designed for fatigue-free operation", "German engineering quality"],
     "cons": ["Hollow shaft availability unknown", "Heavy-duty size may exceed ThumbJoy housing dimensions", "German pricing (premium)", "Lead times from Europe", "Less marine-specific than JR Merritt"],
     "suitability": "HIGH",
-    "suitabilityReason": "True waterproofing + modular handles make this extremely promising. German quality. Need to verify shaft dimensions and marine suitability.",
+    "suitabilityReason": "ACTIVELY BEING EVALUATED — Merten configuring in Elobau tool (Mar 31). IP67 genuine, CAN J1939 available, multiaxial with thumbwheel, capacitive presence detection for kill switch. 7-36V supply fits 12V system. Need to verify hollow shaft for Melexis wire routing.",
     "tags": ["top-candidate", "IP67", "modular", "german", "outdoor"]
   },
   {
