@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kai Concepts — 2-Person Craft Competitor Intelligence">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Kai Intel — 2-Person Craft Competitors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-brand">
+          <a href="../" style="text-decoration:none; color:var(--text-muted); font-size:13px; margin-right:16px; display:flex; align-items:center; gap:4px;">← Kai Intel</a>
+          <div class="header-logo">🚤</div>
+          <div>
+            <div class="header-title">2-Person Craft Competitors</div>
+            <div class="header-subtitle">Electric Hydrofoil Competitive Intelligence</div>
+          </div>
+        </div>
+        <div class="header-meta">
+          <span class="header-badge">🔒 INTERNAL</span>
+          <span id="last-updated" style="font-size:11px; color:var(--text-muted);">Loading…</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="app-error" style="display:none; padding:40px; text-align:center; color:var(--accent-red);">⚠️ Failed to load data.</div>
+
+  <main>
+    <div class="container">
+      <nav class="domain-nav">
+        <button class="nav-tab active" data-section="craft-overview">🗺 Overview</button>
+        <button class="nav-tab" data-section="craft-competitors">🏢 Competitors <span class="count" id="count-competitors">—</span></button>
+        <button class="nav-tab" data-section="craft-intel">📡 Intel Feed <span class="count" id="count-intel">—</span></button>
+        <button class="nav-tab" data-section="craft-patents">📜 Patents <span class="count" id="count-patents">—</span></button>
+        <button class="nav-tab" data-section="craft-controls">🎮 Controls Analysis <span class="count" id="count-controls">—</span></button>
+        <button class="nav-tab" data-section="craft-table">📊 Comparison <span class="count" id="count-table">—</span></button>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <div id="section-craft-overview" class="section active">
+        <div class="market-gap" style="margin-top:8px;">
+          <div class="gap-icon">🎯</div>
+          <div>
+            <div class="gap-title">Market Gap Identified — The "Flying Couch" Segment Is Unclaimed</div>
+            <div class="gap-text">Extensive competitive research confirms <strong>no product currently exists</strong> that combines a comfortable, bench/sofa-style 2-person seating platform with electric hydrofoiling technology at an accessible price point. The WaveFlyer Volaré (ENAUTIC) is closest, but uses jet-ski ergonomics. This is Kai Concepts' window.</div>
+          </div>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-card danger"><div class="stat-value" id="stat-high">—</div><div class="stat-label">High Threat</div></div>
+          <div class="stat-card warning"><div class="stat-value" id="stat-med">—</div><div class="stat-label">Medium Threat</div></div>
+          <div class="stat-card success"><div class="stat-value" id="stat-low">—</div><div class="stat-label">Low Threat</div></div>
+          <div class="stat-card info"><div class="stat-value" id="stat-total">—</div><div class="stat-label">Total Tracked</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-intel">—</div><div class="stat-label">Intel Entries</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-patents">—</div><div class="stat-label">Patents Tracked</div></div>
+        </div>
+        <div class="section-header"><div><div class="section-title">⚠️ Priority Competitors</div><div class="section-desc">High and medium threat companies in the 2-person electric hydrofoil space</div></div></div>
+        <div class="competitors-grid" id="overview-competitors"></div>
+        <div class="section-header" style="margin-top:40px;"><div><div class="section-title">📡 Recent Intelligence</div><div class="section-desc">Latest developments and findings</div></div></div>
+        <div class="intel-feed" id="overview-intel"></div>
+      </div>
+
+      <!-- COMPETITORS -->
+      <div id="section-craft-competitors" class="section">
+        <div class="section-header"><div><div class="section-title">🏢 Competitor Profiles</div><div class="section-desc">All tracked companies in the small electric hydrofoil space</div></div></div>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Companies</button>
+          <button class="filter-btn" data-filter="HIGH">🔴 High Threat</button>
+          <button class="filter-btn" data-filter="MEDIUM">🟡 Medium Threat</button>
+          <button class="filter-btn" data-filter="LOW">🟢 Low Threat</button>
+        </div>
+        <div class="competitors-grid" id="competitors-grid"></div>
+      </div>
+
+      <!-- INTEL FEED -->
+      <div id="section-craft-intel" class="section">
+        <div class="section-header"><div><div class="section-title">📡 Intel Feed</div><div class="section-desc">Chronological log of findings, news, and developments. Newest first.</div></div></div>
+        <div class="intel-feed" id="intel-feed"></div>
+      </div>
+
+      <!-- PATENTS -->
+      <div id="section-craft-patents" class="section">
+        <div class="section-header"><div><div class="section-title">📜 Patent Tracker</div><div class="section-desc">Relevant patent filings to monitor.</div></div></div>
+        <div class="patents-list" id="patents-list"></div>
+      </div>
+
+      <!-- CONTROLS ANALYSIS -->
+      <div id="section-craft-controls" class="section">
+        <div class="section-header"><div><div class="section-title">🎮 Competitor Controls Analysis</div><div class="section-desc">How each competitor controls their craft — steering, throttle, flight control, and joystick details</div></div></div>
+        <div style="background:linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(6,182,212,0.05) 100%); border:1px solid rgba(59,130,246,0.25); border-radius:var(--radius); padding:24px; margin-bottom:32px;">
+          <div style="font-size:16px; font-weight:800; color:var(--accent-cyan); margin-bottom:12px;">🎯 Control System Landscape</div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;"><div style="font-size:24px; font-weight:800; color:var(--accent-blue); font-family:var(--font-mono);" id="ctrl-joystick-count">—</div><div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Use Joystick</div></div>
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;"><div style="font-size:24px; font-weight:800; color:var(--accent-yellow); font-family:var(--font-mono);" id="ctrl-wheel-count">—</div><div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Steering Wheel</div></div>
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;"><div style="font-size:24px; font-weight:800; color:var(--accent-green); font-family:var(--font-mono);" id="ctrl-fbw-count">—</div><div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Fly-by-Wire</div></div>
+            <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;"><div style="font-size:24px; font-weight:800; color:var(--accent-orange); font-family:var(--font-mono);" id="ctrl-other-count">—</div><div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Other (Yoke/Handles)</div></div>
+          </div>
+        </div>
+        <div id="controls-feed"></div>
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <div id="section-craft-table" class="section">
+        <div class="section-header"><div><div class="section-title">📊 Specs Comparison</div><div class="section-desc">Side-by-side comparison of all tracked competitors. Sorted by threat level.</div></div></div>
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead><tr><th>Company</th><th>Product</th><th>Passengers</th><th>Top Speed</th><th>Range</th><th>Price</th><th>Length</th><th>Threat</th></tr></thead>
+            <tbody id="comparison-tbody"><tr><td colspan="8" style="text-align:center; color:var(--text-muted); padding:24px;">Loading…</td></tr></tbody>
+          </table>
+        </div>
+        <div style="margin-top:24px; padding:20px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);">
+          <div style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">📌 Key Observations</div>
+          <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:8px;">
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--threat-high);">●</span><span><strong style="color:var(--text-primary);">ENAUTIC WaveFlyer</strong> is the only 2-seat, side-by-side electric foiler in or near production. Direct competitor to the flying couch concept.</span></li>
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--threat-medium);">●</span><span><strong style="color:var(--text-primary);">Valo Hyperfoil</strong> targets PWC replacement — not the relaxed seating experience. Single rider, performance focus.</span></li>
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--accent-cyan);">●</span><span><strong style="color:var(--text-primary);">The gap:</strong> No product combines comfortable bench/couch seating + electric foiling + 2 passengers + price under $150K.</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><div class="footer-text">KAI INTEL · Confidential — Kai Concepts Internal Use Only · ⚡ R&D Intelligence Platform</div></div>
+  </footer>
+
+  <script src="../js/craft.js"></script>
+</body>
+</html>

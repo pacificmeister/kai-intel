@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kai Concepts — Competitive Intelligence & Joystick Market Overview">
+  <meta name="description" content="Kai Concepts — R&D Intelligence Hub">
   <meta name="robots" content="noindex, nofollow">
   <title>Kai Intel — R&D Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-top: 32px; }
+    .hub-card { background: var(--bg-card); border: 2px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.2s ease; text-decoration: none; color: inherit; display: block; }
+    .hub-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .hub-card-icon { font-size: 48px; margin-bottom: 16px; }
+    .hub-card-title { font-size: 22px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.3px; }
+    .hub-card-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; }
+    .hub-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .hub-stat { background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px; text-align: center; }
+    .hub-stat-val { font-size: 24px; font-weight: 800; font-family: var(--font-mono); color: var(--accent-cyan); }
+    .hub-stat-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
+    .hub-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 13px; font-weight: 600; color: var(--accent-blue); }
+    @media (max-width: 768px) { .hub-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
@@ -31,385 +43,53 @@
     </div>
   </header>
 
-  <!-- SECTION SELECTOR -->
-  <div class="section-selector">
-    <div class="container">
-      <div class="section-selector-inner">
-        <button class="section-btn active" data-domain="craft">
-          <span class="section-btn-icon">🚤</span>
-          <span class="section-btn-label">2-Person Craft Competitors</span>
-        </button>
-        <button class="section-btn" data-domain="joystick">
-          <span class="section-btn-icon">🕹️</span>
-          <span class="section-btn-label">Joystick Market Overview</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ERROR STATE -->
-  <div id="app-error" style="display:none; padding:40px; text-align:center; color:var(--accent-red);">
-    ⚠️ Failed to load data. Make sure you're serving this over HTTP (not file://). Run: <code>python3 -m http.server</code>
-  </div>
-
-  <!-- MAIN -->
   <main>
     <div class="container">
+      <div style="text-align:center; padding:40px 0 8px;">
+        <div style="font-size:28px; font-weight:800; color:var(--text-primary); letter-spacing:-0.5px;">Kai Concepts R&D Intelligence</div>
+        <div style="font-size:14px; color:var(--text-secondary); margin-top:8px;">Competitive intelligence and engineering research for electric hydrofoil development</div>
+      </div>
 
-      <!-- ═══════════════════════════════════════════
-           DOMAIN: 2-PERSON CRAFT COMPETITORS
-           ═══════════════════════════════════════════ -->
-      <div id="domain-craft" class="domain">
-
-        <!-- NAV -->
-        <nav class="domain-nav">
-          <button class="nav-tab active" data-section="craft-overview">🗺 Overview</button>
-          <button class="nav-tab" data-section="craft-competitors">🏢 Competitors <span class="count" id="count-competitors">—</span></button>
-          <button class="nav-tab" data-section="craft-intel">📡 Intel Feed <span class="count" id="count-intel">—</span></button>
-          <button class="nav-tab" data-section="craft-patents">📜 Patents <span class="count" id="count-patents">—</span></button>
-          <button class="nav-tab" data-section="craft-controls">🎮 Controls Analysis <span class="count" id="count-controls">—</span></button>
-          <button class="nav-tab" data-section="craft-table">📊 Comparison <span class="count" id="count-table">—</span></button>
-        </nav>
-
-        <!-- OVERVIEW -->
-        <div id="section-craft-overview" class="section active">
-          <div class="market-gap" style="margin-top:8px;">
-            <div class="gap-icon">🎯</div>
-            <div>
-              <div class="gap-title">Market Gap Identified — The "Flying Couch" Segment Is Unclaimed</div>
-              <div class="gap-text">
-                Extensive competitive research confirms <strong>no product currently exists</strong> that combines a comfortable, bench/sofa-style 2-person seating platform with electric hydrofoiling technology at an accessible price point. The WaveFlyer Volaré (ENAUTIC) is closest, but uses jet-ski ergonomics. This is Kai Concepts' window.
-              </div>
-            </div>
+      <div class="hub-grid">
+        <!-- Craft Competitors -->
+        <a href="craft/" class="hub-card">
+          <div class="hub-card-icon">🚤</div>
+          <div class="hub-card-title">2-Person Craft Competitors</div>
+          <div class="hub-card-desc">Market intelligence on electric hydrofoil competitors. Threat assessment, intel feed, patent tracking, and controls analysis for the 2-person craft segment.</div>
+          <div class="hub-stats">
+            <div class="hub-stat"><div class="hub-stat-val" style="color:var(--accent-red);" id="hub-craft-high">—</div><div class="hub-stat-label">High Threat</div></div>
+            <div class="hub-stat"><div class="hub-stat-val" style="color:var(--accent-yellow);" id="hub-craft-med">—</div><div class="hub-stat-label">Medium</div></div>
+            <div class="hub-stat"><div class="hub-stat-val" style="color:var(--accent-green);" id="hub-craft-low">—</div><div class="hub-stat-label">Low</div></div>
+            <div class="hub-stat"><div class="hub-stat-val" id="hub-craft-total">—</div><div class="hub-stat-label">Competitors</div></div>
+            <div class="hub-stat"><div class="hub-stat-val" id="hub-craft-intel">—</div><div class="hub-stat-label">Intel Items</div></div>
+            <div class="hub-stat"><div class="hub-stat-val" id="hub-craft-patents">—</div><div class="hub-stat-label">Patents</div></div>
           </div>
+          <div class="hub-cta">View Full Report →</div>
+        </a>
 
-          <div class="stats-bar">
-            <div class="stat-card danger"><div class="stat-value" id="stat-high">—</div><div class="stat-label">High Threat</div></div>
-            <div class="stat-card warning"><div class="stat-value" id="stat-med">—</div><div class="stat-label">Medium Threat</div></div>
-            <div class="stat-card success"><div class="stat-value" id="stat-low">—</div><div class="stat-label">Low Threat</div></div>
-            <div class="stat-card info"><div class="stat-value" id="stat-total">—</div><div class="stat-label">Total Tracked</div></div>
-            <div class="stat-card"><div class="stat-value" id="stat-intel">—</div><div class="stat-label">Intel Entries</div></div>
-            <div class="stat-card"><div class="stat-value" id="stat-patents">—</div><div class="stat-label">Patents Tracked</div></div>
+        <!-- Joystick Market -->
+        <a href="joysticks/" class="hub-card">
+          <div class="hub-card-icon">🕹️</div>
+          <div class="hub-card-title">Joystick Market Overview</div>
+          <div class="hub-card-desc">ThumbJoy joystick base replacement research. Product evaluations, wire reduction R&D, teardown analysis, and specs comparison for marine-grade controllers.</div>
+          <div class="hub-stats">
+            <div class="hub-stat"><div class="hub-stat-val" style="color:var(--accent-green);" id="hub-joy-top">—</div><div class="hub-stat-label">Top / Active</div></div>
+            <div class="hub-stat"><div class="hub-stat-val" style="color:var(--accent-yellow);" id="hub-joy-candidates">—</div><div class="hub-stat-label">Candidates</div></div>
+            <div class="hub-stat"><div class="hub-stat-val" id="hub-joy-ref">—</div><div class="hub-stat-label">Reference</div></div>
+            <div class="hub-stat" style="grid-column: span 3;"><div class="hub-stat-val" id="hub-joy-total">—</div><div class="hub-stat-label">Total Evaluated</div></div>
           </div>
-
-          <div class="section-header">
-            <div><div class="section-title">⚠️ Priority Competitors</div><div class="section-desc">High and medium threat companies in the 2-person electric hydrofoil space</div></div>
-          </div>
-          <div class="competitors-grid" id="overview-competitors"></div>
-
-          <div class="section-header" style="margin-top:40px;">
-            <div><div class="section-title">📡 Recent Intelligence</div><div class="section-desc">Latest developments and findings</div></div>
-          </div>
-          <div class="intel-feed" id="overview-intel"></div>
-        </div>
-
-        <!-- COMPETITORS -->
-        <div id="section-craft-competitors" class="section">
-          <div class="section-header">
-            <div><div class="section-title">🏢 Competitor Profiles</div><div class="section-desc">All tracked companies in the small electric hydrofoil space</div></div>
-          </div>
-          <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All Companies</button>
-            <button class="filter-btn" data-filter="HIGH">🔴 High Threat</button>
-            <button class="filter-btn" data-filter="MEDIUM">🟡 Medium Threat</button>
-            <button class="filter-btn" data-filter="LOW">🟢 Low Threat</button>
-          </div>
-          <div class="competitors-grid" id="competitors-grid"></div>
-        </div>
-
-        <!-- INTEL FEED -->
-        <div id="section-craft-intel" class="section">
-          <div class="section-header">
-            <div><div class="section-title">📡 Intel Feed</div><div class="section-desc">Chronological log of findings, news, and developments. Newest first.</div></div>
-          </div>
-          <div class="intel-feed" id="intel-feed"></div>
-        </div>
-
-        <!-- PATENTS -->
-        <div id="section-craft-patents" class="section">
-          <div class="section-header">
-            <div><div class="section-title">📜 Patent Tracker</div><div class="section-desc">Relevant patent filings to monitor. Focus on foil control, propulsion, and small-craft designs.</div></div>
-          </div>
-          <div class="patents-list" id="patents-list"></div>
-        </div>
-
-        <!-- CONTROLS ANALYSIS -->
-        <div id="section-craft-controls" class="section">
-          <div class="section-header">
-            <div>
-              <div class="section-title">🎮 Competitor Controls Analysis</div>
-              <div class="section-desc">How each competitor controls their craft — steering, throttle, flight control, and joystick details with images and links</div>
-            </div>
-          </div>
-
-          <!-- Summary Box -->
-          <div style="background:linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(6,182,212,0.05) 100%); border:1px solid rgba(59,130,246,0.25); border-radius:var(--radius); padding:24px; margin-bottom:32px;">
-            <div style="font-size:16px; font-weight:800; color:var(--accent-cyan); margin-bottom:12px;">🎯 Control System Landscape</div>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
-              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
-                <div style="font-size:24px; font-weight:800; color:var(--accent-blue); font-family:var(--font-mono);" id="ctrl-joystick-count">—</div>
-                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Use Joystick</div>
-              </div>
-              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
-                <div style="font-size:24px; font-weight:800; color:var(--accent-yellow); font-family:var(--font-mono);" id="ctrl-wheel-count">—</div>
-                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Steering Wheel</div>
-              </div>
-              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
-                <div style="font-size:24px; font-weight:800; color:var(--accent-green); font-family:var(--font-mono);" id="ctrl-fbw-count">—</div>
-                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Fly-by-Wire</div>
-              </div>
-              <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); padding:14px; text-align:center;">
-                <div style="font-size:24px; font-weight:800; color:var(--accent-orange); font-family:var(--font-mono);" id="ctrl-other-count">—</div>
-                <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.8px;">Other (Yoke/Handles)</div>
-              </div>
-            </div>
-          </div>
-
-          <div id="controls-feed"></div>
-        </div>
-
-        <!-- COMPARISON TABLE -->
-        <div id="section-craft-table" class="section">
-          <div class="section-header">
-            <div><div class="section-title">📊 Specs Comparison</div><div class="section-desc">Side-by-side comparison of all tracked competitors. Sorted by threat level.</div></div>
-          </div>
-          <div class="table-wrapper">
-            <table class="comparison-table">
-              <thead>
-                <tr>
-                  <th>Company</th><th>Product</th><th>Passengers</th><th>Top Speed</th><th>Range</th><th>Price</th><th>Length</th><th>Threat</th>
-                </tr>
-              </thead>
-              <tbody id="comparison-tbody"><tr><td colspan="8" style="text-align:center; color:var(--text-muted); padding:24px;">Loading…</td></tr></tbody>
-            </table>
-          </div>
-          <div style="margin-top:24px; padding:20px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);">
-            <div style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">📌 Key Observations</div>
-            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:8px;">
-              <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;">
-                <span style="color:var(--threat-high);">●</span>
-                <span><strong style="color:var(--text-primary);">ENAUTIC WaveFlyer</strong> is the only 2-seat, side-by-side electric foiler in or near production. Direct competitor to the flying couch concept.</span>
-              </li>
-              <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;">
-                <span style="color:var(--threat-medium);">●</span>
-                <span><strong style="color:var(--text-primary);">Valo Hyperfoil</strong> targets PWC replacement — not the relaxed seating experience. Single rider, performance focus.</span>
-              </li>
-              <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;">
-                <span style="color:var(--accent-cyan);">●</span>
-                <span><strong style="color:var(--text-primary);">The gap:</strong> No product combines comfortable bench/couch seating + electric foiling + 2 passengers + price under $150K.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div><!-- /domain-craft -->
-
-
-      <!-- ═══════════════════════════════════════════
-           DOMAIN: JOYSTICK MARKET OVERVIEW
-           ═══════════════════════════════════════════ -->
-      <div id="domain-joystick" class="domain" style="display:none;">
-
-        <!-- NAV -->
-        <nav class="domain-nav">
-          <button class="nav-tab active" data-section="joy-overview">🗺 Overview</button>
-          <button class="nav-tab" data-section="joy-products">🕹️ Products <span class="count" id="count-joysticks">—</span></button>
-          <button class="nav-tab" data-section="joy-wirereduction">⚡ Wire Reduction R&D</button>
-          <button class="nav-tab" data-section="joy-teardowns">🔧 Teardowns <span class="count" id="count-teardowns">—</span></button>
-          <button class="nav-tab" data-section="joy-comparison">📊 Comparison</button>
-        </nav>
-
-        <!-- JOY OVERVIEW -->
-        <div id="section-joy-overview" class="section active">
-
-          <div class="market-gap" style="margin-top:8px;">
-            <div class="gap-icon">🕹️</div>
-            <div>
-              <div class="gap-title">ThumbJoy Joystick — Finding the Right Base</div>
-              <div class="gap-text">
-                The Kai Concepts ThumbJoy uses an <strong>APEM HF55</strong> as its base joystick, but it has critical problems: the spring is too soft (1.3N breakout = no feedback at foiling speeds), it's NOT actually waterproof despite IP67 claims, and the hollow shaft is too tight for 6 Melexis wires. This overview maps the market for better alternatives.
-              </div>
-            </div>
-          </div>
-
-          <!-- Requirements Box -->
-          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:24px; margin-bottom:32px;">
-            <div style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:16px;">📋 Must-Have Requirements</div>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
-              <div style="display:flex; gap:10px; align-items:flex-start;">
-                <span style="color:var(--accent-red); font-size:18px; line-height:1;">⬤</span>
-                <div>
-                  <div style="font-size:13px; font-weight:700; color:var(--text-primary);">Hollow Shaft for Wire Routing</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">DEAL BREAKER — 6 Melexis wires must route through shaft to thumbwheel in grip</div>
-                </div>
-              </div>
-              <div style="display:flex; gap:10px; align-items:flex-start;">
-                <span style="color:var(--accent-orange); font-size:18px; line-height:1;">⬤</span>
-                <div>
-                  <div style="font-size:13px; font-weight:700; color:var(--text-primary);">Stiffer Spring / Force Feedback</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">Current HF55 at 1.3N is way too light — need confident center-feel at 25+ knots</div>
-                </div>
-              </div>
-              <div style="display:flex; gap:10px; align-items:flex-start;">
-                <span style="color:var(--accent-orange); font-size:18px; line-height:1;">⬤</span>
-                <div>
-                  <div style="font-size:13px; font-weight:700; color:var(--text-primary);">True Waterproof (IP67+)</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">APEM's IP67 claim is false. Need real marine sealing — splashes, spray, submersion.</div>
-                </div>
-              </div>
-              <div style="display:flex; gap:10px; align-items:flex-start;">
-                <span style="color:var(--accent-yellow); font-size:18px; line-height:1;">⬤</span>
-                <div>
-                  <div style="font-size:13px; font-weight:700; color:var(--text-primary);">Z-Axis Twist (Spring Return)</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">Used for steering left/right — spring-return to center essential</div>
-                </div>
-              </div>
-              <div style="display:flex; gap:10px; align-items:flex-start;">
-                <span style="color:var(--accent-yellow); font-size:18px; line-height:1;">⬤</span>
-                <div>
-                  <div style="font-size:13px; font-weight:700; color:var(--text-primary);">CAN J1939 Interface</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">500kbps CAN preferred, or hall effect analog feeding Teensy CAN</div>
-                </div>
-              </div>
-              <div style="display:flex; gap:10px; align-items:flex-start;">
-                <span style="color:var(--accent-cyan); font-size:18px; line-height:1;">⬤</span>
-                <div>
-                  <div style="font-size:13px; font-weight:700; color:var(--text-primary);">Compact / Fits ThumbJoy Housing</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">Beer-can sized cylindrical base — shallow behind-panel depth</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Stats -->
-          <div class="stats-bar">
-            <div class="stat-card" style="border-left:3px solid var(--accent-green);">
-              <div class="stat-value" id="stat-joy-top" style="color:var(--accent-green);">—</div>
-              <div class="stat-label">Top Candidates</div>
-            </div>
-            <div class="stat-card" style="border-left:3px solid var(--accent-yellow);">
-              <div class="stat-value" id="stat-joy-candidate" style="color:var(--accent-yellow);">—</div>
-              <div class="stat-label">Candidates</div>
-            </div>
-            <div class="stat-card" style="border-left:3px solid var(--accent-cyan);">
-              <div class="stat-value" id="stat-joy-ref" style="color:var(--accent-cyan);">—</div>
-              <div class="stat-label">Reference Products</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value" id="stat-joy-total">—</div>
-              <div class="stat-label">Total Evaluated</div>
-            </div>
-          </div>
-
-          <!-- Top Candidates -->
-          <div class="section-header">
-            <div><div class="section-title">🏆 Top Candidates</div><div class="section-desc">Best options for replacing the APEM HF55 base joystick</div></div>
-          </div>
-          <div class="joystick-grid" id="joy-overview-grid"></div>
-
-        </div>
-
-        <!-- JOY PRODUCTS -->
-        <div id="section-joy-products" class="section">
-          <div class="section-header">
-            <div><div class="section-title">🕹️ All Joystick Products</div><div class="section-desc">Complete market survey of candidate and reference joysticks</div></div>
-          </div>
-          <div class="filter-bar">
-            <button class="joy-filter-btn active" data-joyfilter="all">All Products</button>
-            <button class="joy-filter-btn" data-joyfilter="TOP CANDIDATE">🏆 Top Candidates</button>
-            <button class="joy-filter-btn" data-joyfilter="CANDIDATE">🟡 Candidates</button>
-            <button class="joy-filter-btn" data-joyfilter="PROTOTYPING">🔧 Prototyping</button>
-            <button class="joy-filter-btn" data-joyfilter="REFERENCE">📚 Reference</button>
-          </div>
-          <div class="joystick-grid" id="joy-products-grid"></div>
-        </div>
-
-        <!-- WIRE REDUCTION R&D -->
-        <div id="section-joy-wirereduction" class="section">
-          <div class="section-header">
-            <div>
-              <div class="section-title">⚡ Wire Reduction R&D: 6→3 Signal Multiplexing</div>
-              <div class="section-desc">Research into reducing the 6 Melexis wires to 3 (or fewer) by adding a tiny circuit in the grip that digitizes and multiplexes the signals down the existing HF55 shaft wiring path.</div>
-            </div>
-          </div>
-          <div id="wirereduction-content"></div>
-        </div>
-
-        <!-- JOY TEARDOWNS -->
-        <div id="section-joy-teardowns" class="section">
-          <div class="section-header">
-            <div>
-              <div class="section-title">🔧 Teardowns & Internal Mechanism Research</div>
-              <div class="section-desc">Teardown findings, internal mechanism analysis, and engineering references. Marine/industrial joystick teardowns don't exist publicly — gaming teardowns provide the closest reference.</div>
-            </div>
-          </div>
-
-          <div class="market-gap" style="margin-top:0; margin-bottom:24px; border-color:rgba(249,115,22,0.4); background:linear-gradient(135deg, rgba(249,115,22,0.08) 0%, rgba(239,68,68,0.05) 100%);">
-            <div class="gap-icon">🎯</div>
-            <div>
-              <div class="gap-title" style="color:var(--accent-orange);">Opportunity: First-Ever Volvo Penta Marine Joystick Teardown</div>
-              <div class="gap-text">The Volvo Penta EVC2 unit (P/N 24011) found in the Kai Concepts shop could be the FIRST public teardown of a premium marine joystick. No one has ever documented the internal mechanism of a Volvo Penta, Mercury, Dockmate, or any other marine joystick. Opening this unit would reveal how the world's #1 marine joystick maker solved spring force, sealing, twist axis, and hall sensor placement.</div>
-            </div>
-          </div>
-
-          <div id="teardowns-feed"></div>
-        </div>
-
-        <!-- JOY COMPARISON -->
-        <div id="section-joy-comparison" class="section">
-          <div class="section-header">
-            <div><div class="section-title">📊 Joystick Comparison</div><div class="section-desc">Side-by-side specs comparison. Sorted by suitability.</div></div>
-          </div>
-          <div class="table-wrapper">
-            <table class="comparison-table">
-              <thead>
-                <tr>
-                  <th>Product</th><th>Manufacturer</th><th>Axes</th><th>Sensor</th><th>Output</th><th>IP Rating</th><th>Hollow Shaft</th><th>Price</th><th>Suitability</th>
-                </tr>
-              </thead>
-              <tbody id="joy-comparison-tbody"><tr><td colspan="9" style="text-align:center; color:var(--text-muted); padding:24px;">Loading…</td></tr></tbody>
-            </table>
-          </div>
-
-          <!-- Decision Matrix -->
-          <div style="margin-top:24px; padding:20px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);">
-            <div style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">📌 Decision Matrix Notes</div>
-            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:8px;">
-              <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;">
-                <span style="color:var(--accent-green);">●</span>
-                <span><strong style="color:var(--text-primary);">JR Merritt CS3</strong> — Best overall: marine-rated, configurable springs, twist + thumbwheel. MUST verify hollow shaft.</span>
-              </li>
-              <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;">
-                <span style="color:var(--accent-green);">●</span>
-                <span><strong style="color:var(--text-primary);">Elobau J4F</strong> — True IP67, modular handles, German quality. Strong #2 pick. Verify shaft dimensions.</span>
-              </li>
-              <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;">
-                <span style="color:var(--accent-yellow);">●</span>
-                <span><strong style="color:var(--text-primary);">RunnTech RT600</strong> — Best prototyping pick ($50-150). Test the 3-axis twist concept quickly before committing $500+ on industrial units.</span>
-              </li>
-              <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;">
-                <span style="color:var(--accent-cyan);">●</span>
-                <span><strong style="color:var(--text-primary);">Alternative path:</strong> If no joystick has hollow shaft, consider through-wall magnetic sensing (Melexis below grip, magnet through housing wall) to eliminate wire routing entirely.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div><!-- /domain-joystick -->
-
-    </div><!-- /container -->
+          <div class="hub-cta">View Full Report →</div>
+        </a>
+      </div>
+    </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-text">
-        KAI INTEL · Confidential — Kai Concepts Internal Use Only · ⚡ R&D Intelligence Platform
-      </div>
+      <div class="footer-text">KAI INTEL · Confidential — Kai Concepts Internal Use Only · ⚡ R&D Intelligence Platform</div>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
-
+  <script src="js/hub.js"></script>
 </body>
 </html>

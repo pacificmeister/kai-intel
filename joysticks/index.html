@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kai Concepts — Joystick Market Overview & ThumbJoy R&D">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Kai Intel — Joystick Market Overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-brand">
+          <a href="../" style="text-decoration:none; color:var(--text-muted); font-size:13px; margin-right:16px; display:flex; align-items:center; gap:4px;">← Kai Intel</a>
+          <div class="header-logo">🕹️</div>
+          <div>
+            <div class="header-title">Joystick Market Overview</div>
+            <div class="header-subtitle">ThumbJoy Engineering · Marine Controller R&D</div>
+          </div>
+        </div>
+        <div class="header-meta">
+          <span class="header-badge">🔒 INTERNAL</span>
+          <span id="last-updated" style="font-size:11px; color:var(--text-muted);">Loading…</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="app-error" style="display:none; padding:40px; text-align:center; color:var(--accent-red);">⚠️ Failed to load data.</div>
+
+  <main>
+    <div class="container">
+      <nav class="domain-nav">
+        <button class="nav-tab active" data-section="joy-overview">🗺 Overview</button>
+        <button class="nav-tab" data-section="joy-products">🕹️ Products <span class="count" id="count-joysticks">—</span></button>
+        <button class="nav-tab" data-section="joy-wirereduction">⚡ Wire Reduction R&D</button>
+        <button class="nav-tab" data-section="joy-teardowns">🔧 Teardowns <span class="count" id="count-teardowns">—</span></button>
+        <button class="nav-tab" data-section="joy-comparison">📊 Comparison</button>
+      </nav>
+
+      <!-- JOY OVERVIEW -->
+      <div id="section-joy-overview" class="section active">
+        <div class="market-gap" style="margin-top:8px;">
+          <div class="gap-icon">🕹️</div>
+          <div>
+            <div class="gap-title">ThumbJoy Joystick — Finding the Right Base</div>
+            <div class="gap-text">The Kai Concepts ThumbJoy uses an <strong>APEM HF55</strong> as its base joystick, but it has critical problems: the spring is too soft (1.3N breakout = no feedback at foiling speeds), it's NOT actually waterproof despite IP67 claims, and the hollow shaft is too tight for 6 Melexis wires. This overview maps the market for better alternatives.</div>
+          </div>
+        </div>
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:24px; margin-bottom:32px;">
+          <div style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:16px;">📋 Must-Have Requirements</div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--accent-red); font-size:18px; line-height:1;">⬤</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">Hollow Shaft for Wire Routing</div><div style="font-size:12px; color:var(--text-secondary);">DEAL BREAKER — 6 Melexis wires must route through shaft to thumbwheel in grip</div></div></div>
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--accent-orange); font-size:18px; line-height:1;">⬤</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">Stiffer Spring / Force Feedback</div><div style="font-size:12px; color:var(--text-secondary);">Current HF55 at 1.3N is way too light — need confident center-feel at 25+ knots</div></div></div>
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--accent-orange); font-size:18px; line-height:1;">⬤</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">True Waterproof (IP67+)</div><div style="font-size:12px; color:var(--text-secondary);">APEM's IP67 claim is false. Need real marine sealing — splashes, spray, submersion.</div></div></div>
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--accent-yellow); font-size:18px; line-height:1;">⬤</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">Z-Axis Twist (Spring Return)</div><div style="font-size:12px; color:var(--text-secondary);">Used for steering left/right — spring-return to center essential</div></div></div>
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--accent-yellow); font-size:18px; line-height:1;">⬤</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">CAN J1939 Interface</div><div style="font-size:12px; color:var(--text-secondary);">500kbps CAN preferred, or hall effect analog feeding Teensy CAN</div></div></div>
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="color:var(--accent-cyan); font-size:18px; line-height:1;">⬤</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">Compact / Fits ThumbJoy Housing</div><div style="font-size:12px; color:var(--text-secondary);">Beer-can sized cylindrical base — shallow behind-panel depth</div></div></div>
+          </div>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-card" style="border-left:3px solid var(--accent-green);"><div class="stat-value" id="stat-joy-top" style="color:var(--accent-green);">—</div><div class="stat-label">Top Candidates</div></div>
+          <div class="stat-card" style="border-left:3px solid var(--accent-yellow);"><div class="stat-value" id="stat-joy-candidate" style="color:var(--accent-yellow);">—</div><div class="stat-label">Candidates</div></div>
+          <div class="stat-card" style="border-left:3px solid var(--accent-cyan);"><div class="stat-value" id="stat-joy-ref" style="color:var(--accent-cyan);">—</div><div class="stat-label">Reference Products</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-joy-total">—</div><div class="stat-label">Total Evaluated</div></div>
+        </div>
+        <div class="section-header"><div><div class="section-title">🏆 Top Candidates</div><div class="section-desc">Best options for replacing the APEM HF55 base joystick</div></div></div>
+        <div class="joystick-grid" id="joy-overview-grid"></div>
+      </div>
+
+      <!-- JOY PRODUCTS -->
+      <div id="section-joy-products" class="section">
+        <div class="section-header"><div><div class="section-title">🕹️ All Joystick Products</div><div class="section-desc">Complete market survey of candidate and reference joysticks</div></div></div>
+        <div class="filter-bar">
+          <button class="joy-filter-btn active" data-joyfilter="all">All Products</button>
+          <button class="joy-filter-btn" data-joyfilter="TOP CANDIDATE">🏆 Top Candidates</button>
+          <button class="joy-filter-btn" data-joyfilter="CANDIDATE">🟡 Candidates</button>
+          <button class="joy-filter-btn" data-joyfilter="PROTOTYPING">🔧 Prototyping</button>
+          <button class="joy-filter-btn" data-joyfilter="REFERENCE">📚 Reference</button>
+        </div>
+        <div class="joystick-grid" id="joy-products-grid"></div>
+      </div>
+
+      <!-- WIRE REDUCTION R&D -->
+      <div id="section-joy-wirereduction" class="section">
+        <div class="section-header"><div><div class="section-title">⚡ Wire Reduction R&D: 6→3 Signal Multiplexing</div><div class="section-desc">Research into reducing the 6 Melexis wires to 3 (or fewer) by adding a tiny circuit in the grip.</div></div></div>
+        <div id="wirereduction-content"></div>
+      </div>
+
+      <!-- JOY TEARDOWNS -->
+      <div id="section-joy-teardowns" class="section">
+        <div class="section-header"><div><div class="section-title">🔧 Teardowns & Internal Mechanism Research</div><div class="section-desc">Teardown findings, internal mechanism analysis, and engineering references.</div></div></div>
+        <div class="market-gap" style="margin-top:0; margin-bottom:24px; border-color:rgba(249,115,22,0.4); background:linear-gradient(135deg, rgba(249,115,22,0.08) 0%, rgba(239,68,68,0.05) 100%);">
+          <div class="gap-icon">🎯</div>
+          <div>
+            <div class="gap-title" style="color:var(--accent-orange);">Opportunity: First-Ever Volvo Penta Marine Joystick Teardown</div>
+            <div class="gap-text">The Volvo Penta EVC2 unit found in the Kai Concepts shop could be the FIRST public teardown of a premium marine joystick. No one has ever documented the internal mechanism of a Volvo Penta, Mercury, Dockmate, or any other marine joystick.</div>
+          </div>
+        </div>
+        <div id="teardowns-feed"></div>
+      </div>
+
+      <!-- JOY COMPARISON -->
+      <div id="section-joy-comparison" class="section">
+        <div class="section-header"><div><div class="section-title">📊 Joystick Comparison</div><div class="section-desc">Side-by-side specs comparison. Sorted by suitability.</div></div></div>
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead><tr><th>Product</th><th>Manufacturer</th><th>Axes</th><th>Sensor</th><th>Output</th><th>IP Rating</th><th>Hollow Shaft</th><th>Price</th><th>Suitability</th></tr></thead>
+            <tbody id="joy-comparison-tbody"><tr><td colspan="9" style="text-align:center; color:var(--text-muted); padding:24px;">Loading…</td></tr></tbody>
+          </table>
+        </div>
+        <div style="margin-top:24px; padding:20px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);">
+          <div style="font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">📌 Decision Matrix Notes</div>
+          <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:8px;">
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--accent-green);">●</span><span><strong style="color:var(--text-primary);">Ruffy HE3</strong> — True IP67, dual redundant sensors, proven in Opener BlackFly eVTOL. Confirmed hollow shaft. $281 for 3-axis. Top pick.</span></li>
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--accent-green);">●</span><span><strong style="color:var(--text-primary);">Elobau J4F</strong> — 🔬 ACTIVE EVALUATION (Merten configuring in Elobau tool, Mar 31). IP67, CAN J1939, capacitive presence detection. German quality.</span></li>
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--accent-green);">●</span><span><strong style="color:var(--text-primary);">OTTO JHT Z-axis</strong> — IP68S (submersible!). 2.2–6.7N operating force. Miniature form factor.</span></li>
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--accent-yellow);">●</span><span><strong style="color:var(--text-primary);">MEGATRON TRY120</strong> — NEW: Purpose-built for marine bow thruster control. IP67, CAN J1939, 26mm depth, 9Nm Z-torque. Check hollow shaft.</span></li>
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--accent-red);">●</span><span><strong style="color:var(--text-primary);">JR Merritt CS3/VCS2</strong> — ❌ REJECTED: IP65 only, fails mandatory IP67 waterproofing requirement.</span></li>
+            <li style="font-size:13px; color:var(--text-secondary); display:flex; gap:8px; align-items:flex-start;"><span style="color:var(--accent-cyan);">●</span><span><strong style="color:var(--text-primary);">Alternative path:</strong> If no joystick has hollow shaft, consider through-wall magnetic sensing (Melexis below grip, magnet through housing wall) to eliminate wire routing entirely.</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><div class="footer-text">KAI INTEL · Confidential — Kai Concepts Internal Use Only · ⚡ R&D Intelligence Platform</div></div>
+  </footer>
+
+  <script src="../js/joysticks.js"></script>
+</body>
+</html>
