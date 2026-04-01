@@ -378,7 +378,7 @@
     "status": "\ud83d\uded2 PURCHASED FOR EVALUATION",
     "statusNote": "Sample purchased 2026-03-30 for hands-on evaluation. True IP67, redundant Hall sensors, 3-axis (Z-twist), 12-bit, configurable \u2014 designed for marine/industrial.",
     "image": "https://ruffycontrols.com/wp-content/uploads/2020/01/HE3-Series-Joystick-1.jpg",
-    "thumbnail": "https://ruffycontrols.com/wp-content/uploads/2020/01/HE3-Series-Joystick-1.jpg",
+    "thumbnail": "../img/ruffy-he3.jpg",
     "website": "https://ruffycontrols.com/he3-series/",
     "datasheetUrl": "http://www.nexuscomponents.co.uk/Manufacturers/RUFFY-CONTROLS/Ruffy%20HE3%20Redundant%20Sensor,%20Fully%20Sealed%20Multi-Axis%20Hall%20Effect%20Joystick%202%20Axis%20Range",
     "videos": [
@@ -447,7 +447,7 @@
     "purchased": true,
     "purchaseDate": "2026-03-30",
     "image": "https://ruffycontrols.com/wp-content/uploads/2020/01/SG-Series-1.jpg",
-    "thumbnail": "https://ruffycontrols.com/wp-content/uploads/2020/01/SG-Series-1.jpg",
+    "thumbnail": "../img/ruffy-sg.jpg",
     "website": "https://ruffycontrols.com/sg-series/",
     "datasheetUrl": "https://ruffycontrols.com/product/sg-series/",
     "axes": "2-axis standard (X/Y), optional 3rd axis thumbwheel in handle top",
