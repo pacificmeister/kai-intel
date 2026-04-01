@@ -7,7 +7,7 @@ let state = {
   wireReduction: null,
   circuitDesign: null,
   activeSection: 'joy-overview',
-  joyFilter: 'all'
+  joyFilter: 'candidates'
 };
 
 async function fetchJSON(url, fallback) {
@@ -175,7 +175,8 @@ function renderJoyOverview() {
 function renderJoyProducts() {
   const grid = document.getElementById('joy-products-grid');
   if (!grid) return;
-  const filtered = state.joyFilter === 'all' ? state.joysticks : state.joysticks.filter(j => j.status === state.joyFilter);
+  const candidateStatuses = ['✅ CURRENTLY IN USE', '🛒 PURCHASED FOR EVALUATION', '🔬 SAMPLE REQUESTED', 'CANDIDATE', '🔬 ACTIVE EVALUATION'];
+  const filtered = state.joyFilter === 'all' ? state.joysticks : state.joyFilter === 'candidates' ? state.joysticks.filter(j => candidateStatuses.includes(j.status)) : state.joysticks.filter(j => j.status === state.joyFilter);
   grid.innerHTML = filtered.length ? filtered.map(renderJoystickCard).join('') : '<div class="empty-state"><div class="empty-state-icon">🔍</div><div class="empty-state-text">No joysticks match this filter.</div></div>';
 }
 
