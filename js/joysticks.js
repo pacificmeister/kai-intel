@@ -103,13 +103,15 @@ function renderJoystickCard(j) {
   }[j.status] || 'var(--text-muted)';
 
   const suitColor = { HIGH: 'var(--accent-green)', MEDIUM: 'var(--accent-yellow)', LOW: 'var(--accent-red)', UNSUITABLE: 'var(--accent-red)' }[j.suitability] || 'var(--text-muted)';
-  const thumbSrc = j.thumbnail || j.image;
+  const rawThumb = j.thumbnail || j.image || '';
+  const thumbSrc = rawThumb ? `https://wsrv.nl/?url=${encodeURIComponent(rawThumb)}&w=200&h=200&fit=contain&output=jpg&q=80` : '';
+  const initials = (j.manufacturer || '').split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
   const videosHtml = (j.videos && j.videos.length) ? `<div style="padding:0 20px 12px; display:flex; gap:6px; flex-wrap:wrap;">${j.videos.map(v => `<a href="${esc(v.url)}" target="_blank" class="link-btn" style="font-size:10px; background:rgba(239,68,68,0.08); border-color:rgba(239,68,68,0.3); color:var(--accent-red);">▶ ${esc(v.title)}</a>`).join('')}</div>` : '';
 
   return `
     <div class="joystick-card" style="border-top:3px solid ${statusColor};">
       <div class="card-header" style="padding-top:20px; display:flex; gap:14px; align-items:flex-start;">
-        ${thumbSrc ? `<div style="flex-shrink:0; width:100px; height:100px; border-radius:10px; overflow:hidden; background:rgba(255,255,255,0.08); border:1px solid var(--border); display:flex; align-items:center; justify-content:center;"><img src="${esc(thumbSrc)}" alt="${esc(j.name)}" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.style.display='none'"></div>` : ''}
+        <div style="flex-shrink:0; width:100px; height:100px; border-radius:10px; overflow:hidden; background:rgba(255,255,255,0.06); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; position:relative;">${thumbSrc ? `<img src="${esc(thumbSrc)}" alt="${esc(j.name)}" style="width:100%; height:100%; object-fit:contain; padding:6px; position:relative; z-index:1;" onerror="this.style.display='none'">` : ''}<span style="font-size:28px; font-weight:800; color:var(--text-muted); opacity:0.4; position:absolute;">${initials}</span></div>
         <div class="card-company" style="flex:1;">
           <div class="company-name">${esc(j.name)}</div>
           <div class="company-location">🏭 ${esc(j.manufacturer)} · 📍 ${esc(j.country)}</div>
