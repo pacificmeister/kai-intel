@@ -90,8 +90,11 @@ function renderAll() {
 function renderJoystickCard(j) {
   const statusColor = {
     'CURRENT': 'var(--accent-red)',
+    '✅ CURRENTLY IN USE': 'var(--accent-blue)',
+    '🛒 PURCHASED FOR EVALUATION': 'var(--accent-green)',
     'TOP CANDIDATE': 'var(--accent-green)',
     '🔬 ACTIVE EVALUATION': 'var(--accent-green)',
+    '🔬 SAMPLE REQUESTED': 'var(--accent-green)',
     'CANDIDATE': 'var(--accent-yellow)',
     'PROTOTYPING': 'var(--accent-orange)',
     'INVESTIGATION': 'var(--accent-cyan)',
@@ -164,7 +167,7 @@ function renderJoyOverview() {
 
   const grid = document.getElementById('joy-overview-grid');
   if (grid) {
-    const featured = state.joysticks.filter(j => j.status === 'TOP CANDIDATE' || j.status === '🔬 ACTIVE EVALUATION' || j.status === 'CANDIDATE' || j.status === 'CURRENT');
+    const featured = state.joysticks.filter(j => j.status === '✅ CURRENTLY IN USE' || j.status === '🛒 PURCHASED FOR EVALUATION' || j.status === 'TOP CANDIDATE' || j.status === '🔬 ACTIVE EVALUATION' || j.status === '🔬 SAMPLE REQUESTED' || j.status === 'CANDIDATE' || j.status === 'CURRENT');
     grid.innerHTML = featured.map(renderJoystickCard).join('');
   }
 }
