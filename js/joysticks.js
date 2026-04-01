@@ -7,7 +7,7 @@ let state = {
   wireReduction: null,
   circuitDesign: null,
   activeSection: 'joy-overview',
-  joyFilter: 'candidates'
+  joyFilter: 'all'
 };
 
 async function fetchJSON(url, fallback) {
