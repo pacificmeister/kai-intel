@@ -157,17 +157,20 @@ function renderJoystickCard(j) {
 }
 
 function renderJoyOverview() {
-  const top = state.joysticks.filter(j => j.status === 'TOP CANDIDATE' || j.status === '🔬 ACTIVE EVALUATION');
-  const candidates = state.joysticks.filter(j => j.status === 'CANDIDATE' || j.status === 'PROTOTYPING');
-  const refs = state.joysticks.filter(j => j.status === 'REFERENCE');
-  setEl('stat-joy-top', top.length);
+  const inuse = state.joysticks.filter(j => j.status === '✅ CURRENTLY IN USE');
+  const purchased = state.joysticks.filter(j => j.status === '🛒 PURCHASED FOR EVALUATION');
+  const requested = state.joysticks.filter(j => j.status === '🔬 SAMPLE REQUESTED' || j.status === '🔬 ACTIVE EVALUATION');
+  const candidates = state.joysticks.filter(j => j.status === 'CANDIDATE');
+  setEl('stat-joy-inuse', inuse.length);
+  setEl('stat-joy-purchased', purchased.length);
+  setEl('stat-joy-requested', requested.length);
   setEl('stat-joy-candidate', candidates.length);
-  setEl('stat-joy-ref', refs.length);
   setEl('stat-joy-total', state.joysticks.length);
 
   const grid = document.getElementById('joy-overview-grid');
   if (grid) {
-    const featured = state.joysticks.filter(j => j.status === '✅ CURRENTLY IN USE' || j.status === '🛒 PURCHASED FOR EVALUATION' || j.status === 'TOP CANDIDATE' || j.status === '🔬 ACTIVE EVALUATION' || j.status === '🔬 SAMPLE REQUESTED' || j.status === 'CANDIDATE' || j.status === 'CURRENT');
+    const candidateStatuses = ['✅ CURRENTLY IN USE', '🛒 PURCHASED FOR EVALUATION', '🔬 SAMPLE REQUESTED', '🔬 ACTIVE EVALUATION', 'CANDIDATE'];
+    const featured = state.joysticks.filter(j => candidateStatuses.includes(j.status));
     grid.innerHTML = featured.map(renderJoystickCard).join('');
   }
 }
