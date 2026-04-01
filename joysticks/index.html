@@ -44,11 +44,63 @@
 
       <!-- JOY OVERVIEW -->
       <div id="section-joy-overview" class="section active">
-        <div class="market-gap" style="margin-top:8px;">
-          <div class="gap-icon">🕹️</div>
-          <div>
-            <div class="gap-title">ThumbJoy Joystick — Finding the Right Base</div>
-            <div class="gap-text">The Kai Concepts ThumbJoy uses an <strong>APEM HF55</strong> as its base joystick, but it has critical problems: the spring is too soft (1.3N breakout = no feedback at foiling speeds), it's NOT actually waterproof despite IP67 claims, and the hollow shaft is too tight for 6 Melexis wires. This overview maps the market for better alternatives.</div>
+        <!-- ThumbJoy System Overview -->
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:24px; margin-top:8px; margin-bottom:24px;">
+          <div style="font-size:20px; font-weight:800; color:var(--text-primary); margin-bottom:16px;">🕹️ ThumbJoy System Overview</div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:20px;">
+            <div style="padding:16px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm); border-left:3px solid var(--accent-cyan);">
+              <div style="font-size:11px; font-weight:700; color:var(--accent-cyan); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">Architecture</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">
+                <strong>MCU:</strong> Teensy 4.1 (in handle base)<br>
+                <strong>Bus:</strong> CAN J1939 @ 500kbps<br>
+                <strong>Connector:</strong> M12 5-pos (12V + CAN H/L + GND)<br>
+                <strong>Display:</strong> Adafruit 2.8" TFT LCD (SPI)<br>
+                <strong>PCB:</strong> Custom v3 (JLCPCB, Sep 2025)<br>
+                <strong>Safety:</strong> Magnetic kill switch (Hall sensor)
+              </div>
+            </div>
+            <div style="padding:16px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm); border-left:3px solid var(--accent-blue);">
+              <div style="font-size:11px; font-weight:700; color:var(--accent-blue); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">Current Base: APEM HF55 (HF5844)</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">
+                <strong>Sensor:</strong> Hall effect, CAN J1939 (custom 500kbps)<br>
+                <strong>Thumbwheel:</strong> Melexis Hall sensor in custom grip<br>
+                <strong>Z-axis:</strong> Spring-return twist for steering<br>
+                <strong>Angle:</strong> 32° X/Y (±16°), 60° Z (±30°)<br>
+                <strong>Form:</strong> Beer-can base, pistol grip top
+              </div>
+            </div>
+            <div style="padding:16px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm); border-left:3px solid var(--accent-green);">
+              <div style="font-size:11px; font-weight:700; color:var(--accent-green); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">Key People</div>
+              <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">
+                <strong>Alec Korver</strong> — PCB/electronics (double Melexis PCB)<br>
+                <strong>MCAD:</strong> Fusion 360<br>
+                <strong>ECAD:</strong> Fusion ECAD<br>
+                <strong>Mfg:</strong> JLCPCB (PCB assembly)<br>
+                <strong>Buttons:</strong> JRPanel.com membranes<br>
+                <strong>Sealing:</strong> Gore vent M12, O-ring cap
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Goals -->
+        <div style="background:linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(249,115,22,0.05) 100%); border:1px solid rgba(239,68,68,0.3); border-radius:var(--radius); padding:24px; margin-bottom:24px;">
+          <div style="font-size:16px; font-weight:800; color:var(--accent-red); margin-bottom:12px;">🎯 Stated Goals</div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="font-size:22px;">🔧</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">Make It Stiffer</div><div style="font-size:12px; color:var(--text-secondary);">Current HF55 spring breakout force is only 1.3N — way too soft for foiling speeds. Need dramatically stiffer X/Y and Z-axis feel. Testing springs from Lee Spring (X/Y) and McMaster (Z-axis).</div></div></div>
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="font-size:22px;">🔌</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">Remove External Cable</div><div style="font-size:12px; color:var(--text-secondary);">The Melexis thumbwheel in the grip needs 6 wires routed to the base. Currently runs as an ugly external cable from base to grip — not waterproof, not production-ready. Must route internally or eliminate wires entirely.</div></div></div>
+            <div style="display:flex; gap:10px; align-items:flex-start;"><span style="font-size:22px;">💧</span><div><div style="font-size:13px; font-weight:700; color:var(--text-primary);">Real Waterproofing</div><div style="font-size:12px; color:var(--text-secondary);">APEM confirmed HF55 is NOT actually waterproof despite IP67 label. Adhesive degradation and water ingress failures documented. Need genuinely sealed base (IP67 minimum).</div></div></div>
+          </div>
+        </div>
+
+        <!-- Problems -->
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:24px; margin-bottom:24px;">
+          <div style="font-size:16px; font-weight:700; color:var(--text-primary); margin-bottom:16px;">⚠️ Known Problems (APEM HF55)</div>
+          <div style="display:grid; grid-template-columns:1fr; gap:10px;">
+            <div style="font-size:13px; color:var(--text-secondary); padding:10px 12px; background:rgba(239,68,68,0.05); border-left:3px solid var(--accent-red); border-radius:0 var(--radius-sm) var(--radius-sm) 0;"><strong style="color:var(--text-primary);">Spring too soft:</strong> 1.3N breakout, 2.8N operating — no tactile feedback at speed. Z-axis torque only 0.09 Nm breakout.</div>
+            <div style="font-size:13px; color:var(--text-secondary); padding:10px 12px; background:rgba(239,68,68,0.05); border-left:3px solid var(--accent-red); border-radius:0 var(--radius-sm) var(--radius-sm) 0;"><strong style="color:var(--text-primary);">NOT waterproof:</strong> APEM admitted HF55 fails IP67. Internal adhesive degrades, water ingress documented. They are "working on overmolding fix."</div>
+            <div style="font-size:13px; color:var(--text-secondary); padding:10px 12px; background:rgba(249,115,22,0.05); border-left:3px solid var(--accent-orange); border-radius:0 var(--radius-sm) var(--radius-sm) 0;"><strong style="color:var(--text-primary);">External cable:</strong> 6 Melexis wires run outside the joystick from base to grip — ugly, fragile, not sealed. Shaft too tight for internal routing, wires disturb Z-axis magnet alignment.</div>
+            <div style="font-size:13px; color:var(--text-secondary); padding:10px 12px; background:rgba(249,115,22,0.05); border-left:3px solid var(--accent-orange); border-radius:0 var(--radius-sm) var(--radius-sm) 0;"><strong style="color:var(--text-primary);">CAN speed mismatch:</strong> APEM default is 250kbps, ThumbJoy needs 500kbps — requires custom firmware (HF5844) and 2nd CAN transceiver for translation.</div>
           </div>
         </div>
         <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:24px; margin-bottom:32px;">
