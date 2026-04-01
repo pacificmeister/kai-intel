@@ -5,14 +5,17 @@
     "manufacturer": "APEM",
     "country": "France",
     "category": "Fingertip Proportional",
-    "status": "CURRENT — ACTIVE VENDOR DIALOGUE",
+    "status": "CURRENT \u2014 ACTIVE VENDOR DIALOGUE",
     "statusNote": "Currently used in ThumbJoy (HF5844, 500kbps CAN). Merten emailed APEM (Mar 31) requesting stiffer factory springs + alternative products with thumbwheel/IP67/XYZ. Awaiting response from Amber Grove & Florent Sarps (Product Manager).",
     "image": "https://www.apem.com/idec-apem/medias/sys_master/hde/h16/50437538570270/HF-Series-product-image.png",
     "thumbnail": "https://www.apem.com/idec-apem/medias/sys_master/hde/h16/50437538570270/HF-Series-product-image.png",
     "website": "https://www.apem.com/idec-apem/en_US/Joysticks/Fingertip-Proportional/HF/p/HF55S10",
     "datasheetUrl": "https://www.apem.com/idec-apem/en_US/Joysticks/Fingertip-Proportional/HF/p/HF55S10",
     "videos": [
-      {"title": "APEM HF Series Product Overview", "url": "https://www.youtube.com/results?search_query=APEM+HF55+joystick+fingertip"}
+      {
+        "title": "APEM HF Series Product Overview",
+        "url": "https://www.youtube.com/results?search_query=APEM+HF55+joystick+fingertip"
+      }
     ],
     "axes": "2 + Z-axis twist",
     "sensorType": "Hall Effect (contactless)",
@@ -20,18 +23,37 @@
     "breakoutForce": "1.3 N (0.3 lbf)",
     "operatingForce": "2.8 N (0.63 lbf)",
     "twistTorque": "0.09 Nm breakout / 0.121 Nm operating",
-    "mechanicalAngle": "32° (16° from center)",
-    "twistRotation": "60° (30° from center)",
-    "ipRating": "IP67 (CLAIMED — not actually waterproof per APEM)",
+    "mechanicalAngle": "32\u00b0 (16\u00b0 from center)",
+    "twistRotation": "60\u00b0 (30\u00b0 from center)",
+    "ipRating": "IP67 (CLAIMED \u2014 not actually waterproof per APEM)",
     "hollowShaft": true,
     "lifecycle": "5 million cycles",
     "mounting": "Drop-in panel mount, shallow depth",
     "price": "~$300-500 (custom CAN firmware MOQ unclear)",
-    "pros": ["Compact fingertip form factor", "Hall effect — no contact wear", "Hollow shaft for wire routing", "Custom 500kbps CAN available (HF5844)", "Already integrated into ThumbJoy system", "Proven in-field (prototype testing)"],
-    "cons": ["Spring WAY too soft — 1.3N breakout gives no feedback at speed", "NOT actually waterproof despite IP67 label (confirmed by APEM)", "Shaft too tight for 6 Melexis wires", "Internal epoxy seal cracks easily", "Custom firmware may have long lead times"],
+    "pros": [
+      "Compact fingertip form factor",
+      "Hall effect \u2014 no contact wear",
+      "Hollow shaft for wire routing",
+      "Custom 500kbps CAN available (HF5844)",
+      "Already integrated into ThumbJoy system",
+      "Proven in-field (prototype testing)"
+    ],
+    "cons": [
+      "Spring WAY too soft \u2014 1.3N breakout gives no feedback at speed",
+      "NOT actually waterproof despite IP67 label (confirmed by APEM)",
+      "Shaft too tight for 6 Melexis wires",
+      "Internal epoxy seal cracks easily",
+      "Custom firmware may have long lead times"
+    ],
     "suitability": "LOW",
     "suitabilityReason": "Proven platform but spring force and waterproofing failures are deal-breakers for marine hydrofoil use. Good enough for prototyping, not for production.",
-    "tags": ["current", "fingertip", "CAN-bus", "hollow-shaft", "soft-spring"]
+    "tags": [
+      "current",
+      "fingertip",
+      "CAN-bus",
+      "hollow-shaft",
+      "soft-spring"
+    ]
   },
   {
     "id": "jr-merritt-cs3",
@@ -39,14 +61,17 @@
     "manufacturer": "JR Merritt Controls",
     "country": "USA (Merrifield, MN)",
     "category": "Heavy Duty Multi-Axis",
-    "status": "❌ UNSUITABLE",
-    "statusNote": "REJECTED: IP65 only — does NOT meet IP67 requirement for marine use (confirmed 2026-03-31)",
+    "status": "\u274c UNSUITABLE",
+    "statusNote": "REJECTED: IP65 only \u2014 does NOT meet IP67 requirement for marine use (confirmed 2026-03-31)",
     "image": "https://jrmerritt.com/wp-content/uploads/2020/07/CS3-SERIES.png",
     "thumbnail": "https://jrmerritt.com/wp-content/uploads/2020/07/CS3-SERIES.png",
     "website": "https://jrmerritt.com/multi-axis-joysticks/cs3/",
     "datasheetUrl": "https://jrmerritt.com/multi-axis-joysticks/cs3/",
     "videos": [
-      {"title": "JR Merritt CS3 Joystick at ICUEE (Official)", "url": "https://www.youtube.com/watch?v=bkVjV9JGMZA"}
+      {
+        "title": "JR Merritt CS3 Joystick at ICUEE (Official)",
+        "url": "https://www.youtube.com/watch?v=bkVjV9JGMZA"
+      }
     ],
     "axes": "Multi-axis + optional 3rd axis (twist handle OR thumbwheel)",
     "sensorType": "Hall Effect",
@@ -57,15 +82,35 @@
     "mechanicalAngle": "Configurable",
     "twistRotation": "Available",
     "ipRating": "IP65+ sealing options",
-    "hollowShaft": "Unknown — needs confirmation",
+    "hollowShaft": "Unknown \u2014 needs confirmation",
     "lifecycle": "Industrial grade",
     "mounting": "Panel mount",
     "price": "RFQ (industrial pricing, ~$400-800 est.)",
-    "pros": ["Explicitly designed for marine/boat applications", "Twist handle AND thumbwheel options — both available", "Configurable spring forces — can get stiff feel", "CAN bus output option", "Hall effect paddle-style thumbwheel sold separately", "US manufacturer — easier communication, faster shipping", "Industrial-grade build quality"],
-    "cons": ["Hollow shaft availability unknown — CRITICAL to verify", "Industrial/heavy appearance — may need grip customization", "Lead times for custom configs unknown", "Price likely higher than APEM"],
+    "pros": [
+      "Explicitly designed for marine/boat applications",
+      "Twist handle AND thumbwheel options \u2014 both available",
+      "Configurable spring forces \u2014 can get stiff feel",
+      "CAN bus output option",
+      "Hall effect paddle-style thumbwheel sold separately",
+      "US manufacturer \u2014 easier communication, faster shipping",
+      "Industrial-grade build quality"
+    ],
+    "cons": [
+      "Hollow shaft availability unknown \u2014 CRITICAL to verify",
+      "Industrial/heavy appearance \u2014 may need grip customization",
+      "Lead times for custom configs unknown",
+      "Price likely higher than APEM"
+    ],
     "suitability": "UNSUITABLE",
-    "suitabilityReason": "REJECTED — IP65 only, does not meet mandatory IP67 waterproofing requirement. Per Merten (2026-03-31).",
-    "tags": ["rejected", "IP65-only", "marine", "configurable", "heavy-duty", "US-made"]
+    "suitabilityReason": "REJECTED \u2014 IP65 only, does not meet mandatory IP67 waterproofing requirement. Per Merten (2026-03-31).",
+    "tags": [
+      "rejected",
+      "IP65-only",
+      "marine",
+      "configurable",
+      "heavy-duty",
+      "US-made"
+    ]
   },
   {
     "id": "jr-merritt-vcs2",
@@ -73,8 +118,8 @@
     "manufacturer": "JR Merritt Controls",
     "country": "USA (Merrifield, MN)",
     "category": "Versatile Multi-Axis (Compact)",
-    "status": "❌ UNSUITABLE",
-    "statusNote": "REJECTED: No confirmed IP67 rating — fails mandatory waterproofing requirement (2026-03-31)",
+    "status": "\u274c UNSUITABLE",
+    "statusNote": "REJECTED: No confirmed IP67 rating \u2014 fails mandatory waterproofing requirement (2026-03-31)",
     "image": "https://jrmerritt.com/wp-content/uploads/2020/07/vcs2.png",
     "thumbnail": "https://jrmerritt.com/wp-content/uploads/2020/07/vcs2.png",
     "website": "https://jrmerritt.com/multi-axis-joysticks/vcs2/",
@@ -93,11 +138,24 @@
     "lifecycle": "Industrial grade",
     "mounting": "Panel mount, compact",
     "price": "RFQ (~$300-600 est.)",
-    "pros": ["Smaller footprint than CS3 — may fit ThumbJoy housing better", "Same configurability as CS3", "Multi-axis with twist/thumbwheel option"],
-    "cons": ["Less force feedback than full-size CS3", "Hollow shaft unconfirmed", "Less marine-specific documentation"],
+    "pros": [
+      "Smaller footprint than CS3 \u2014 may fit ThumbJoy housing better",
+      "Same configurability as CS3",
+      "Multi-axis with twist/thumbwheel option"
+    ],
+    "cons": [
+      "Less force feedback than full-size CS3",
+      "Hollow shaft unconfirmed",
+      "Less marine-specific documentation"
+    ],
     "suitability": "UNSUITABLE",
-    "suitabilityReason": "REJECTED — No confirmed IP67 rating. Fails mandatory waterproofing requirement. Per Merten (2026-03-31).",
-    "tags": ["rejected", "no-IP67", "compact", "configurable"]
+    "suitabilityReason": "REJECTED \u2014 No confirmed IP67 rating. Fails mandatory waterproofing requirement. Per Merten (2026-03-31).",
+    "tags": [
+      "rejected",
+      "no-IP67",
+      "compact",
+      "configurable"
+    ]
   },
   {
     "id": "elobau-j4f",
@@ -105,33 +163,56 @@
     "manufacturer": "Elobau",
     "country": "Germany (Leutkirch)",
     "category": "Heavy Duty Industrial/Outdoor",
-    "status": "🔬 SAMPLE REQUESTED",
+    "status": "\ud83d\udd2c SAMPLE REQUESTED",
     "statusNote": "Merten submitted config J4C6ASS00GC0025J via Elobau configurator (Mar 31). Account manager Brianna McIntyre assigned. Sample requested. Concern: may be too large. Waiting on sample ETA + pricing.",
     "image": "https://www.elobau.com/fileadmin/_processed_/a/5/csm_J4F_product_f2c4d4b5e6.png",
     "thumbnail": "https://www.elobau.com/fileadmin/_processed_/a/5/csm_J4F_product_f2c4d4b5e6.png",
     "website": "https://www.elobau.com/en/products/operator-controls/operate-control/multi-axis-joysticks/heavy-duty-joystick-j4f/",
     "datasheetUrl": "https://je-joystick.elobau.com/wp-content/uploads/2025/04/Technical_Comparison_JE_J4F_online_E_2025.pdf",
     "videos": [
-      {"title": "Elobau New Joystick Range (Agritechnica 2025)", "url": "https://www.ivtinternational.com/videos/agritechnica-video-elobaus-all-new-joystick-range.html"}
+      {
+        "title": "Elobau New Joystick Range (Agritechnica 2025)",
+        "url": "https://www.ivtinternational.com/videos/agritechnica-video-elobaus-all-new-joystick-range.html"
+      }
     ],
     "axes": "Multi-axis configurable",
     "sensorType": "Hall Effect + Reed (contactless)",
     "output": "CAN bus",
     "breakoutForce": "Heavy duty (significantly higher than HF55)",
-    "operatingForce": "Heavy duty — designed for fatigue-free outdoor operation",
+    "operatingForce": "Heavy duty \u2014 designed for fatigue-free outdoor operation",
     "twistTorque": "TBD",
     "mechanicalAngle": "Configurable",
     "twistRotation": "TBD",
-    "ipRating": "IP67 (genuine — designed for outdoor/harsh conditions)",
-    "hollowShaft": "Unknown — needs confirmation",
+    "ipRating": "IP67 (genuine \u2014 designed for outdoor/harsh conditions)",
+    "hollowShaft": "Unknown \u2014 needs confirmation",
     "lifecycle": "Industrial grade, reed = infinite cycles",
     "mounting": "Panel mount, various options",
     "price": "RFQ (German industrial, ~$500-1000 est.)",
-    "pros": ["Genuinely IP67 — designed for harsh outdoor conditions", "Modular handle construction — application-specific mods possible", "Hall effect + reed contactless = no corrosion failure mode", "CAN bus output", "Micro push buttons for outdoor use built into handles", "Ergonomic — designed for fatigue-free operation", "German engineering quality"],
-    "cons": ["Hollow shaft availability unknown", "Heavy-duty size may exceed ThumbJoy housing dimensions", "German pricing (premium)", "Lead times from Europe", "Less marine-specific than JR Merritt"],
+    "pros": [
+      "Genuinely IP67 \u2014 designed for harsh outdoor conditions",
+      "Modular handle construction \u2014 application-specific mods possible",
+      "Hall effect + reed contactless = no corrosion failure mode",
+      "CAN bus output",
+      "Micro push buttons for outdoor use built into handles",
+      "Ergonomic \u2014 designed for fatigue-free operation",
+      "German engineering quality"
+    ],
+    "cons": [
+      "Hollow shaft availability unknown",
+      "Heavy-duty size may exceed ThumbJoy housing dimensions",
+      "German pricing (premium)",
+      "Lead times from Europe",
+      "Less marine-specific than JR Merritt"
+    ],
     "suitability": "HIGH",
-    "suitabilityReason": "ACTIVELY BEING EVALUATED — Merten configuring in Elobau tool (Mar 31). IP67 genuine, CAN J1939 available, multiaxial with thumbwheel, capacitive presence detection for kill switch. 7-36V supply fits 12V system. Need to verify hollow shaft for Melexis wire routing.",
-    "tags": ["top-candidate", "IP67", "modular", "german", "outdoor"]
+    "suitabilityReason": "ACTIVELY BEING EVALUATED \u2014 Merten configuring in Elobau tool (Mar 31). IP67 genuine, CAN J1939 available, multiaxial with thumbwheel, capacitive presence detection for kill switch. 7-36V supply fits 12V system. Need to verify hollow shaft for Melexis wire routing.",
+    "tags": [
+      "top-candidate",
+      "IP67",
+      "modular",
+      "german",
+      "outdoor"
+    ]
   },
   {
     "id": "otto-jhm",
@@ -159,11 +240,28 @@
     "lifecycle": "Military-grade durability",
     "mounting": "Shallow behind-panel depth",
     "price": "RFQ (military/marine pricing, ~$400-800 est.)",
-    "pros": ["Military/marine heritage — built for harsh environments", "Dual magnet design for reliability", "Shallow behind-panel depth — good for compact housing", "US manufacturer", "Full-function medium size"],
-    "cons": ["No standard Z-axis twist — would need modification or separate control", "Hollow shaft uncertain", "Military pricing tends to be premium", "Less configurability than JR Merritt"],
+    "pros": [
+      "Military/marine heritage \u2014 built for harsh environments",
+      "Dual magnet design for reliability",
+      "Shallow behind-panel depth \u2014 good for compact housing",
+      "US manufacturer",
+      "Full-function medium size"
+    ],
+    "cons": [
+      "No standard Z-axis twist \u2014 would need modification or separate control",
+      "Hollow shaft uncertain",
+      "Military pricing tends to be premium",
+      "Less configurability than JR Merritt"
+    ],
     "suitability": "MEDIUM",
     "suitabilityReason": "Rock-solid reliability but may lack Z-axis twist. Good backup option if custom twist mechanism is added externally.",
-    "tags": ["candidate", "military", "marine", "US-made", "dual-magnet"]
+    "tags": [
+      "candidate",
+      "military",
+      "marine",
+      "US-made",
+      "dual-magnet"
+    ]
   },
   {
     "id": "penny-giles-jc6000",
@@ -172,7 +270,7 @@
     "country": "UK / Global",
     "category": "Rugged Industrial Multi-Axis",
     "status": "INVESTIGATION",
-    "statusNote": "Very stiff feel — designed for 7-20 tonne vehicles",
+    "statusNote": "Very stiff feel \u2014 designed for 7-20 tonne vehicles",
     "image": "https://industrial.curtisswright.com/images/large/jc6000_joystick_controller_lrg.jpg",
     "thumbnail": "https://industrial.curtisswright.com/images/large/jc6000_joystick_controller_lrg.jpg",
     "website": "https://industrial.curtisswright.com/en-gb/products/joystick-controllers/jc6000-rugged-multi-axis-joystick-controller",
@@ -181,7 +279,7 @@
     "axes": "Single or dual axis",
     "sensorType": "Hall Effect or potentiometric",
     "output": "CAN bus or Analog",
-    "breakoutForce": "Heavy — designed for 7-20 tonne vehicles",
+    "breakoutForce": "Heavy \u2014 designed for 7-20 tonne vehicles",
     "operatingForce": "Very stiff industrial feel",
     "twistTorque": "No standard twist",
     "mechanicalAngle": "Standard industrial",
@@ -191,11 +289,31 @@
     "lifecycle": "Industrial grade",
     "mounting": "Panel mount",
     "price": "RFQ (~$500-1200 est.)",
-    "pros": ["Extremely stiff feel — strong force feedback", "IP66 sealing", "Hall effect or pot options", "CAN bus output", "Range of ergonomic handle designs", "Custom spring-force adjustments available", "Proven in off-highway and marine"],
-    "cons": ["May be TOO stiff / heavy for fingertip operation", "Likely too large for ThumbJoy beer-can housing", "No twist axis", "Hollow shaft very unlikely", "Heavy-duty = heavy weight"],
+    "pros": [
+      "Extremely stiff feel \u2014 strong force feedback",
+      "IP66 sealing",
+      "Hall effect or pot options",
+      "CAN bus output",
+      "Range of ergonomic handle designs",
+      "Custom spring-force adjustments available",
+      "Proven in off-highway and marine"
+    ],
+    "cons": [
+      "May be TOO stiff / heavy for fingertip operation",
+      "Likely too large for ThumbJoy beer-can housing",
+      "No twist axis",
+      "Hollow shaft very unlikely",
+      "Heavy-duty = heavy weight"
+    ],
     "suitability": "LOW",
     "suitabilityReason": "Great reference for spring force but likely too bulky and lacks twist. JC3000 fingertip version might be more relevant.",
-    "tags": ["investigation", "industrial", "stiff", "IP66", "UK"]
+    "tags": [
+      "investigation",
+      "industrial",
+      "stiff",
+      "IP66",
+      "UK"
+    ]
   },
   {
     "id": "runntech-rt600",
@@ -204,7 +322,7 @@
     "country": "China",
     "category": "Compact 3-Axis Fingertip",
     "status": "PROTOTYPING",
-    "statusNote": "Cheap, compact, 3-axis with twist — great for testing",
+    "statusNote": "Cheap, compact, 3-axis with twist \u2014 great for testing",
     "image": "https://www.runntech.com/wp-content/uploads/2020/08/RT600-T-3-03-HV2-HD12-BT1-M11.jpg",
     "thumbnail": "https://www.runntech.com/wp-content/uploads/2020/08/RT600-T-3-03-HV2-HD12-BT1-M11.jpg",
     "website": "https://www.runntech.com/runntech-3-axis-hall-effect-compact-fingertip-joystick-for-boat-and-vessel-control-system-panel/",
@@ -218,16 +336,37 @@
     "twistTorque": "Self-centering spring return",
     "mechanicalAngle": "Standard fingertip",
     "twistRotation": "Twist knob (clockwise/counterclockwise)",
-    "ipRating": "Unknown — not rated for marine",
+    "ipRating": "Unknown \u2014 not rated for marine",
     "hollowShaft": "Unknown",
     "lifecycle": "Unknown",
     "mounting": "36x36mm panel mount",
     "price": "$50-150 (direct from manufacturer)",
-    "pros": ["Very compact — 36x36mm mounting", "Native 3-axis with twist knob", "Hall effect throughout", "Self-centering spring return", "Extremely affordable for prototyping", "Multiple grip options (pushbutton, bare knob)", "Boat/vessel applications listed by manufacturer"],
-    "cons": ["No IP rating — not waterproof", "Chinese quality — durability unknown", "Analog output only (no CAN) — would feed into Teensy ADC", "Spring force likely soft (fingertip class)", "No marine track record", "Hollow shaft unlikely at this size"],
+    "pros": [
+      "Very compact \u2014 36x36mm mounting",
+      "Native 3-axis with twist knob",
+      "Hall effect throughout",
+      "Self-centering spring return",
+      "Extremely affordable for prototyping",
+      "Multiple grip options (pushbutton, bare knob)",
+      "Boat/vessel applications listed by manufacturer"
+    ],
+    "cons": [
+      "No IP rating \u2014 not waterproof",
+      "Chinese quality \u2014 durability unknown",
+      "Analog output only (no CAN) \u2014 would feed into Teensy ADC",
+      "Spring force likely soft (fingertip class)",
+      "No marine track record",
+      "Hollow shaft unlikely at this size"
+    ],
     "suitability": "MEDIUM",
     "suitabilityReason": "Best low-cost prototyping option. Test the 3-axis twist concept quickly before committing to an expensive industrial joystick. Not production-worthy.",
-    "tags": ["prototyping", "budget", "3-axis", "compact", "china"]
+    "tags": [
+      "prototyping",
+      "budget",
+      "3-axis",
+      "compact",
+      "china"
+    ]
   },
   {
     "id": "ruffy-he3",
@@ -235,52 +374,123 @@
     "manufacturer": "Ruffy Controls Inc.",
     "country": "USA (Carlsbad, CA)",
     "category": "Redundant-Sensor Fully Sealed Multi-Axis",
-    "status": "TOP CANDIDATE",
-    "statusNote": "True IP67, redundant Hall sensors, 3-axis (Z-twist), 12-bit, configurable — designed for marine/industrial. Note: Ruffy is separate from APEM (similar product space, different company).",
+    "status": "\ud83d\uded2 PURCHASED FOR EVALUATION",
+    "statusNote": "Sample purchased 2026-03-30 for hands-on evaluation. True IP67, redundant Hall sensors, 3-axis (Z-twist), 12-bit, configurable \u2014 designed for marine/industrial.",
     "image": "https://ruffycontrols.com/wp-content/uploads/2020/01/HE3-Series-Joystick-1.jpg",
     "thumbnail": "https://ruffycontrols.com/wp-content/uploads/2020/01/HE3-Series-Joystick-1.jpg",
     "website": "https://ruffycontrols.com/he3-series/",
     "datasheetUrl": "http://www.nexuscomponents.co.uk/Manufacturers/RUFFY-CONTROLS/Ruffy%20HE3%20Redundant%20Sensor,%20Fully%20Sealed%20Multi-Axis%20Hall%20Effect%20Joystick%202%20Axis%20Range",
     "videos": [
-      {"title": "Ruffy Controls HE3 Series Overview", "url": "https://www.youtube.com/results?search_query=Ruffy+Controls+HE3+joystick"}
+      {
+        "title": "Ruffy Controls HE3 Series Overview",
+        "url": "https://www.youtube.com/results?search_query=Ruffy+Controls+HE3+joystick"
+      }
     ],
-    "axes": "2-axis standard, 3-axis with Z-twist option (40° X/Y, 90° Z)",
-    "sensorType": "Hall Effect — REDUNDANT (dual sensor per axis, safety-critical applications)",
-    "output": "Analog (0–5V ratiometric), multiple output options configurable",
-    "breakoutForce": "Max applied force: 150 lbF (667N) — extremely robust",
-    "operatingForce": "Spring return, stiff feel — heavy duty",
-    "twistTorque": "14 lbF·in max applied Z-axis torque",
-    "mechanicalAngle": "40° total (20° each direction) X/Y",
-    "twistRotation": "90° total Z-axis (45° each direction), spring return",
+    "axes": "2-axis standard, 3-axis with Z-twist option (40\u00b0 X/Y, 90\u00b0 Z)",
+    "sensorType": "Hall Effect \u2014 REDUNDANT (dual sensor per axis, safety-critical applications)",
+    "output": "Analog (0\u20135V ratiometric), multiple output options configurable",
+    "breakoutForce": "Max applied force: 150 lbF (667N) \u2014 extremely robust",
+    "operatingForce": "Spring return, stiff feel \u2014 heavy duty",
+    "twistTorque": "14 lbF\u00b7in max applied Z-axis torque",
+    "mechanicalAngle": "40\u00b0 total (20\u00b0 each direction) X/Y",
+    "twistRotation": "90\u00b0 total Z-axis (45\u00b0 each direction), spring return",
     "ipRating": "IP67 minimum (sealed above flange)",
-    "hollowShaft": "Unknown — needs confirmation. 12 wires per pinout suggests wiring exits at base, not through shaft.",
+    "hollowShaft": "Unknown \u2014 needs confirmation. 12 wires per pinout suggests wiring exits at base, not through shaft.",
     "lifecycle": "5 million cycles",
     "mounting": "Panel mount with flange",
     "price": "$210.60 (2-axis base), price increases for 3-axis and redundant options",
     "pros": [
-      "TRUE IP67 — 'minimum' IP67 means exceeds the standard",
-      "REDUNDANT Hall sensors — dual sensor per axis for safety-critical use (marine, military, industrial)",
+      "TRUE IP67 \u2014 'minimum' IP67 means exceeds the standard",
+      "REDUNDANT Hall sensors \u2014 dual sensor per axis for safety-critical use (marine, military, industrial)",
       "3-axis with Z-twist available (same as ThumbJoy need)",
-      "12-bit resolution — high precision",
-      "5V supply — compatible with existing ThumbJoy architecture",
+      "12-bit resolution \u2014 high precision",
+      "5V supply \u2014 compatible with existing ThumbJoy architecture",
       "Extreme robustness: 150 lbF force rating, 5M cycles",
       "Military/SAE vibration tested (MIL-STD-810G, SAE J1455)",
-      "ESD immunity ±15kV/±8kV — good for electrically noisy marine environment",
-      "Wide operating temp -40°F to 185°F",
-      "US manufacturer (Carlsbad, CA) — easy to contact",
+      "ESD immunity \u00b115kV/\u00b18kV \u2014 good for electrically noisy marine environment",
+      "Wide operating temp -40\u00b0F to 185\u00b0F",
+      "US manufacturer (Carlsbad, CA) \u2014 easy to contact",
       "Configurable handle styles and output options",
       "Inexpensive starting at $210"
     ],
     "cons": [
-      "12-wire pinout (redundant sensors double the wires) — makes shaft routing harder",
-      "No CAN output — analog only (feeds into Teensy ADC or bridge circuit)",
-      "Hollow shaft unknown — the 12-wire count suggests wiring exits at base panel, not through shaft",
+      "12-wire pinout (redundant sensors double the wires) \u2014 makes shaft routing harder",
+      "No CAN output \u2014 analog only (feeds into Teensy ADC or bridge circuit)",
+      "Hollow shaft unknown \u2014 the 12-wire count suggests wiring exits at base panel, not through shaft",
       "Redundant sensors may be overkill for ThumbJoy application (adds complexity)",
-      "Glass/mineral filled nylon body — may be lighter duty than steel-bodied competitors"
+      "Glass/mineral filled nylon body \u2014 may be lighter duty than steel-bodied competitors"
     ],
     "suitability": "HIGH",
     "suitabilityReason": "Excellent candidate. True IP67, 3-axis with Z-twist, 12-bit Hall effect, redundant sensors, stiff springs, US-made, $210. The 12-wire count from redundancy is a concern for shaft routing but manageable with the ATtiny bridge circuit. First call to make alongside JR Merritt CS3.",
-    "tags": ["top-candidate", "IP67", "redundant", "3-axis", "Z-twist", "US-made", "12-bit", "marine"]
+    "tags": [
+      "top-candidate",
+      "IP67",
+      "redundant",
+      "3-axis",
+      "Z-twist",
+      "US-made",
+      "12-bit",
+      "marine"
+    ],
+    "purchased": true,
+    "purchaseDate": "2026-03-30"
+  },
+  {
+    "id": "ruffy-sg",
+    "name": "Ruffy Controls SG Series",
+    "manufacturer": "Ruffy Controls Inc.",
+    "country": "USA (Carlsbad, CA)",
+    "category": "2-Axis Hand Grip with Optional 3rd Axis Thumbwheel",
+    "status": "\ud83d\uded2 PURCHASED FOR EVALUATION",
+    "statusNote": "Sample purchased 2026-03-30 for hands-on evaluation. KEY FEATURE: Has thumbwheel on top (optional 3rd axis in handle) \u2014 matches ThumbJoy throttle requirement natively.",
+    "purchased": true,
+    "purchaseDate": "2026-03-30",
+    "image": "https://ruffycontrols.com/wp-content/uploads/2020/01/SG-Series-1.jpg",
+    "thumbnail": "https://ruffycontrols.com/wp-content/uploads/2020/01/SG-Series-1.jpg",
+    "website": "https://ruffycontrols.com/sg-series/",
+    "datasheetUrl": "https://ruffycontrols.com/product/sg-series/",
+    "axes": "2-axis standard (X/Y), optional 3rd axis thumbwheel in handle top",
+    "sensorType": "Hall Effect \u2014 REDUNDANT (dual sensor per axis, safety-critical)",
+    "output": "Analog (Hall Effect), 5VDC, redundant outputs standard",
+    "ipRating": "IP67 (sealed above panel, standard)",
+    "hollowShaft": "Unknown \u2014 needs physical inspection of sample",
+    "mounting": "Panel mount, circular cutout 57.15mm",
+    "operatingTemp": "-40\u00b0C to 85\u00b0C",
+    "dimensions": "2.38 x 2.38 x 7.18 in (60.5 x 60.5 x 182.4 mm)",
+    "weight": "0.5 lbs (227g)",
+    "price": "$271.70 (base configuration)",
+    "leadTime": "12 weeks (standard)",
+    "pros": [
+      "THUMBWHEEL ON TOP \u2014 optional 3rd axis in handle, exactly what ThumbJoy needs for throttle",
+      "TRUE IP67 sealed above panel \u2014 standard, not optional",
+      "REDUNDANT Hall sensors \u2014 dual per axis, safety-critical rated",
+      "Hand grip form factor \u2014 palm-sized, ergonomic",
+      "Optional operator presence switch (dead man's switch)",
+      "Variety of handle options \u2014 configurable",
+      "US manufacturer (Carlsbad, CA) \u2014 same as HE3, easy to contact",
+      "5VDC compatible with existing ThumbJoy architecture",
+      "Panel mount with standard cutout"
+    ],
+    "cons": [
+      "2-axis base \u2014 no Z-twist rotation (unlike HE3). 3rd axis is thumbwheel only.",
+      "Larger form factor than HE3 (7.18\" tall hand grip vs fingertip)",
+      "Redundant sensors = more wires to route",
+      "No CAN output \u2014 analog only",
+      "$271 starting price \u2014 pricier than HE3 ($210)",
+      "12-week lead time for production orders"
+    ],
+    "suitability": "HIGH",
+    "suitabilityReason": "Very promising for ThumbJoy. The built-in thumbwheel on top is the killer feature \u2014 eliminates the need to retrofit a Melexis sensor. IP67 + redundant sensors + hand grip form factor. Key questions for sample eval: 1) Does the thumbwheel feel right for throttle? 2) Can we lock X-axis with Y-gate? 3) Internal wire routing possibility?",
+    "tags": [
+      "purchased",
+      "evaluation",
+      "IP67",
+      "redundant",
+      "thumbwheel",
+      "hand-grip",
+      "US-made",
+      "marine"
+    ]
   },
   {
     "id": "volvo-penta-evc2",
@@ -289,52 +499,66 @@
     "country": "Slovakia (Made) / Sweden (HQ)",
     "category": "OEM Marine Joystick System",
     "status": "REFERENCE",
-    "statusNote": "Industry-leading marine joystick — fly-by-wire docking for IPS & sterndrive. Part 24011, serial 2316335. Found at Kai Concepts shop.",
+    "statusNote": "Industry-leading marine joystick \u2014 fly-by-wire docking for IPS & sterndrive. Part 24011, serial 2316335. Found at Kai Concepts shop.",
     "image": "https://www.volvopenta.com/content/dam/volvo-penta/global/images/accessories/joystick-driving/joystick-driving-hero-mobile.jpg",
     "thumbnail": "https://www.volvopenta.com/content/dam/volvo-penta/global/images/accessories/joystick-driving/joystick-driving-hero-mobile.jpg",
     "website": "https://www.volvopenta.com/en-us/marine/accessories/joystick-control/",
     "datasheetUrl": "https://www.manualslib.com/manual/932445/Volvo-Penta-Ips.html?page=41",
     "videos": [
-      {"title": "Volvo Penta Joystick Controls for IPS Docking (Official)", "url": "https://www.youtube.com/watch?v=Q2mHjeil8kE"},
-      {"title": "BoatTEST: Volvo Penta Sterndrive Joystick Full Review", "url": "https://boattest.com/engine-review/Volvo-Penta/440022_Sterndrive-Joystick"}
+      {
+        "title": "Volvo Penta Joystick Controls for IPS Docking (Official)",
+        "url": "https://www.youtube.com/watch?v=Q2mHjeil8kE"
+      },
+      {
+        "title": "BoatTEST: Volvo Penta Sterndrive Joystick Full Review",
+        "url": "https://boattest.com/engine-review/Volvo-Penta/440022_Sterndrive-Joystick"
+      }
     ],
-    "axes": "3-axis (surge/sway/yaw) — push forward/back, side-to-side, twist to rotate",
+    "axes": "3-axis (surge/sway/yaw) \u2014 push forward/back, side-to-side, twist to rotate",
     "sensorType": "Hall Effect (proportional, fly-by-wire)",
     "output": "Proprietary CAN (Volvo Penta EVC2 bus)",
-    "breakoutForce": "Marine-optimized — firm, confident feel",
-    "operatingForce": "Proportional, boat-grade — two power modes (Low/High RPM button)",
+    "breakoutForce": "Marine-optimized \u2014 firm, confident feel",
+    "operatingForce": "Proportional, boat-grade \u2014 two power modes (Low/High RPM button)",
     "twistTorque": "Twist knob for yaw (boat spins on axis)",
     "mechanicalAngle": "Standard marine proportional",
-    "twistRotation": "Twist top to rotate boat — spring-return to center",
+    "twistRotation": "Twist top to rotate boat \u2014 spring-return to center",
     "ipRating": "Marine rated (helm-mounted, splash-proof enclosure)",
     "hollowShaft": "N/A (integrated unit)",
-    "lifecycle": "OEM marine grade — 10+ years typical service life",
+    "lifecycle": "OEM marine grade \u2014 10+ years typical service life",
     "mounting": "Helm console mount (drop-in or flush)",
     "price": "~$2,000-4,000 (part of EVC system, not sold standalone easily)",
     "pros": [
-      "THE gold standard for marine joystick docking — invented it for recreational boats",
-      "3-axis with twist yaw — push any direction + rotate with one hand",
+      "THE gold standard for marine joystick docking \u2014 invented it for recreational boats",
+      "3-axis with twist yaw \u2014 push any direction + rotate with one hand",
       "Two power modes: Low RPM (precision docking) and High RPM (windy conditions)",
-      "Fly-by-wire with sophisticated EVC software — individually controls each drive",
-      "Fully intuitive — no manual needed (confirmed by BoatTEST captain)",
+      "Fly-by-wire with sophisticated EVC software \u2014 individually controls each drive",
+      "Fully intuitive \u2014 no manual needed (confirmed by BoatTEST captain)",
       "Self-preservation: won't shift above 750 RPM, protects drives",
-      "Massive install base — thousands of boats worldwide",
+      "Massive install base \u2014 thousands of boats worldwide",
       "Station-keeping capability in current",
       "Side push feature for docking sideways against structures",
       "Integrated autopilot engagement after course changes",
-      "Made by Volvo — automotive/marine engineering quality"
+      "Made by Volvo \u2014 automotive/marine engineering quality"
     ],
     "cons": [
-      "Locked to Volvo Penta EVC ecosystem — proprietary CAN protocol",
+      "Locked to Volvo Penta EVC ecosystem \u2014 proprietary CAN protocol",
       "Requires twin engine/drive setup (IPS pods or DPS sterndrives)",
-      "NOT available as standalone joystick component — always part of drive system",
-      "Expensive as system — $2K-4K+ for the joystick portion alone",
+      "NOT available as standalone joystick component \u2014 always part of drive system",
+      "Expensive as system \u2014 $2K-4K+ for the joystick portion alone",
       "Cannot be repurposed for custom small-craft CAN integration without reverse engineering",
-      "Grey color only, fixed form factor — no grip customization"
+      "Grey color only, fixed form factor \u2014 no grip customization"
     ],
     "suitability": "LOW",
-    "suitabilityReason": "Cannot be used directly (proprietary EVC system). But THE most important reference product — Volvo Penta literally invented marine joystick docking. Study the 3-axis feel, the Low/High RPM modes, the twist yaw, and the fly-by-wire philosophy. The unit found at Kai Concepts shop (P/N 24011) can be physically examined for ergonomics and mechanical design.",
-    "tags": ["reference", "gold-standard", "marine", "OEM", "volvo-penta", "fly-by-wire", "found-in-shop"]
+    "suitabilityReason": "Cannot be used directly (proprietary EVC system). But THE most important reference product \u2014 Volvo Penta literally invented marine joystick docking. Study the 3-axis feel, the Low/High RPM modes, the twist yaw, and the fly-by-wire philosophy. The unit found at Kai Concepts shop (P/N 24011) can be physically examined for ergonomics and mechanical design.",
+    "tags": [
+      "reference",
+      "gold-standard",
+      "marine",
+      "OEM",
+      "volvo-penta",
+      "fly-by-wire",
+      "found-in-shop"
+    ]
   },
   {
     "id": "dockmate-twist",
@@ -343,13 +567,16 @@
     "country": "Netherlands",
     "category": "Wireless Marine Remote",
     "status": "REFERENCE",
-    "statusNote": "Complete marine solution — already solved waterproof joystick for boats",
+    "statusNote": "Complete marine solution \u2014 already solved waterproof joystick for boats",
     "image": "https://dockmate.eu/wp-content/uploads/2022/10/Dockmate-Twist-Silver-Front.png",
     "thumbnail": "https://dockmate.eu/wp-content/uploads/2022/10/Dockmate-Twist-Silver-Front.png",
     "website": "https://www.dockmate.us/twist",
     "datasheetUrl": "https://www.dockmate.se/wp-content/uploads/2024/02/dockmate-TWIST-product-info.pdf",
     "videos": [
-      {"title": "Dockmate TWIST — Wireless Joystick Demo", "url": "https://www.youtube.com/results?search_query=dockmate+twist+wireless+joystick+boat"}
+      {
+        "title": "Dockmate TWIST \u2014 Wireless Joystick Demo",
+        "url": "https://www.youtube.com/results?search_query=dockmate+twist+wireless+joystick+boat"
+      }
     ],
     "axes": "3-axis proportional (engine + thruster in 1 joystick)",
     "sensorType": "Proportional (Hall presumed)",
@@ -364,11 +591,31 @@
     "lifecycle": "Marine grade",
     "mounting": "Handheld + optional cradle mount",
     "price": "~$3,000-5,000 (full system with receiver)",
-    "pros": ["Already solved the marine waterproof joystick problem", "3-axis proportional in one unit", "Wireless with low latency", "Can be handheld OR cradle-mounted", "Controls 1, 2+ engines + thrusters", "Proven on thousands of boats worldwide", "REV G+ wireless receiver for easy integration"],
-    "cons": ["Full system — hard to source just the joystick", "Expensive for what we need", "Proprietary wireless protocol (not CAN J1939)", "Not designed for custom grip modification", "May not allow Melexis thumbwheel integration"],
+    "pros": [
+      "Already solved the marine waterproof joystick problem",
+      "3-axis proportional in one unit",
+      "Wireless with low latency",
+      "Can be handheld OR cradle-mounted",
+      "Controls 1, 2+ engines + thrusters",
+      "Proven on thousands of boats worldwide",
+      "REV G+ wireless receiver for easy integration"
+    ],
+    "cons": [
+      "Full system \u2014 hard to source just the joystick",
+      "Expensive for what we need",
+      "Proprietary wireless protocol (not CAN J1939)",
+      "Not designed for custom grip modification",
+      "May not allow Melexis thumbwheel integration"
+    ],
     "suitability": "LOW",
     "suitabilityReason": "Excellent reference product showing what 'done right' looks like in marine. Not practical to strip for parts, but their ergonomics and waterproofing approach is worth studying.",
-    "tags": ["reference", "wireless", "marine", "proven", "complete-system"]
+    "tags": [
+      "reference",
+      "wireless",
+      "marine",
+      "proven",
+      "complete-system"
+    ]
   },
   {
     "id": "seascape-rov",
@@ -377,13 +624,16 @@
     "country": "Netherlands",
     "category": "Waterproof ROV Hand Controller",
     "status": "REFERENCE",
-    "statusNote": "New 2025 product — solved waterproof 3-axis + thumbwheel combo",
+    "statusNote": "New 2025 product \u2014 solved waterproof 3-axis + thumbwheel combo",
     "image": "https://www.seascapesubsea.com/wp-content/uploads/2025/03/ROV-Hand-Controller-Front.png",
     "thumbnail": "https://www.seascapesubsea.com/wp-content/uploads/2025/03/ROV-Hand-Controller-Front.png",
     "website": "https://www.seascapesubsea.com/product/rov-hand-controller/",
     "datasheetUrl": "https://www.seascapesubsea.com/wp-content/uploads/SSROV-HC-waterproof-ROV-hand-controller-1.pdf",
     "videos": [
-      {"title": "Seascape ROV Controller — Blue Robotics Community Launch", "url": "https://discuss.bluerobotics.com/t/introducing-the-seascape-subsea-waterproof-rov-hand-controller/21526"}
+      {
+        "title": "Seascape ROV Controller \u2014 Blue Robotics Community Launch",
+        "url": "https://discuss.bluerobotics.com/t/introducing-the-seascape-subsea-waterproof-rov-hand-controller/21526"
+      }
     ],
     "axes": "3-axis joystick + analog thumbwheel + 2 rotary switches",
     "sensorType": "Likely Hall Effect / potentiometric",
@@ -398,11 +648,30 @@
     "lifecycle": "Marine subsea grade",
     "mounting": "Handheld",
     "price": "RFQ (new product, Sept 2025)",
-    "pros": ["Fully waterproof housing", "3-axis joystick + analog thumbwheel in one unit", "15 pushbuttons + 2 rotary switches", "New product (Sept 2025) — cutting edge design", "Designed for demanding marine environments (ROV ops)", "Blue Robotics community integration"],
-    "cons": ["USB HID output (not CAN J1939)", "Handheld form factor — not panel mount", "ROV-focused, not PWC/foiler", "New product — limited track record", "May not be available as OEM joystick component"],
+    "pros": [
+      "Fully waterproof housing",
+      "3-axis joystick + analog thumbwheel in one unit",
+      "15 pushbuttons + 2 rotary switches",
+      "New product (Sept 2025) \u2014 cutting edge design",
+      "Designed for demanding marine environments (ROV ops)",
+      "Blue Robotics community integration"
+    ],
+    "cons": [
+      "USB HID output (not CAN J1939)",
+      "Handheld form factor \u2014 not panel mount",
+      "ROV-focused, not PWC/foiler",
+      "New product \u2014 limited track record",
+      "May not be available as OEM joystick component"
+    ],
     "suitability": "MEDIUM",
     "suitabilityReason": "Very relevant reference for waterproof joystick + thumbwheel combo. Worth contacting Seascape about OEM component supply or design consultation.",
-    "tags": ["reference", "waterproof", "thumbwheel", "ROV", "2025-new"]
+    "tags": [
+      "reference",
+      "waterproof",
+      "thumbwheel",
+      "ROV",
+      "2025-new"
+    ]
   },
   {
     "id": "mercury-joystick",
@@ -411,13 +680,16 @@
     "country": "USA",
     "category": "OEM Marine Joystick System",
     "status": "REFERENCE",
-    "statusNote": "Industry standard for marine joystick docking — huge install base",
+    "statusNote": "Industry standard for marine joystick docking \u2014 huge install base",
     "image": "https://www.mercurymarine.com/content/dam/mercury-marine/global/hero/joystick-piloting-hero.jpg",
     "thumbnail": "https://www.mercurymarine.com/content/dam/mercury-marine/global/hero/joystick-piloting-hero.jpg",
     "website": "https://www.mercurymarine.com/us/en/gauges-and-controls/joystick-piloting",
     "datasheetUrl": null,
     "videos": [
-      {"title": "Mercury Joystick Piloting — How It Works", "url": "https://www.youtube.com/results?search_query=mercury+marine+joystick+piloting+demo"}
+      {
+        "title": "Mercury Joystick Piloting \u2014 How It Works",
+        "url": "https://www.youtube.com/results?search_query=mercury+marine+joystick+piloting+demo"
+      }
     ],
     "axes": "3-axis (surge, sway, yaw)",
     "sensorType": "Hall Effect (presumed)",
@@ -432,11 +704,28 @@
     "lifecycle": "OEM marine grade",
     "mounting": "Helm console, flush mount",
     "price": "$5,000-15,000 (full system with integration)",
-    "pros": ["Gold standard for marine joystick control", "Millions of hours of marine operation", "Intuitive 3-axis (including twist for yaw)", "Fully proportional speed control", "Proven waterproof marine design"],
-    "cons": ["Proprietary SmartCraft ecosystem — locked to Mercury", "Extremely expensive as a system", "Not available as standalone component", "Overkill for a small craft application"],
+    "pros": [
+      "Gold standard for marine joystick control",
+      "Millions of hours of marine operation",
+      "Intuitive 3-axis (including twist for yaw)",
+      "Fully proportional speed control",
+      "Proven waterproof marine design"
+    ],
+    "cons": [
+      "Proprietary SmartCraft ecosystem \u2014 locked to Mercury",
+      "Extremely expensive as a system",
+      "Not available as standalone component",
+      "Overkill for a small craft application"
+    ],
     "suitability": "LOW",
     "suitabilityReason": "Not practical to use, but the absolute gold standard for how marine joystick control should feel and perform. Study their ergonomics.",
-    "tags": ["reference", "gold-standard", "marine", "OEM", "proprietary"]
+    "tags": [
+      "reference",
+      "gold-standard",
+      "marine",
+      "OEM",
+      "proprietary"
+    ]
   },
   {
     "id": "megatron-try120",
@@ -455,20 +744,45 @@
     "sensorType": "Hall Effect (contactless), optionally redundant",
     "output": "CAN J1939, CANopen, USB, or Analog",
     "breakoutForce": "Heavy-duty finger forces (350N max X/Y, 9Nm max Z-torque)",
-    "operatingForce": "High spring and reset forces — designed for outdoor marine use",
-    "twistTorque": "Z-axis max torque 9 Nm — very stiff",
+    "operatingForce": "High spring and reset forces \u2014 designed for outdoor marine use",
+    "twistTorque": "Z-axis max torque 9 Nm \u2014 very stiff",
     "mechanicalAngle": "Standard fingertip range",
     "twistRotation": "3-axis version has integrated Z-twist sensor",
-    "ipRating": "IP67 (genuine — designed for marine cockpit exposure)",
-    "hollowShaft": "Unknown — needs confirmation",
+    "ipRating": "IP67 (genuine \u2014 designed for marine cockpit exposure)",
+    "hollowShaft": "Unknown \u2014 needs confirmation",
     "lifecycle": "5 million cycles",
-    "mounting": "Panel mount, 26mm installation depth — extremely shallow",
-    "price": "RFQ (~€300-600 est.)",
-    "pros": ["Explicitly designed for maritime bow thruster applications", "IP67 — marine-grade, designed for boat cockpit spray/splash", "CAN J1939 output option — native protocol match for ThumbJoy", "Z-axis twist with 9 Nm max torque — far stiffer than HF55", "Ultra-compact 26mm behind-panel depth — fits ThumbJoy beer-can base easily", "Robust metal internal mechanism", "Redundant sensor option for safety-critical use", "Ergonomic control knob with optional buttons on top", "350N max force X/Y — very robust", "German manufacturer, established OEM supplier"],
-    "cons": ["Hollow shaft unknown — critical to verify for Melexis wire routing", "European sourcing — may have longer lead times to US", "Premium pricing likely (German industrial OEM)", "Custom handle modifications may be needed for Melexis thumbwheel integration", "No images of internal mechanism available"],
+    "mounting": "Panel mount, 26mm installation depth \u2014 extremely shallow",
+    "price": "RFQ (~\u20ac300-600 est.)",
+    "pros": [
+      "Explicitly designed for maritime bow thruster applications",
+      "IP67 \u2014 marine-grade, designed for boat cockpit spray/splash",
+      "CAN J1939 output option \u2014 native protocol match for ThumbJoy",
+      "Z-axis twist with 9 Nm max torque \u2014 far stiffer than HF55",
+      "Ultra-compact 26mm behind-panel depth \u2014 fits ThumbJoy beer-can base easily",
+      "Robust metal internal mechanism",
+      "Redundant sensor option for safety-critical use",
+      "Ergonomic control knob with optional buttons on top",
+      "350N max force X/Y \u2014 very robust",
+      "German manufacturer, established OEM supplier"
+    ],
+    "cons": [
+      "Hollow shaft unknown \u2014 critical to verify for Melexis wire routing",
+      "European sourcing \u2014 may have longer lead times to US",
+      "Premium pricing likely (German industrial OEM)",
+      "Custom handle modifications may be needed for Melexis thumbwheel integration",
+      "No images of internal mechanism available"
+    ],
     "suitability": "HIGH",
     "suitabilityReason": "Purpose-built for marine applications (bow thrusters). IP67 genuine, CAN J1939, extremely compact 26mm depth, very stiff feel (9Nm Z-torque). If hollow shaft is confirmed, this could be the ideal ThumbJoy base. Contact MEGATRON for shaft details.",
-    "tags": ["candidate", "marine-native", "IP67", "CAN-J1939", "german", "compact", "OEM"]
+    "tags": [
+      "candidate",
+      "marine-native",
+      "IP67",
+      "CAN-J1939",
+      "german",
+      "compact",
+      "OEM"
+    ]
   },
   {
     "id": "gessmann-v24",
@@ -495,12 +809,32 @@
     "hollowShaft": "Unknown",
     "lifecycle": "V24: 20 million cycles, V28: 5 million cycles",
     "mounting": "Panel mount, modular",
-    "price": "RFQ (~€500-1200 est.)",
-    "pros": ["Extremely long life — V24 up to 20 million cycles", "IP67 protection", "PLd / SIL2 functional safety certification", "Highly modular — combine axes as needed", "German quality, established manufacturer (70+ years)", "Multiple handle and grip options"],
-    "cons": ["Likely too large for ThumbJoy beer-can housing", "Modular = complex configuration", "European sourcing, premium pricing", "CANopen standard (J1939 availability uncertain)", "Hollow shaft unlikely in modular design"],
+    "price": "RFQ (~\u20ac500-1200 est.)",
+    "pros": [
+      "Extremely long life \u2014 V24 up to 20 million cycles",
+      "IP67 protection",
+      "PLd / SIL2 functional safety certification",
+      "Highly modular \u2014 combine axes as needed",
+      "German quality, established manufacturer (70+ years)",
+      "Multiple handle and grip options"
+    ],
+    "cons": [
+      "Likely too large for ThumbJoy beer-can housing",
+      "Modular = complex configuration",
+      "European sourcing, premium pricing",
+      "CANopen standard (J1939 availability uncertain)",
+      "Hollow shaft unlikely in modular design"
+    ],
     "suitability": "LOW",
     "suitabilityReason": "Excellent engineering reference but likely too large and complex for ThumbJoy's compact form factor. Worth contacting if a larger base housing is considered in future revisions.",
-    "tags": ["investigation", "modular", "IP67", "german", "industrial", "safety-certified"]
+    "tags": [
+      "investigation",
+      "modular",
+      "IP67",
+      "german",
+      "industrial",
+      "safety-certified"
+    ]
   },
   {
     "id": "oem-controls-js9",
@@ -520,19 +854,38 @@
     "output": "Proportional analog 0-10V (configurable ratiometric/absolute), digital outputs per axis",
     "breakoutForce": "Marine-optimized feel (configurable)",
     "operatingForce": "Configurable via handle selection",
-    "twistTorque": "TBD — check with OEM Controls",
+    "twistTorque": "TBD \u2014 check with OEM Controls",
     "mechanicalAngle": "Configurable",
     "twistRotation": "TBD",
     "ipRating": "Marine rated (designed for saltwater environments)",
-    "hollowShaft": "Unknown — needs confirmation",
+    "hollowShaft": "Unknown \u2014 needs confirmation",
     "lifecycle": "Industrial grade",
     "mounting": "Panel mount",
     "price": "RFQ (US industrial, call 203-929-8431)",
-    "pros": ["US manufacturer with dedicated marine industry division", "Online configurator tool available", "Designed explicitly for saltwater/vibration/extreme marine environments", "Multiple handle options (compact, ergonomic, heavy-duty)", "Return-to-center, detent, adjustable friction options", "PLd/SIL2 safety capability (JS27 model)", "Phone: 203-929-8431, responsive US sales team"],
-    "cons": ["Exact IP rating unclear — 'marine rated' but not confirmed IP67", "No CAN J1939 listed on JS9 — analog output only (would need Teensy ADC)", "Specs behind their configurator/contact wall", "Z-axis twist availability unclear for JS9 model"],
+    "pros": [
+      "US manufacturer with dedicated marine industry division",
+      "Online configurator tool available",
+      "Designed explicitly for saltwater/vibration/extreme marine environments",
+      "Multiple handle options (compact, ergonomic, heavy-duty)",
+      "Return-to-center, detent, adjustable friction options",
+      "PLd/SIL2 safety capability (JS27 model)",
+      "Phone: 203-929-8431, responsive US sales team"
+    ],
+    "cons": [
+      "Exact IP rating unclear \u2014 'marine rated' but not confirmed IP67",
+      "No CAN J1939 listed on JS9 \u2014 analog output only (would need Teensy ADC)",
+      "Specs behind their configurator/contact wall",
+      "Z-axis twist availability unclear for JS9 model"
+    ],
     "suitability": "MEDIUM",
     "suitabilityReason": "Promising US manufacturer with explicit marine focus and online configurator. Need to contact them (203-929-8431) for detailed specs: IP rating, Z-axis twist, hollow shaft, CAN options. The JS27 model may be better suited (PLd/SIL2, more options).",
-    "tags": ["candidate", "marine", "US-made", "configurator", "OEM"]
+    "tags": [
+      "candidate",
+      "marine",
+      "US-made",
+      "configurator",
+      "OEM"
+    ]
   },
   {
     "id": "shipcontroller-joystick",
@@ -555,16 +908,33 @@
     "twistTorque": "Z-axis rotation recognized",
     "mechanicalAngle": "Standard marine",
     "twistRotation": "Z-axis rotation",
-    "ipRating": "IP67 (confirmed — marine specification)",
+    "ipRating": "IP67 (confirmed \u2014 marine specification)",
     "hollowShaft": "Unknown",
-    "lifecycle": "Very long — hall effect, minimal moving parts",
+    "lifecycle": "Very long \u2014 hall effect, minimal moving parts",
     "mounting": "Integrated into handheld remote",
     "price": "N/A (part of full system, not sold separately)",
-    "pros": ["Proven marine IP67 3-axis joystick in production", "Hall effect — long life, no wear", "Designed specifically for boat propulsion control", "Z-axis rotation for yaw — exactly our use case"],
-    "cons": ["Not available as standalone component", "Integrated into proprietary wireless remote system", "The actual joystick component inside is likely sourced from another OEM (APEM, MEGATRON, or similar)", "No standalone pricing or purchasing"],
+    "pros": [
+      "Proven marine IP67 3-axis joystick in production",
+      "Hall effect \u2014 long life, no wear",
+      "Designed specifically for boat propulsion control",
+      "Z-axis rotation for yaw \u2014 exactly our use case"
+    ],
+    "cons": [
+      "Not available as standalone component",
+      "Integrated into proprietary wireless remote system",
+      "The actual joystick component inside is likely sourced from another OEM (APEM, MEGATRON, or similar)",
+      "No standalone pricing or purchasing"
+    ],
     "suitability": "LOW",
-    "suitabilityReason": "Valuable as proof that IP67 3-axis hall effect marine joysticks exist in production. Worth contacting Shipcontroller to ask who manufactures the joystick component inside their remote — could lead us to a direct OEM source.",
-    "tags": ["reference", "marine-production", "IP67", "3-axis", "spain", "wireless-remote"]
+    "suitabilityReason": "Valuable as proof that IP67 3-axis hall effect marine joysticks exist in production. Worth contacting Shipcontroller to ask who manufactures the joystick component inside their remote \u2014 could lead us to a direct OEM source.",
+    "tags": [
+      "reference",
+      "marine-production",
+      "IP67",
+      "3-axis",
+      "spain",
+      "wireless-remote"
+    ]
   },
   {
     "id": "megatron-847",
@@ -573,7 +943,7 @@
     "country": "Germany (Munich)",
     "category": "Miniature Finger Joystick",
     "status": "INVESTIGATION",
-    "statusNote": "Ultra-compact IP67 hall effect finger joystick. 10M cycle life. Single-axis paddle style — could work as a dedicated thumbwheel replacement.",
+    "statusNote": "Ultra-compact IP67 hall effect finger joystick. 10M cycle life. Single-axis paddle style \u2014 could work as a dedicated thumbwheel replacement.",
     "image": "https://www.megatron.de/fileadmin/user_upload/products/joysticks/847/847_HQ.png",
     "thumbnail": "https://www.megatron.de/fileadmin/user_upload/products/joysticks/847/847_HQ.png",
     "website": "https://www.megatron.de/en/products/finger-joysticks/finger-joystick-series-847.html",
@@ -590,13 +960,31 @@
     "ipRating": "IP67",
     "hollowShaft": false,
     "lifecycle": "10 million cycles",
-    "mounting": "13mm behind-panel depth — extremely compact",
-    "price": "RFQ (~€100-200 est.)",
-    "pros": ["IP67 waterproof — genuine", "Incredibly compact (13mm depth)", "10 million cycle life — double the HF55", "Redundant sensor option", "Soft-touch ergonomics", "Could replace Melexis thumbwheel entirely as a standalone throttle input"],
-    "cons": ["Single-axis only — not a joystick replacement", "No Z-axis twist or X/Y control", "Would be an additional component, not a base replacement"],
+    "mounting": "13mm behind-panel depth \u2014 extremely compact",
+    "price": "RFQ (~\u20ac100-200 est.)",
+    "pros": [
+      "IP67 waterproof \u2014 genuine",
+      "Incredibly compact (13mm depth)",
+      "10 million cycle life \u2014 double the HF55",
+      "Redundant sensor option",
+      "Soft-touch ergonomics",
+      "Could replace Melexis thumbwheel entirely as a standalone throttle input"
+    ],
+    "cons": [
+      "Single-axis only \u2014 not a joystick replacement",
+      "No Z-axis twist or X/Y control",
+      "Would be an additional component, not a base replacement"
+    ],
     "suitability": "MEDIUM",
-    "suitabilityReason": "Not a base joystick replacement, but could serve as a standalone IP67 throttle paddle mounted externally on the ThumbJoy body — eliminating the need for Melexis thumbwheel and all 6 wires through the shaft. Worth considering as an alternative architecture.",
-    "tags": ["investigation", "throttle-alternative", "IP67", "compact", "german", "paddle"]
+    "suitabilityReason": "Not a base joystick replacement, but could serve as a standalone IP67 throttle paddle mounted externally on the ThumbJoy body \u2014 eliminating the need for Melexis thumbwheel and all 6 wires through the shaft. Worth considering as an alternative architecture.",
+    "tags": [
+      "investigation",
+      "throttle-alternative",
+      "IP67",
+      "compact",
+      "german",
+      "paddle"
+    ]
   },
   {
     "id": "vetus-bpje2",
@@ -619,15 +1007,32 @@
     "twistTorque": "Integrated",
     "mechanicalAngle": "Standard marine panel",
     "twistRotation": "Via combined knob rotation",
-    "ipRating": "IP67 (confirmed — marine specification)",
+    "ipRating": "IP67 (confirmed \u2014 marine specification)",
     "hollowShaft": "N/A (panel-integrated)",
     "lifecycle": "Marine OEM grade",
     "mounting": "130x75mm panel cutout, 90mm build-in depth, 12/24V",
     "price": "~$400-800 (full panel unit)",
-    "pros": ["Proven marine IP67 design — thousands of boats", "Combines multiple control axes into single intuitive knob", "Child-proof lock feature", "12/24V compatible", "Dutch marine engineering (VETUS is a major marine OEM)"],
-    "cons": ["Proprietary system — locked to VETUS thrusters", "Not available as standalone joystick component", "Panel-integrated, not a drop-in joystick base", "90mm build-in depth — larger than ideal"],
+    "pros": [
+      "Proven marine IP67 design \u2014 thousands of boats",
+      "Combines multiple control axes into single intuitive knob",
+      "Child-proof lock feature",
+      "12/24V compatible",
+      "Dutch marine engineering (VETUS is a major marine OEM)"
+    ],
+    "cons": [
+      "Proprietary system \u2014 locked to VETUS thrusters",
+      "Not available as standalone joystick component",
+      "Panel-integrated, not a drop-in joystick base",
+      "90mm build-in depth \u2014 larger than ideal"
+    ],
     "suitability": "LOW",
     "suitabilityReason": "Reference for how major marine OEMs solve the waterproof joystick control problem. The 'combined twin joystick into single knob' UX concept is interesting for ThumbJoy v2 design thinking.",
-    "tags": ["reference", "marine-OEM", "IP67", "netherlands", "thruster-control"]
+    "tags": [
+      "reference",
+      "marine-OEM",
+      "IP67",
+      "netherlands",
+      "thruster-control"
+    ]
   }
 ]
