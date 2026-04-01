@@ -47,6 +47,7 @@ async function init() {
     renderAll();
     setupNavs();
     setupJoyFilters();
+    setupRndTabs();
   } catch (err) {
     console.error('Failed to load data:', err);
     const errEl = document.getElementById('app-error');
@@ -61,6 +62,19 @@ function setupNavs() {
       document.querySelectorAll('.domain-nav .nav-tab').forEach(t => t.classList.toggle('active', t === tab));
       document.querySelectorAll('.section').forEach(s => s.classList.toggle('active', s.id === 'section-' + sectionId));
       state.activeSection = sectionId;
+    });
+  });
+}
+
+function setupRndTabs() {
+  document.querySelectorAll('.rnd-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.rnd-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.dataset.rnd;
+      document.querySelectorAll('.rnd-section').forEach(s => s.style.display = 'none');
+      const el = document.getElementById('rnd-' + target);
+      if (el) el.style.display = 'block';
     });
   });
 }

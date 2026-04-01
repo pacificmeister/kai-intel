@@ -37,7 +37,7 @@
       <nav class="domain-nav">
         <button class="nav-tab active" data-section="joy-overview">🗺 Overview</button>
         <button class="nav-tab" data-section="joy-products">🕹️ Products <span class="count" id="count-joysticks">—</span></button>
-        <button class="nav-tab" data-section="joy-wirereduction">⚡ Wire Reduction R&D</button>
+        <button class="nav-tab" data-section="joy-rnd">🔬 R&D</button>
         <button class="nav-tab" data-section="joy-teardowns">🔧 Teardowns <span class="count" id="count-teardowns">—</span></button>
         <button class="nav-tab" data-section="joy-comparison">📊 Comparison</button>
       </nav>
@@ -90,10 +90,83 @@
         <div class="joystick-grid" id="joy-products-grid"></div>
       </div>
 
-      <!-- WIRE REDUCTION R&D -->
-      <div id="section-joy-wirereduction" class="section">
-        <div class="section-header"><div><div class="section-title">⚡ Wire Reduction R&D: 6→3 Signal Multiplexing</div><div class="section-desc">Research into reducing the 6 Melexis wires to 3 (or fewer) by adding a tiny circuit in the grip.</div></div></div>
-        <div id="wirereduction-content"></div>
+      <!-- R&D -->
+      <div id="section-joy-rnd" class="section">
+        <div class="section-header"><div><div class="section-title">🔬 R&D</div><div class="section-desc">Active engineering research: spring stiffness, wire routing, and signal multiplexing.</div></div></div>
+
+        <!-- R&D Sub-nav -->
+        <div class="filter-bar" style="margin-bottom:24px;">
+          <button class="rnd-tab active" data-rnd="stiffness">🔧 Stiffness Modification</button>
+          <button class="rnd-tab" data-rnd="wirerun">🔌 Wire Run</button>
+          <button class="rnd-tab" data-rnd="wirereduction">⚡ Wire Reduction</button>
+        </div>
+
+        <!-- Stiffness Modification -->
+        <div id="rnd-stiffness" class="rnd-section active">
+          <div class="section-header"><div><div class="section-title">🔧 Stiffness Modification</div><div class="section-desc">Testing springs for X/Y and Z-axis feel on the APEM HF55 and alternative joystick bases.</div></div></div>
+
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:16px; border-left:4px solid var(--accent-blue);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <div style="font-size:16px; font-weight:700; color:var(--text-primary);">Z-Axis Spring Test</div>
+              <span style="font-size:10px; font-weight:700; padding:3px 10px; border-radius:20px; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); color:var(--accent-green);">INSTALLED</span>
+            </div>
+            <div style="font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;">
+              <strong style="color:var(--text-primary);">McMaster 5108N98</strong> — Tested for Z-axis stiffness (week of 2026-03-24).<br>
+              Currently installed in the <strong style="color:var(--accent-cyan);">Blue Prototype Joystick</strong> at the Kai shop.<br>
+              Original spring: McMaster 5108N973 (extension spring, 4mm OD, 0.8mm wire, 12.6mm long, 2.86 lbf/mm) — too soft at 1.3N breakout.
+            </div>
+            <a href="https://www.mcmaster.com/5108N98/" target="_blank" class="link-btn">↗ McMaster 5108N98</a>
+          </div>
+
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:16px; border-left:4px solid var(--accent-orange);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <div style="font-size:16px; font-weight:700; color:var(--text-primary);">X/Y Axis Spring Test Kit</div>
+              <span style="font-size:10px; font-weight:700; padding:3px 10px; border-radius:20px; background:rgba(249,115,22,0.15); border:1px solid rgba(249,115,22,0.3); color:var(--accent-orange);">ORDERED 2026-03-30</span>
+            </div>
+            <div style="font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;">
+              <strong style="color:var(--text-primary);">Lee Spring — 7 variants, 2 each ($112.72)</strong><br>
+              Order #260139265 · PO: "LoveF - Springs For Apem HF55"<br>
+              Purpose: Mechanical testing of different stiffnesses for X/Y axes. Custom production once correct stiffness is determined.
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:8px; margin-bottom:12px;">
+              <div style="font-size:12px; color:var(--text-secondary); padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">LC 047F 03 S316 × 2 — $17.26</div>
+              <div style="font-size:12px; color:var(--text-secondary); padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">LC 047F 03 M × 2 — $15.64</div>
+              <div style="font-size:12px; color:var(--text-secondary); padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">LCM125FF 01 S × 2 — $15.64</div>
+              <div style="font-size:12px; color:var(--text-secondary); padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">LC 054FF 03S × 2 — $15.64</div>
+              <div style="font-size:12px; color:var(--text-secondary); padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">LC 054FF 03S316 × 2 — $17.26</div>
+              <div style="font-size:12px; color:var(--text-secondary); padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">LCM125FF 01 M × 2 — $15.64</div>
+              <div style="font-size:12px; color:var(--text-secondary); padding:8px; background:rgba(0,0,0,0.15); border-radius:var(--radius-sm);">LC 054FF 03M × 2 — $15.64</div>
+            </div>
+            <a href="https://www.leespring.com/" target="_blank" class="link-btn">↗ Lee Spring</a>
+          </div>
+        </div>
+
+        <!-- Wire Run -->
+        <div id="rnd-wirerun" class="rnd-section" style="display:none;">
+          <div class="section-header"><div><div class="section-title">🔌 Wire Run</div><div class="section-desc">Research into routing Melexis sensor wires through the joystick shaft internally — eliminating external wiring.</div></div></div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:16px;">
+            <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">📋 The Problem</div>
+            <div style="font-size:13px; color:var(--text-secondary); line-height:1.6;">
+              The ThumbJoy needs 6 Melexis Hall sensor wires routed from the grip top, down through the joystick shaft to the base PCB. Currently these run externally, which is ugly and unreliable. The APEM HF55 shaft is too tight for internal routing, and the wires disturb Z-axis magnet alignment.
+            </div>
+          </div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; margin-bottom:16px;">
+            <div style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:12px;">🔍 Solutions Under Investigation</div>
+            <div style="font-size:13px; color:var(--text-secondary); line-height:1.6;">
+              <div style="margin-bottom:8px; padding-left:8px; border-left:2px solid var(--accent-cyan)33;">• <strong>Flex PCB ribbon</strong> — Ultra-thin flexible PCB routed through shaft</div>
+              <div style="margin-bottom:8px; padding-left:8px; border-left:2px solid var(--accent-cyan)33;">• <strong>Through-wall magnetic sensing</strong> — Melexis below grip, magnet through housing wall</div>
+              <div style="margin-bottom:8px; padding-left:8px; border-left:2px solid var(--accent-cyan)33;">• <strong>Ultra-thin wire</strong> — AWG 34+ magnet wire through shaft</div>
+              <div style="margin-bottom:8px; padding-left:8px; border-left:2px solid var(--accent-cyan)33;">• <strong>Wireless sensor</strong> — BLE/proprietary wireless from grip to base</div>
+              <div style="margin-bottom:8px; padding-left:8px; border-left:2px solid var(--accent-cyan)33;">• <strong>Slip ring</strong> — Rotary electrical contact for Z-axis rotation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wire Reduction -->
+        <div id="rnd-wirereduction" class="rnd-section" style="display:none;">
+          <div class="section-header"><div><div class="section-title">⚡ Wire Reduction: 6→3 Signal Multiplexing</div><div class="section-desc">Research into reducing the 6 Melexis wires to 3 (or fewer) by adding a tiny circuit in the grip.</div></div></div>
+          <div id="wirereduction-content"></div>
+        </div>
       </div>
 
       <!-- JOY TEARDOWNS -->
