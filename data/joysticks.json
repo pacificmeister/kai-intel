@@ -6,7 +6,7 @@
     "country": "France",
     "category": "Fingertip Proportional",
     "status": "\u2705 CURRENTLY IN USE",
-    "statusNote": "Active joystick base in ThumbJoy (custom PN HF5844, 500kbps CAN firmware). Known issues: Z-axis spring too soft (1.3N), NOT actually waterproof despite IP67 claim (confirmed by APEM). Merten emailed APEM (Mar 31) requesting stiffer springs + alternatives.",
+    "statusNote": "Active joystick base in ThumbJoy (custom PN HF5844, 500kbps CAN firmware). Known issues: Z-axis spring too soft (1.3N), NOT actually waterproof despite IP67 claim (confirmed by APEM). Merten emailed APEM (Mar 31) requesting stiffer springs + alternatives. Z-AXIS TEST: McMaster 5108N98 spring tested for Z-axis stiffness (week of 3/24), currently installed in Blue Prototype at shop. X/Y AXIS TEST: 7 Lee Spring variants ordered (3/30, Order #260139265) to test different stiffnesses \u2014 mechanical testing before custom production.",
     "image": "https://www.apem.com/idec-apem/medias/sys_master/hde/h16/50437538570270/HF-Series-product-image.png",
     "thumbnail": "../img/apem-hf55.jpg",
     "website": "https://www.apem.com/idec-apem/en_US/Joysticks/Fingertip-Proportional/HF/p/HF55S10",
