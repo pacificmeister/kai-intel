@@ -104,13 +104,12 @@ function renderJoystickCard(j) {
 
   const suitColor = { HIGH: 'var(--accent-green)', MEDIUM: 'var(--accent-yellow)', LOW: 'var(--accent-red)', UNSUITABLE: 'var(--accent-red)' }[j.suitability] || 'var(--text-muted)';
   const thumbSrc = j.thumbnail || j.image;
-  const imgHtml = thumbSrc ? `<div class="joy-image-wrap"><img src="${esc(thumbSrc)}" alt="${esc(j.name)}" class="joy-image" onerror="this.parentElement.style.display='none'"></div>` : '';
   const videosHtml = (j.videos && j.videos.length) ? `<div style="padding:0 20px 12px; display:flex; gap:6px; flex-wrap:wrap;">${j.videos.map(v => `<a href="${esc(v.url)}" target="_blank" class="link-btn" style="font-size:10px; background:rgba(239,68,68,0.08); border-color:rgba(239,68,68,0.3); color:var(--accent-red);">▶ ${esc(v.title)}</a>`).join('')}</div>` : '';
 
   return `
     <div class="joystick-card" style="border-top:3px solid ${statusColor};">
-      ${imgHtml}
-      <div class="card-header" style="padding-top:${thumbSrc ? '12px' : '20px'};">
+      <div class="card-header" style="padding-top:20px; display:flex; gap:14px; align-items:flex-start;">
+        ${thumbSrc ? `<div style="flex-shrink:0; width:80px; height:80px; border-radius:8px; overflow:hidden; background:rgba(255,255,255,0.05); border:1px solid var(--border); display:flex; align-items:center; justify-content:center;"><img src="${esc(thumbSrc)}" alt="${esc(j.name)}" style="max-width:100%; max-height:100%; object-fit:contain; padding:4px;" onerror="this.parentElement.style.display='none'"></div>` : ''}
         <div class="card-company" style="flex:1;">
           <div class="company-name">${esc(j.name)}</div>
           <div class="company-location">🏭 ${esc(j.manufacturer)} · 📍 ${esc(j.country)}</div>
