@@ -109,7 +109,7 @@ function renderJoystickCard(j) {
   return `
     <div class="joystick-card" style="border-top:3px solid ${statusColor};">
       <div class="card-header" style="padding-top:20px; display:flex; gap:14px; align-items:flex-start;">
-        ${thumbSrc ? `<div style="flex-shrink:0; width:80px; height:80px; border-radius:8px; overflow:hidden; background:rgba(255,255,255,0.05); border:1px solid var(--border); display:flex; align-items:center; justify-content:center;"><img src="${esc(thumbSrc)}" alt="${esc(j.name)}" style="max-width:100%; max-height:100%; object-fit:contain; padding:4px;" onerror="this.parentElement.style.display='none'"></div>` : ''}
+        ${thumbSrc ? `<div style="flex-shrink:0; width:100px; height:100px; border-radius:10px; overflow:hidden; background:rgba(255,255,255,0.08); border:1px solid var(--border); display:flex; align-items:center; justify-content:center;"><img src="${esc(thumbSrc)}" alt="${esc(j.name)}" style="width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.style.display='none'"></div>` : ''}
         <div class="card-company" style="flex:1;">
           <div class="company-name">${esc(j.name)}</div>
           <div class="company-location">🏭 ${esc(j.manufacturer)} · 📍 ${esc(j.country)}</div>
