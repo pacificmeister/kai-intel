@@ -1,5 +1,25 @@
 [
   {
+    "id": "intel-023",
+    "date": "2026-04-02",
+    "title": "Axopar × Flite eFoil collab — boat makers now bundling eFoils as accessories ($6,995, April 2026)",
+    "summary": "Finnish boat brand Axopar and Australian eFoil maker Flite have launched the 'Flite AIR x Axopar' — a purpose-built eFoil board designed specifically for boaters to use as a water toy from their Axopar vessels. Previewed at Boot Düsseldorf January 2026, available April 2026 at $6,995. Not a direct competitor to Flying Couch (single-seat eFoil), but a strong market signal: premium boat brands are now integrating foiling boards as premium accessories/tenders. This 'foil as yacht toy' positioning is exactly the space Kai Concepts can target — a Flying Couch as THE premium water toy for luxury boat owners. The Axopar×Flite move validates that boat-owner audience. Also at Boot Düsseldorf: the Awake NAVI foiler was shown, confirming the two products shared the same show floor — the market is now watching both the seated-foiler and eFoil-accessory categories simultaneously.",
+    "source": "lakelandboating.com / allatsea.net",
+    "url": "https://lakelandboating.com/flite-and-axopar-launch-efoiling-board-for-boaters/",
+    "tags": ["flite", "axopar", "collaboration", "efoil-accessory", "boat-owners", "market-signal", "boot-dusseldorf"],
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "intel-022",
+    "date": "2026-04-02",
+    "title": "💰 Arc Boat raises $50M Series C (a16z, Eclipse, Menlo, Lowercarbon) — electric marine sector hits VC prime time",
+    "summary": "Los Angeles electric boat startup Arc Boat Company closed a $50M Series C round led by Eclipse, with a16z, Menlo Ventures, Lowercarbon Capital, Necessary Ventures, and Offline Ventures participating. Arc makes large electric sport/wake boats (Arc Sport, Arc One, Arc Coast) — not hydrofoils — and is now expanding into commercial and defense electric vessels. Revenue described as 'meaningful' from consumer sport boats. The Tesla-playbook parallel (high-end consumer → commercial scale) is explicit: former Tesla VP Greg Reichow at Eclipse directly cited it. Key takeaway for Kai Concepts: A-list VC money (a16z + Lowercarbon + Menlo in the same cap table) is now flowing directly into electric marine. This is the same investor cohort that funded the EV transition. The sector is no longer a curiosity — it's a fundable thesis. Raises urgency for Kai Concepts to get to a fundable milestone (working demo, early orders) before this window gets crowded.",
+    "source": "techcrunch.com",
+    "url": "https://techcrunch.com/2026/03/19/arc-expands-into-electric-commercial-and-defense-boats-with-50m-raise/",
+    "tags": ["arc-boat", "funding", "a16z", "series-c", "vc-signal", "electric-marine", "market-signal"],
+    "priority": "MEDIUM"
+  },
+  {
     "id": "intel-021",
     "date": "2026-03-30",
     "title": "🚨 Valo/Boundary Layer Technologies appears DEFUNCT — ridevalo.com domain hijacked by gambling spam",
