@@ -1,5 +1,15 @@
 [
   {
+    "id": "intel-024",
+    "date": "2026-04-04",
+    "title": "Candela P-12 Business unveiled — premium luxury ferry variant, first unit commissioned for Mumbai",
+    "summary": "Candela launched the P-12 Business on April 2, 2026 — a premium interior variant of their P-12 electric hydrofoil ferry, aimed at high-end transport routes (resort transfers, urban commuter links). Features include plush seating, Wi-Fi, USB-C charging, a coffee bar, and a star ceiling lighting system. Noise level: just 63-64 dB inside at top speed (closer to a quiet conversation than a ferry). Range: 40 nmi at 25 knots. The first P-12 Business has been commissioned and is headed to Mumbai (Gateway of India to Navi Mumbai Airport, cutting 2-hour trip to 35 min), Maldives, and Saudi Arabia. While far outside the 2-person flying couch category, this shows Candela's platform is becoming deeply differentiated by cabin experience — a strong market signal that premium interior experience sells on the water. The couch/lounge design philosophy Kai Concepts is building into a small 2-person foiler is exactly what Candela is selling at the 12-passenger ferry scale. Validates the Flying Couch as the consumer-accessible version of this same premium foiling experience.",
+    "source": "electrek.co / workboat365.com",
+    "url": "https://electrek.co/2026/04/02/candelas-new-p-12-business-electric-ferry-is-luxury-soaring-just-above-the-waves/",
+    "tags": ["candela", "p-12-business", "ferry", "premium-interior", "market-signal", "luxury-foiling"],
+    "priority": "LOW"
+  },
+  {
     "id": "intel-023",
     "date": "2026-04-02",
     "title": "Axopar × Flite eFoil collab — boat makers now bundling eFoils as accessories ($6,995, April 2026)",
