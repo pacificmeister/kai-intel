@@ -1,5 +1,25 @@
 [
   {
+    "id": "intel-026",
+    "date": "2026-04-04",
+    "title": "Flite wins iF Design Awards for AMPJet & Fliteboard RACE — eFoil design credibility going mainstream",
+    "summary": "Australian eFoil maker Flite (Byron Bay) won two prestigious iF Design Awards this week: for the FLITELab* AMPJet and the Fliteboard RACE. The AMPJet is notable — it's the world's first removable jet cartridge fully integrated within a foil board structure, delivering 25kg of thrust with no external drag, usable across prone foiling, winging, and downwinding. Fliteboard RACE, co-developed with Mercury Racing, hits 34 mph (30 knots). Also noted: Flite received Gold recognition at the German Design Award 2026. Not direct competitors to Flying Couch (both are single-rider eFoils), but the design award signal matters: major international design juries are now taking electric foiling products seriously as design objects — the same credibility Kai Concepts needs. The AMPJet's propulsion tech (integrated, removable, multi-sport) is a space to watch for IP overlap.",
+    "source": "boatingnz.co.nz / fliteboard.com",
+    "url": "https://www.boatingnz.co.nz/2026/03/flite-wins-two-prestigious-if-design-awards-for-flitelab-ampjet-and-fliteboard-race/",
+    "tags": ["flite", "design-award", "ampjet", "mercury-racing", "market-signal", "efoil"],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-025",
+    "date": "2026-04-04",
+    "title": "MC-Zero electric tender debuts at Palm Beach — ZeroJet × McConaghy carbon jet tender, first twin-engine electric tender",
+    "summary": "ZeroJet and McConaghy Boats debuted the MC-Zero range of electric tenders at the Palm Beach International Boat Show (late March 2026). Two models: MC-Zero 450 (4.5m, twin-engine — 'world's first twin jet electric tender') and MC-Zero 325 (3.25m, single engine). Both use ZeroJet's 48V / 30kW electric jet systems and semi-solid state batteries from Australian supplier Safiery (3C discharge rate — high performance, fast discharge). Full carbon fiber construction. Not a hydrofoil — a premium electric surface tender. Relevance to Kai Concepts: LOW as a competitor (wrong category), but signals that the premium yacht tender market is actively electrifying with carbon/high-performance products. The overlap audience (superyacht/luxury boat owners as early adopters) is identical. Validates the 'electric water toy for luxury boaters' positioning Kai Concepts can own at the foiling end of the market.",
+    "source": "yachting-pages.com",
+    "url": "https://www.yachting-pages.com/articles/zerojet-and-mcconaghy-launch-mc-zero-news.html",
+    "tags": ["mc-zero", "zerojet", "mcconaghy", "electric-tender", "carbon", "palm-beach", "market-signal"],
+    "priority": "LOW"
+  },
+  {
     "id": "intel-024",
     "date": "2026-04-04",
     "title": "Candela P-12 Business unveiled — premium luxury ferry variant, first unit commissioned for Mumbai",
