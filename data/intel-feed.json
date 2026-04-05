@@ -1,5 +1,15 @@
 [
   {
+    "id": "intel-027",
+    "date": "2026-04-05",
+    "title": "Vector Water Craft (Australia) launches 7-model portable electric mini jet boat lineup — 2-seater Duo at ~$11,800 USD",
+    "summary": "Australian startup Vector Water Craft launched a lineup of 7 portable electric mini jet boats, getting mainstream press coverage this week (Watercraft Journal, April 1, 2026). Highlights: models range from 15kW single-seat playboats to a 70kW+ high-performance solo machine. The key model for Kai Concepts awareness: the Vector Duo 25kW 2-Seater Electric Jet Boat — a two-seat electric jet boat designed to fit in a pickup bed or large SUV (trailer-free). Top speed ~60 km/h, ~2 hr runtime, priced from approximately $11,800 USD equivalent (AUD pricing). NOT a hydrofoil — purely a surface jet boat. Relevance to Flying Couch: LOW as a direct competitor (no foil, very different experience), but it signals growing competition in the compact/portable electric 2-seat watercraft space at the affordable end. Their trailer-free pitch is interesting — Kai Concepts could adopt similar messaging. Worth monitoring if they add foil capability.",
+    "source": "watercraftjournal.com / vectorwatercraft.com.au",
+    "url": "https://watercraftjournal.com/portable-electric-mini-jet-boats-skip-the-ramp-and-trailer-hassle/",
+    "tags": ["vector-water-craft", "new-entrant", "australia", "2-seat", "electric-jet", "no-foil", "affordable", "portable"],
+    "priority": "LOW"
+  },
+  {
     "id": "intel-026",
     "date": "2026-04-04",
     "title": "Flite wins iF Design Awards for AMPJet & Fliteboard RACE — eFoil design credibility going mainstream",
