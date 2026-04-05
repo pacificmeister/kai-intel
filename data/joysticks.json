@@ -1052,5 +1052,71 @@
       "netherlands",
       "thruster-control"
     ]
+  },
+  {
+    "id": "makersan-mo390-394",
+    "name": "Makersan MO 390 + MO 394",
+    "manufacturer": "Makersan",
+    "country": "Turkey",
+    "category": "Modular CAN Joystick + Grip",
+    "status": "NEW CANDIDATE (PARTIAL FIT)",
+    "statusNote": "Discovered 2026-04-05 during market scan. Strong on IP67 + CAN + thumbwheel/button configurability, but no confirmed Z-axis twist on this platform yet.",
+    "image": "https://makersan.com/wp-content/uploads/2025/07/makersan-mo390-394.png",
+    "thumbnail": "https://makersan.com/wp-content/uploads/2025/07/makersan-mo390-394.png",
+    "website": "https://makersan.com/joysticks/joystick-3/",
+    "datasheetUrl": "https://makersan.com/joysticks/joystick-grip/",
+    "videos": [],
+    "axes": "2-axis full, 2-axis plus, or single-axis actuation (Z-twist not confirmed)",
+    "sensorType": "Contactless Hall effect, full redundant",
+    "output": "CAN J1939, CANopen, or analog (MO394 grip analog-only in full assembly note)",
+    "breakoutForce": "TBD",
+    "operatingForce": "TBD",
+    "twistTorque": "Not specified (likely no Z twist in current MO390/394 base offering)",
+    "mechanicalAngle": "±20° lever operating angle",
+    "twistRotation": "Not confirmed",
+    "ipRating": "IP67",
+    "hollowShaft": "Unknown",
+    "lifecycle": "Up to 5 million cycles",
+    "mounting": "Joystick base with configurable grip and connector options",
+    "price": "RFQ",
+    "pros": [
+      "IP67 stated by manufacturer",
+      "CAN J1939 and CANopen support",
+      "Redundant Hall sensing",
+      "Strong grip configurability: up to 5 front buttons + rear controls",
+      "Thumbwheel/rocker/toggle options including vertical orientation",
+      "Wide supply range options (5V or 8-32V listed)"
+    ],
+    "cons": [
+      "No confirmed Z-axis twist spring-return (requirement #4)",
+      "No confirmed Y-gate/limiter code set",
+      "No published breakout/operating force curves found",
+      "Unknown shaft geometry for internal Melexis wire routing",
+      "No confirmed compact palm-sized geometry yet"
+    ],
+    "suitability": "MEDIUM-LOW",
+    "suitabilityReason": "Promising as a configurable marine control grip platform (IP67 + CAN + thumbwheel/buttons), but currently fails mandatory ThumbJoy requirement #4 until Z-axis twist with spring return is confirmed.",
+    "requirementsCheck": {
+      "ip67": "PASS",
+      "thumbwheel_or_melexis": "PASS",
+      "xy_with_y_gate": "PARTIAL",
+      "z_axis_twist": "FAIL_UNCONFIRMED",
+      "palm_compact": "UNKNOWN",
+      "buttons": "PASS",
+      "analog_or_can": "PASS"
+    },
+    "contacts": {
+      "website": "https://makersan.com",
+      "sales": "Via site contact form"
+    },
+    "tags": [
+      "new",
+      "IP67",
+      "CAN-J1939",
+      "CANopen",
+      "thumbwheel",
+      "modular-grip",
+      "partial-fit"
+    ]
   }
 ]
