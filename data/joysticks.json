@@ -1118,5 +1118,115 @@
       "modular-grip",
       "partial-fit"
     ]
+  },
+  {
+    "id": "apem-hj-series",
+    "name": "APEM HJ Series",
+    "manufacturer": "APEM",
+    "country": "France",
+    "category": "Industrial Hand Joystick",
+    "status": "NEW CANDIDATE (REJECTED FOR THUMBJOY)",
+    "statusNote": "Discovered in Monday sweep (2026-04-06) via APEM distributor documentation. Strong force and CAN options, but sealing is typically up to IP63 front panel (IP67 only for some ball-tip handle configurations), so it fails ThumbJoy's mandatory IP67 no-exceptions requirement.",
+    "image": "https://www.controldevices.com.au/wp-content/uploads/2025/04/APEM-HJ-Series-Hall-effect-Industrial-Joystick.webp",
+    "thumbnail": "https://www.controldevices.com.au/wp-content/uploads/2025/04/APEM-HJ-Series-Hall-effect-Industrial-Joystick.webp",
+    "website": "https://www.controldevices.com.au/product/hj-series-hall-effect-industrial-joystick/",
+    "datasheetUrl": "https://www.controldevices.com.au/product/hj-series-hall-effect-industrial-joystick/",
+    "axes": "Multi-axis hand joystick (vehicle in-cab class); specific twist variants not confirmed in this source",
+    "sensorType": "Hall Effect",
+    "output": "CANbus J1939, CANopen, USB, analog options",
+    "breakoutForce": "TBD",
+    "operatingForce": "14.0 N (from distributor technical summary)",
+    "twistTorque": "TBD",
+    "mechanicalAngle": "38 deg (subject to limiter plate)",
+    "twistRotation": "TBD",
+    "ipRating": "Up to IP63 front panel (source notes some ball-tip handle configs up to IP67)",
+    "hollowShaft": "Unknown",
+    "lifecycle": "5 million cycles",
+    "mounting": "Panel mount",
+    "price": "RFQ",
+    "pros": [
+      "Much stiffer operating force than fingertip class options (14N)",
+      "CAN J1939/CANopen plus USB and analog options",
+      "Multiple handle options",
+      "Industrial durability (5M cycles)"
+    ],
+    "cons": [
+      "Fails mandatory IP67 requirement in standard configurations (IP63 front panel)",
+      "Twist/Z-axis and Y-gate details not confirmed in source used",
+      "Likely larger than palm-sized ThumbJoy target"
+    ],
+    "suitability": "LOW",
+    "suitabilityReason": "Rejected for ThumbJoy baseline because mandatory IP67 waterproof requirement is not broadly met on the listed configurations.",
+    "requirementsCheck": {
+      "ip67": "FAIL",
+      "thumbwheel_or_melexis": "UNKNOWN",
+      "xy_with_y_gate": "PARTIAL",
+      "z_axis_twist": "UNKNOWN",
+      "palm_compact": "PARTIAL",
+      "buttons": "PASS",
+      "analog_or_can": "PASS"
+    },
+    "tags": [
+      "new",
+      "apem",
+      "j1939",
+      "canopen",
+      "rejected-ip",
+      "monday-discovery"
+    ]
+  },
+  {
+    "id": "runntech-rt02-can2",
+    "name": "RunnTech RT02 Series (CAN 2.0 variant)",
+    "manufacturer": "RunnTech",
+    "country": "China",
+    "category": "Industrial Multi-Axis Joystick",
+    "status": "NEW CANDIDATE (REJECTED FOR THUMBJOY)",
+    "statusNote": "New RT02 CAN2.0 listing found in Monday sweep (published ~2 weeks before 2026-04-06). Good CAN integration and button-rich handle, but only IP64 in the listing, failing mandatory IP67 requirement.",
+    "image": "https://www.runntech.com/wp-content/uploads/2025/03/RT02-CAN2-joystick.jpg",
+    "thumbnail": "https://www.runntech.com/wp-content/uploads/2025/03/RT02-CAN2-joystick.jpg",
+    "website": "https://www.runntech.com/runntech-rt02-seris-industrial-joystick-with-can-2-0-communication-output-precision-meets-reliability/",
+    "datasheetUrl": "https://www.runntech.com/runntech-rt02-seris-industrial-joystick-with-can-2-0-communication-output-precision-meets-reliability/",
+    "axes": "Dual-axis in published example; 1/2/3-axis family variants mentioned",
+    "sensorType": "Hall Effect or potentiometer family options",
+    "output": "CAN 2.0 (listing), analog options in family",
+    "breakoutForce": "TBD",
+    "operatingForce": "Spring return to center; numeric force TBD",
+    "twistTorque": "TBD",
+    "mechanicalAngle": "TBD",
+    "twistRotation": "TBD",
+    "ipRating": "IP64 (published listing)",
+    "hollowShaft": "Unknown",
+    "lifecycle": "TBD",
+    "mounting": "Panel mount",
+    "price": "RFQ",
+    "pros": [
+      "Fresh 2026 market activity with CAN 2.0 variant",
+      "Rich grip controls (4 buttons + rear trigger in featured config)",
+      "Available in rugged industrial form factors"
+    ],
+    "cons": [
+      "IP64 only in listing, below mandatory IP67",
+      "No confirmed vertical thumbwheel on top",
+      "No confirmed Z-axis spring-return in published CAN2.0 config"
+    ],
+    "suitability": "LOW",
+    "suitabilityReason": "Rejected for ThumbJoy due to mandatory IP67 failure in currently documented RT02 CAN2.0 configuration.",
+    "requirementsCheck": {
+      "ip67": "FAIL",
+      "thumbwheel_or_melexis": "FAIL",
+      "xy_with_y_gate": "PARTIAL",
+      "z_axis_twist": "UNKNOWN",
+      "palm_compact": "FAIL",
+      "buttons": "PASS",
+      "analog_or_can": "PASS"
+    },
+    "tags": [
+      "new",
+      "runntech",
+      "can2",
+      "rejected-ip",
+      "monday-discovery"
+    ]
   }
 ]
