@@ -1,5 +1,15 @@
 [
   {
+    "id": "intel-028",
+    "date": "2026-04-06",
+    "title": "IP ALERT: SeaBubbles acquired Neocean's foiling tech - inverted-T foil patents now in ferry startup's hands",
+    "summary": "Confirmed (Sept 2024, updated Jan 2026): French electric water taxi startup SeaBubbles acquired the patents and technology of defunct Neocean (Overboat) in September 2024, specifically targeting Neocean's expertise in 'inverted T' foil flight control systems. Neocean ceased operations March 2024 after financial difficulties. SeaBubbles is using the acquisition to accelerate development of its SmartBubble 8-pax water taxi. What this means for Kai Concepts: (1) Neocean's Overboat was a legitimate 2-person electric foiling catamaran with proven stability tech - that lineage is now inside SeaBubbles; (2) SeaBubbles' SmartBubble is a commercial 8-seat ferry, not a Flying Couch competitor, but their foil control IP portfolio just got stronger; (3) The specific inverted-T foil patents are now encumbered - Kai Concepts engineering should audit these claims before finalizing foil design. Monitor SeaBubbles for any consumer/leisure product announcements.",
+    "source": "prnewswire.com / marinebusiness.news / bwmonline.com",
+    "url": "https://www.prnewswire.com/news-releases/seabubbles-accelerates-sustainable-maritime-mobility-with-smartbubble-and-strategic-acquisition-302247896.html",
+    "tags": ["seabubbles", "neocean", "patent-acquisition", "inverted-t-foil", "flight-control", "ip-alert", "france"],
+    "priority": "MEDIUM"
+  },
+  {
     "id": "intel-027",
     "date": "2026-04-05",
     "title": "Vector Water Craft (Australia) launches 7-model portable electric mini jet boat lineup — 2-seater Duo at ~$11,800 USD",

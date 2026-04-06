@@ -1,5 +1,17 @@
 [
   {
+    "id": "pat-008",
+    "title": "Neocean Overboat Inverted-T Foil Flight Control System (acquired by SeaBubbles)",
+    "assignee": "SeaBubbles (acquired from Neocean / Electro Nautic France)",
+    "country": "France / International",
+    "filingDate": "~2019-2022 (Neocean era)",
+    "status": "Granted (acquired via liquidation sale, Sept 2024)",
+    "description": "Covers flight control systems for inverted-T hydrofoil watercraft, developed for the Overboat catamaran. SeaBubbles acquired these patents in Sept 2024 to accelerate their SmartBubble foil control development. The inverted-T foil with active stabilization (100Hz control loop) is the core claimed IP.",
+    "relevance": "MEDIUM-HIGH — Kai Concepts must audit these claims before finalizing foil design. Inverted-T is a common foil geometry. SeaBubbles now controls key flight control IP in this space.",
+    "url": "https://marinebusiness.news/news/leisure-marine/seabubbles-acquires-neoceans-foiling-technology/",
+    "tags": ["seabubbles", "neocean", "inverted-t", "flight-control", "acquired", "france", "audit-required"]
+  },
+  {
     "id": "pat-001",
     "title": "WaveDrive Propulsion System (ENAUTIC)",
     "assignee": "ENAUTIC / Electro Nautic",

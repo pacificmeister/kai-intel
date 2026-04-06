@@ -269,6 +269,35 @@
     "tags": ["6-passenger", "ai-controls", "aerospace", "canada", "new-entrant-2026"]
   },
   {
+    "id": "seabubbles-smartbubble",
+    "company": "SeaBubbles",
+    "location": "Paris, France",
+    "website": "https://seabubbles.com",
+    "founded": 2016,
+    "product": "SmartBubble",
+    "tagline": "8-seat electric hydrofoil water taxi with acquired Neocean foil-control IP",
+    "passengers": 8,
+    "topSpeed": null,
+    "range": null,
+    "battery": null,
+    "weight": null,
+    "length": null,
+    "price": "Commercial / B2B only",
+    "pricingModel": "commercial fleet",
+    "fundingStatus": "Backed by Richard Branson / Virgin; multiple rounds",
+    "fundingAmount": null,
+    "keyTeam": ["Alain Thébault (Founder)"],
+    "patents": ["Retractable foil system (4 patents)", "Neocean inverted-T foil flight control (acquired Sept 2024)"],
+    "threatLevel": "LOW-WATCH",
+    "threatReason": "8-pax commercial water taxi — not a direct Flying Couch competitor. BUT: SeaBubbles acquired Neocean's inverted-T foil flight control patents in Sept 2024. Their growing IP portfolio in foil stabilization is relevant for Kai Concepts engineering IP clearance. Watch for any consumer/leisure pivot.",
+    "latestNews": "Sept 2024: Acquired Neocean's foil patents and flight control expertise. Revealed SmartBubble 8-pax model. Jan 2026: Referenced as owning Neocean's hydrofoil legacy. No consumer product planned as of reporting.",
+    "mediaLinks": [
+      "https://www.prnewswire.com/news-releases/seabubbles-accelerates-sustainable-maritime-mobility-with-smartbubble-and-strategic-acquisition-302247896.html",
+      "https://marinebusiness.news/news/leisure-marine/seabubbles-acquires-neoceans-foiling-technology/"
+    ],
+    "tags": ["8-passenger", "commercial", "patent-holder", "inverted-t-foil", "france", "ip-watch"]
+  },
+  {
     "id": "iguana-foiler",
     "company": "Iguana Yachts",
     "location": "Normandy, France",
