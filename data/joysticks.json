@@ -164,8 +164,8 @@
     "manufacturer": "Elobau",
     "country": "Germany (Leutkirch)",
     "category": "Heavy Duty Industrial/Outdoor",
-    "status": "🔬 SAMPLE REQUESTED",
-    "statusNote": "Merten submitted config J4C6ASS00GC0025J via Elobau configurator (Mar 31). Account manager Brianna McIntyre assigned. Sample requested. Concern: may be too large. Waiting on sample ETA + pricing.",
+    "status": "🔬 DEEP-DIVED (2026-04-07)",
+    "statusNote": "Tuesday deep-dive complete (2026-04-07). J4F is robust and truly IP67 on electronics but physically large/heavy for ThumbJoy. Verified dimensions, connector, CAN details, and load specs. Still no confirmed hollow shaft path for internal Melexis wiring.",
     "image": "https://www.elobau.com/fileadmin/_processed_/a/5/csm_J4F_product_f2c4d4b5e6.png",
     "thumbnail": "../img/elobau-j4f.jpg",
     "website": "https://www.elobau.com/en/products/operator-controls/operate-control/multi-axis-joysticks/heavy-duty-joystick-j4f/",
@@ -176,43 +176,65 @@
         "url": "https://www.ivtinternational.com/videos/agritechnica-video-elobaus-all-new-joystick-range.html"
       }
     ],
-    "axes": "Multi-axis configurable",
+    "axes": "2-axis base (X/Y ±20°). J4 platform supports Z-load and variants, but J4F twist implementation remains unconfirmed for this exact config.",
     "sensorType": "Hall Effect + Reed (contactless)",
-    "output": "CAN bus",
-    "breakoutForce": "Heavy duty (significantly higher than HF55)",
-    "operatingForce": "Heavy duty — designed for fatigue-free outdoor operation",
-    "twistTorque": "TBD",
-    "mechanicalAngle": "Configurable",
-    "twistRotation": "TBD",
-    "ipRating": "IP67 (genuine — designed for outdoor/harsh conditions)",
-    "hollowShaft": "Unknown — needs confirmation",
-    "lifecycle": "Industrial grade, reed = infinite cycles",
-    "mounting": "Panel mount, various options",
-    "price": "RFQ (German industrial, ~$500-1000 est.)",
+    "output": "J1939 CAN (J4F safety config, 250 kbps), 9–32V. J4 base family also supports analog/redundant/CANopen variants.",
+    "breakoutForce": "Not published in available J4F docs; heavy-duty class. (J4 base supports detent/friction/interlock modes.)",
+    "operatingForce": "Not explicitly published for J4F in reviewed docs; static load class is very high (2000N X/Y, 700N Z at 190mm lever).",
+    "twistTorque": "Not published for J4F config. Z-axis load capacity listed for J4 base family (700N at 190mm) but no confirmed spring-return twist torque curve.",
+    "mechanicalAngle": "±20° X/Y (40° total)",
+    "twistRotation": "Unconfirmed for J4F safety-handle configuration",
+    "ipRating": "IP67 electronics (also listed as IP6K7K for J4F electronics); mechanics/thumbwheel on J4F comparison listed IP54",
+    "hollowShaft": "Unknown; likely non-hollow/limited routing (zinc die-cast shaft + base Deutsch connector architecture)",
+    "lifecycle": "2 million cycles (J4F base), handle button/thumbwheel in J4F comparison: 2 million",
+    "mounting": "Top-mount, 87mm under-panel depth, 106x106mm base, 87.7x87.7mm hole pattern, Deutsch DT04-6P connector",
+    "price": "RFQ (industrial OEM pricing, typically premium)",
     "pros": [
-      "Genuinely IP67 — designed for harsh outdoor conditions",
-      "Modular handle construction — application-specific mods possible",
-      "Hall effect + reed contactless = no corrosion failure mode",
-      "CAN bus output",
-      "Micro push buttons for outdoor use built into handles",
-      "Ergonomic — designed for fatigue-free operation",
-      "German engineering quality"
+      "Real marine/off-highway robustness with IP67 electronics",
+      "CAN J1939 safety module support, 9–32V system-friendly",
+      "Very high static load capacity (X/Y 2000N, Z 700N @190mm)",
+      "Detent/friction/center-interlock actuation modes on J4 base family",
+      "Modular handle ecosystem with button and thumbwheel options",
+      "Known connector and mounting geometry (Deutsch DT04-6P, top-mount)"
     ],
     "cons": [
-      "Hollow shaft availability unknown",
-      "Heavy-duty size may exceed ThumbJoy housing dimensions",
-      "German pricing (premium)",
-      "Lead times from Europe",
-      "Less marine-specific than JR Merritt"
+      "Too large/heavy for palm-sized ThumbJoy target (334.6mm overall, ~1.26kg base+handle class)",
+      "No verified hollow shaft/internal wire path for custom Melexis routing",
+      "No published breakout/operating force curves for J4F in retrieved docs",
+      "Twist (Z-axis spring-return) not confirmed for this exact J4F configuration",
+      "J4F safety CAN profile appears fixed to J1939 250 kbps unless custom arrangement"
     ],
-    "suitability": "HIGH",
-    "suitabilityReason": "ACTIVELY BEING EVALUATED — Merten configuring in Elobau tool (Mar 31). IP67 genuine, CAN J1939 available, multiaxial with thumbwheel, capacitive presence detection for kill switch. 7-36V supply fits 12V system. Need to verify hollow shaft for Melexis wire routing.",
+    "suitability": "MEDIUM",
+    "suitabilityReason": "Strong industrial benchmark and genuine environmental sealing, but likely too big for ThumbJoy and still unclear on internal wire routing + Z-twist behavior. Best treated as a robust architecture reference unless Kai accepts a larger controller envelope.",
     "tags": [
       "top-candidate",
       "IP67",
       "modular",
       "german",
       "outdoor"
+    ],
+    "dimensions": "Joystick system (J4 + 36xG): total height 334.6mm, above panel 247.6mm, below panel 87mm, base 106x106mm, weight ~1260g",
+    "contacts": {
+      "accountManager": "Brianna McIntyre",
+      "email": "b.mcintyre@elobau.com",
+      "phone": "847-672-7515",
+      "insideSales": "e.warnes@elobau.com",
+      "website": "https://www.elobau.com/en/contact/"
+    },
+    "requirementsCheck": {
+      "ip67": "PASS (electronics)",
+      "thumbwheel_or_melexis": "PASS (handle options exist)",
+      "xy_with_y_gate": "PARTIAL (detent/interlock options; explicit Y-only gate not yet confirmed)",
+      "z_axis_twist": "UNCONFIRMED",
+      "palm_compact": "FAIL (too large/heavy)",
+      "buttons": "PASS",
+      "analog_or_can": "PASS"
+    },
+    "deepDiveDate": "2026-04-07",
+    "deepDiveSources": [
+      "https://je-joystick.elobau.com/wp-content/uploads/2025/04/Technical_Comparison_JE_J4F_online_E_2025.pdf",
+      "https://www.kdk-argentina.com/representadas/elobau/assets/hoja-de-datos---joystick-de-servicio-pesado-j4f-%E2%80%93-elobau.pdf",
+      "https://www.elobau.com/en/products/operator-controls/operate-control/multi-axis-joysticks/heavy-duty-joystick-j4-base/"
     ]
   },
   {
