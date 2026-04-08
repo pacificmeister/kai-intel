@@ -1081,8 +1081,8 @@
     "manufacturer": "Makersan",
     "country": "Turkey",
     "category": "Modular CAN Joystick + Grip",
-    "status": "NEW CANDIDATE (PARTIAL FIT)",
-    "statusNote": "Discovered 2026-04-05 during market scan. Strong on IP67 + CAN + thumbwheel/button configurability, but no confirmed Z-axis twist on this platform yet.",
+    "status": "DEEPENED (WEDNESDAY UPDATE)",
+    "statusNote": "Updated 2026-04-08 with code-level confirmation: MO390 supports Single Axis NS/WE + detent/friction modes (usable Y-lock behavior), and MO394 grip matrix confirms multiple vertical thumb control configurations. Still no confirmed spring-return Z-twist on this platform.",
     "image": "https://makersan.com/wp-content/uploads/2025/07/makersan-mo390-394.png",
     "thumbnail": "https://makersan.com/wp-content/uploads/2025/07/makersan-mo390-394.png",
     "website": "https://makersan.com/joysticks/joystick-3/",
@@ -1105,23 +1105,23 @@
       "IP67 stated by manufacturer",
       "CAN J1939 and CANopen support",
       "Redundant Hall sensing",
+      "MO390 code table supports Single Axis NS/WE and detent/friction behavior",
+      "MO394 grip code table confirms vertical thumb control options",
       "Strong grip configurability: up to 5 front buttons + rear controls",
-      "Thumbwheel/rocker/toggle options including vertical orientation",
       "Wide supply range options (5V or 8-32V listed)"
     ],
     "cons": [
       "No confirmed Z-axis twist spring-return (requirement #4)",
-      "No confirmed Y-gate/limiter code set",
       "No published breakout/operating force curves found",
       "Unknown shaft geometry for internal Melexis wire routing",
       "No confirmed compact palm-sized geometry yet"
     ],
     "suitability": "MEDIUM-LOW",
-    "suitabilityReason": "Promising as a configurable marine control grip platform (IP67 + CAN + thumbwheel/buttons), but currently fails mandatory ThumbJoy requirement #4 until Z-axis twist with spring return is confirmed.",
+    "suitabilityReason": "Improved confidence for requirements #2 and #3 after code-level verification (vertical thumb controls + functional Y-lock behavior). Still blocked by missing confirmed Z-axis spring-return (#4).",
     "requirementsCheck": {
       "ip67": "PASS",
-      "thumbwheel_or_melexis": "PASS",
-      "xy_with_y_gate": "PARTIAL",
+      "thumbwheel_or_melexis": "PASS (vertical thumb control codes confirmed on MO394)",
+      "xy_with_y_gate": "PASS (functional equivalent via Single Axis NS/WE mode; explicit \"Y-gate\" naming still absent)",
       "z_axis_twist": "FAIL_UNCONFIRMED",
       "palm_compact": "UNKNOWN",
       "buttons": "PASS",
@@ -1249,6 +1249,64 @@
       "can2",
       "rejected-ip",
       "monday-discovery"
+    ]
+  },
+  {
+    "id": "makersan-mo393-thumbwheel",
+    "name": "Makersan MO393 Thumbwheel Joystick",
+    "manufacturer": "Makersan",
+    "country": "Turkey",
+    "category": "Single-Axis Thumbwheel Module",
+    "status": "NEW (WEDNESDAY CREATIVE SOLUTION)",
+    "statusNote": "Added 2026-04-08. Dedicated thumb control module with multiple spring-return/rocker/toggle variants. Not a full joystick replacement, but a promising way to avoid routing extra thumbwheel wires through a main joystick shaft.",
+    "image": "https://makersan.com/wp-content/uploads/2025/07/makersan-mo393-thumbwheel.png",
+    "thumbnail": "https://makersan.com/wp-content/uploads/2025/07/makersan-mo393-thumbwheel.png",
+    "website": "https://makersan.com/joysticks/thumbwheel-joystick/",
+    "datasheetUrl": "https://makersan.com/joysticks/thumbwheel-joystick/",
+    "videos": [],
+    "axes": "Single-axis thumb control",
+    "sensorType": "Hall effect (redundant / full redundant options)",
+    "output": "Analog 0-5V variants (per MO393 order coding)",
+    "breakoutForce": "TBD",
+    "operatingForce": "Spring-return / rocker / toggle variants",
+    "twistTorque": "N/A",
+    "mechanicalAngle": "N/A (thumbwheel/rocker style actuation)",
+    "twistRotation": "N/A",
+    "ipRating": "Unconfirmed on MO393 page (platform family targets IP67 class)",
+    "hollowShaft": "N/A",
+    "lifecycle": "TBD",
+    "mounting": "Grip/top-panel integration module",
+    "price": "RFQ",
+    "pros": [
+      "Can offload thumb throttle function from main joystick handle",
+      "Multiple cap/actuation styles (spring return, rocker, toggle)",
+      "Redundant/full-redundant analog options",
+      "Simple wiring options (loose cable or Molex Micro-Fit)",
+      "Useful fallback if through-shaft routing remains problematic"
+    ],
+    "cons": [
+      "Not a complete X/Y/Z joystick base",
+      "CAN output not confirmed on MO393 itself",
+      "IP rating for MO393 variant needs explicit confirmation",
+      "Requires separate integration effort in ThumbJoy housing"
+    ],
+    "suitability": "MEDIUM (ARCHITECTURE COMPONENT)",
+    "suitabilityReason": "Good creative solution for requirement #2 and the wire-routing bottleneck, but cannot satisfy full joystick requirements alone.",
+    "requirementsCheck": {
+      "ip67": "UNCONFIRMED",
+      "thumbwheel_or_melexis": "PASS",
+      "xy_with_y_gate": "N/A",
+      "z_axis_twist": "N/A",
+      "palm_compact": "PASS",
+      "buttons": "N/A",
+      "analog_or_can": "PARTIAL (analog confirmed)"
+    },
+    "tags": [
+      "new",
+      "thumbwheel",
+      "creative-solution",
+      "wire-routing-alternative",
+      "analog"
     ]
   }
 ]
