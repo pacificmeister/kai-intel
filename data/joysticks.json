@@ -1315,57 +1315,75 @@
     "manufacturer": "OTTO Controls",
     "country": "USA (Carpentersville, IL)",
     "category": "Miniature Hall Joystick with Twist",
-    "status": "NEW DISCOVERY (THURSDAY 2026-04-09)",
-    "statusNote": "Added in Thursday discovery sweep. Strong sealing and twist-axis behavior, but CAN and thumbwheel integration are still open.",
+    "status": "🔬 DEEP-DIVED (2026-04-10)",
+    "statusNote": "Friday deep-dive completed from OTTO catalog pages + product page. Confirmed force/torque window, panel geometry, gating code, and wiring schema. Still waiting on factory answer for hollow-shaft/internal wire routing feasibility for Melexis integration.",
     "image": "https://otto-controls.com/jht-z-axis-miniature-z-axis-joystick-2",
     "thumbnail": "https://otto-controls.com/jht-z-axis-miniature-z-axis-joystick-2",
     "website": "https://otto-controls.com/jht-z-axis-miniature-z-axis-joystick-2",
     "datasheetUrl": "https://www.otto-controls.com/-/media/products/joysticks/jhtzaxisminiaturezaxisjoystick/JHT-Z-Axis-Joystick-Catalog-Pages.ashx",
     "axes": "2-axis + Z-axis twist",
     "sensorType": "Hall effect (contactless)",
-    "output": "Analog or SPI (3.3V/5V)",
-    "breakoutForce": "TBD (vendor force curve needed)",
-    "operatingForce": "TBD; OTTO page notes compact joystick with optional gating",
-    "twistTorque": "Z-axis options include spring return, detent, or friction hold",
-    "mechanicalAngle": "TBD",
+    "output": "Analog Hall (5V) and SPI options (3.3V or 5V). No native CAN/J1939 listed.",
+    "breakoutForce": "X/Y operating force at grip (with bellows): 0.5 to 1.5 lbf (2.2 to 6.7 N), ~1 lbf nominal option",
+    "operatingForce": "X/Y operating force window confirmed from catalog: 0.5-1.5 lbf with bellows",
+    "twistTorque": "Z-axis operational torque: return-to-center 8-24 oz·in (typ 16), detent 10-30 oz·in (typ 20), friction hold 1-7 oz·in (typ 4)",
+    "mechanicalAngle": "X/Y travel shown to ±20° (JHT family output graph), multiple gate options including single-axis gated return-to-center",
     "twistRotation": "60° total",
     "ipRating": "IP68S electronics sealed",
-    "hollowShaft": "Unknown",
+    "hollowShaft": "Unknown (no shaft cross-section in public catalog; must confirm with OTTO engineering)",
     "lifecycle": "5 million joystick cycles; 1 million Z-axis/pushbutton cycles",
-    "mounting": "Miniature panel/control-box class",
+    "mounting": "Compact square footprint; drawing shows 1.67 in square body, 1.280 in suggested panel opening, max panel thickness 0.140 in, 4x #4-40 inserts",
     "price": "RFQ",
     "pros": [
-      "IP68S sealing exceeds IP67 requirement",
-      "Native Z-axis twist with spring-return option",
-      "Compact package for limited-space designs",
-      "Hall-effect contactless sensing",
-      "Multiple gating options available"
+      "IP68S electronics sealing exceeds mandatory IP67",
+      "Native Z-axis twist with spring-return, detent, or friction variants",
+      "Measured force range now known (0.5-1.5 lbf X/Y, stiffer than HF55 class)",
+      "Compact package with defined panel cutout and inserts",
+      "Optional dual pushbuttons on top",
+      "Hall-effect contactless sensing and optional SPI output"
     ],
     "cons": [
-      "No native CAN J1939/CANopen listed",
-      "No built-in vertical thumbwheel confirmed",
-      "Hollow shaft/wire routing not yet confirmed",
-      "Force curves still missing"
+      "No native CAN J1939/CANopen (analog/SPI only)",
+      "No built-in vertical thumbwheel option in standard handle",
+      "Hollow-shaft/internal wire path still unconfirmed (critical for custom Melexis wheel)",
+      "No published force-vs-angle curve for full X/Y stroke (only operating-force range)",
+      "1 million-cycle rating for Z-axis/pushbuttons is lower than joystick axis life"
     ],
     "suitability": "MEDIUM-HIGH",
-    "suitabilityReason": "Potentially one of the best seal+twist compact bases, but still needs confirmation on thumbwheel integration and wiring geometry for ThumbJoy.",
+    "suitabilityReason": "Technically strong on sealing, compactness, and twist behavior. Biggest remaining risk is thumbwheel integration path: without confirmed internal routing (or a proven external/through-wall design), requirement #2 is only partial.",
     "requirementsCheck": {
       "ip67": "PASS (IP68S)",
-      "thumbwheel_or_melexis": "PARTIAL (no built-in thumbwheel; custom integration unconfirmed)",
-      "xy_with_y_gate": "PARTIAL (gating options listed; explicit Y-only confirmation pending)",
+      "thumbwheel_or_melexis": "PARTIAL (no built-in wheel; custom Melexis integration depends on unresolved routing geometry)",
+      "xy_with_y_gate": "PASS (single-axis gated return-to-center option available; orientation can be set for Y-only behavior)",
       "z_axis_twist": "PASS",
       "palm_compact": "PASS",
-      "buttons": "PARTIAL (optional pushbuttons)",
-      "analog_or_can": "PASS (analog/SPI)"
+      "buttons": "PASS (2-button option)",
+      "analog_or_can": "PASS (analog/SPI accepted; no CAN)"
     },
     "tags": [
-      "new",
-      "thursday-discovery",
       "IP68S",
-      "twist",
       "compact",
-      "otto"
-    ]
+      "deep-dived",
+      "friday-rotation",
+      "new",
+      "otto",
+      "thursday-discovery",
+      "twist"
+    ],
+    "dimensions": "Approx. from OTTO drawing: 1.67 in square body, 1.280 in panel opening, max panel thickness 0.140 in, height callout 2.70 in max",
+    "contacts": {
+      "company": "OTTO Controls / OTTO Engineering",
+      "phone": "+1-847-428-7171",
+      "contactForm": "https://www.otto-controls.com/contact-us",
+      "address": "2 East Main Street, Carpentersville, IL 60110, USA"
+    },
+    "deepDiveDate": "2026-04-10",
+    "deepDiveSources": [
+      "https://otto-controls.com/jht-z-axis-miniature-z-axis-joystick-2",
+      "https://docs.rs-online.com/1aa5/0900766b81344b62.pdf",
+      "https://www.otto-controls.com/contact-us"
+    ],
+    "recommendedConfig": "JHT-E2-1-GG-GG-1-1 (example): Z return-to-center + dual output + single-axis gated behavior + wire leads + two pushbuttons. Verify final code with OTTO sales."
   },
   {
     "id": "elobau-j7",
