@@ -1,5 +1,27 @@
 [
   {
+    "id": "pat-009",
+    "title": "Watercraft Having a Lift Assembly (BRP/Sea-Doo)",
+    "assignee": "Bombardier Recreational Products Inc. (BRP) / BRP US Inc.",
+    "number": "WO2025163457A1 (PCT/IB2025/050787)",
+    "country": "International (WIPO/PCT)",
+    "filingDate": "2025-01-24 (priority 2024-01-30)",
+    "publicationDate": "2025-08-07",
+    "status": "Published / Pending",
+    "description": "Hydrofoil personal watercraft patent covering a straddle-seat hull with mast/foil lift assembly, pump-jet propulsion, movable foil surfaces (elevons), and control logic that links handlebar position to foil pitch (manual + sensor-assisted automated modes). Claims include retractable/movable hydrofoil arrangements and control-unit-managed pitch/height stabilization.",
+    "relevance": "MEDIUM-HIGH — Adjacent IP from the largest global PWC OEM. Not a direct 2-person couch craft today, but highly relevant for hydrofoil PWC control architecture and future multi-passenger product expansion.",
+    "url": "https://patents.google.com/patent/WO2025163457A1/en",
+    "tags": [
+      "brp",
+      "sea-doo",
+      "wipo",
+      "hydrofoil-pwc",
+      "lift-assembly",
+      "handlebar-control",
+      "pending"
+    ]
+  },
+  {
     "id": "pat-008",
     "title": "Neocean Overboat Inverted-T Foil Flight Control System (acquired by SeaBubbles)",
     "assignee": "SeaBubbles (acquired from Neocean / Electro Nautic France)",
@@ -9,7 +31,15 @@
     "description": "Covers flight control systems for inverted-T hydrofoil watercraft, developed for the Overboat catamaran. SeaBubbles acquired these patents in Sept 2024 to accelerate their SmartBubble foil control development. The inverted-T foil with active stabilization (100Hz control loop) is the core claimed IP.",
     "relevance": "MEDIUM-HIGH — Kai Concepts must audit these claims before finalizing foil design. Inverted-T is a common foil geometry. SeaBubbles now controls key flight control IP in this space.",
     "url": "https://marinebusiness.news/news/leisure-marine/seabubbles-acquires-neoceans-foiling-technology/",
-    "tags": ["seabubbles", "neocean", "inverted-t", "flight-control", "acquired", "france", "audit-required"]
+    "tags": [
+      "seabubbles",
+      "neocean",
+      "inverted-t",
+      "flight-control",
+      "acquired",
+      "france",
+      "audit-required"
+    ]
   },
   {
     "id": "pat-001",
@@ -21,7 +51,11 @@
     "description": "Core propulsion and foil control technology powering WaveFlyer Volaré. Enables autonomous stabilization and efficient hydrofoiling. Claims cover the integrated drive-and-foil-control approach.",
     "relevance": "HIGH — direct competitor tech. ENAUTIC's core IP. Defines what Kai Concepts cannot copy.",
     "url": "https://enautic.co",
-    "tags": ["enautic", "propulsion", "foil-control"]
+    "tags": [
+      "enautic",
+      "propulsion",
+      "foil-control"
+    ]
   },
   {
     "id": "pat-002",
@@ -34,7 +68,12 @@
     "description": "Covers a boat with two hydrofoils where the rear strut carries a motor pod with counter-rotating propellers, which is turnable for steering. This is essentially the C-Pod system architecture.",
     "relevance": "MEDIUM — Candela's core drivetrain patent. Relevant if Kai Concepts uses similar pod-on-strut approach.",
     "url": "https://patents.google.com/patent/WO2022010402A1/en",
-    "tags": ["candela", "c-pod", "motor-pod", "counter-rotating"]
+    "tags": [
+      "candela",
+      "c-pod",
+      "motor-pod",
+      "counter-rotating"
+    ]
   },
   {
     "id": "pat-003",
@@ -47,7 +86,11 @@
     "description": "A hydrofoil assembly adapted to be removably attached to a watercraft. Covers modular hydrofoil attachment systems. Published 2023.",
     "relevance": "LOW — broad modular attachment claim. Monitor for grant.",
     "url": "https://patents.google.com/patent/US20230312061A1/en",
-    "tags": ["modular", "attachment", "general"]
+    "tags": [
+      "modular",
+      "attachment",
+      "general"
+    ]
   },
   {
     "id": "pat-004",
@@ -60,13 +103,22 @@
     "description": "New WIPO PCT application from Norway for a hydrofoil vessel design. Filed October 2024. Details limited as still pending publication.",
     "relevance": "LOW — monitor for claims as it publishes.",
     "url": "https://patents.google.com/patent/WO2025089965A1/en",
-    "tags": ["norway", "wipo", "pending", "monitor"]
+    "tags": [
+      "norway",
+      "wipo",
+      "pending",
+      "monitor"
+    ]
   },
   {
     "id": "pat-005",
     "title": "Watercraft with Hydrofoil (SubSeaSail)",
     "assignee": "SubSeaSail, Inc.",
-    "inventors": ["Chris Todter", "Mark Timothy Ott", "Michael B. Jones"],
+    "inventors": [
+      "Chris Todter",
+      "Mark Timothy Ott",
+      "Michael B. Jones"
+    ],
     "number": "US11897583",
     "country": "USA",
     "filingDate": "2023-05-05",
@@ -75,7 +127,11 @@
     "description": "A watercraft including a board with top/bottom surface and a hydrofoil attached to a strut. Covers hydrofoil board attachment geometries.",
     "relevance": "LOW — covers board-style craft, not seated platforms. Monitor for reissue/continuation.",
     "url": "https://patents.justia.com/patents-by-us-classification/114/274",
-    "tags": ["board-style", "usa", "strut-attachment"]
+    "tags": [
+      "board-style",
+      "usa",
+      "strut-attachment"
+    ]
   },
   {
     "id": "pat-007",
@@ -87,7 +143,14 @@
     "description": "Patent covers a hydrofoil watercraft with integrated lift-propulsion system, depicted as a surfboard-shaped hull with foil below. Appears to be an eFoil-category design. Part of BRP/Sea-Doo's push into electric powersports.",
     "relevance": "MEDIUM — BRP is the largest PWC OEM globally. If they commercialize this, it signals full mainstream legitimacy for electric hydrofoiling and creates a mass-market reference point. Unlikely to threaten Kai Concepts' couch niche directly, but watch for subsequent patents covering larger or multi-person configurations.",
     "url": "https://www.rideapart.com/news/757391/brp-sea-doo-electric-ev-hydrofoil-surfboard/",
-    "tags": ["brp", "sea-doo", "oem", "efoil", "usa", "large-incumbent"]
+    "tags": [
+      "brp",
+      "sea-doo",
+      "oem",
+      "efoil",
+      "usa",
+      "large-incumbent"
+    ]
   },
   {
     "id": "pat-006",
@@ -102,6 +165,10 @@
     "description": "Design patent for an electric watercraft — covers ornamental design.",
     "relevance": "LOW — design patent, doesn't block functional innovation.",
     "url": "https://patents.justia.com/patents-by-us-classification/D12/309",
-    "tags": ["design-patent", "usa", "watercraft"]
+    "tags": [
+      "design-patent",
+      "usa",
+      "watercraft"
+    ]
   }
 ]

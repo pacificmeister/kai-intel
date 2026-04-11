@@ -1,5 +1,45 @@
 [
   {
+    "id": "brp-seadoo-hydrofoil-pwc",
+    "company": "BRP / Sea-Doo",
+    "location": "Québec, Canada",
+    "website": "https://sea-doo.brp.com",
+    "founded": 1942,
+    "product": "Hydrofoil PWC concept (patent-stage)",
+    "tagline": "OEM hydrofoil personal watercraft architecture with active lift control",
+    "passengers": 1,
+    "topSpeed": null,
+    "range": null,
+    "battery": null,
+    "weight": null,
+    "length": null,
+    "price": null,
+    "pricingModel": "not announced",
+    "fundingStatus": "Incumbent OEM",
+    "fundingAmount": null,
+    "keyTeam": [],
+    "patents": [
+      "WO2025163457A1 (Watercraft having a lift assembly)",
+      "Lift-Propulsion System for a Watercraft and Watercraft Having Same"
+    ],
+    "threatLevel": "MEDIUM-WATCH",
+    "threatReason": "Not a direct Flying Couch competitor yet (patent-stage, likely single-rider PWC form factor), but Sea-Doo is the largest powersports OEM with global distribution. If they productize hydrofoil control systems and expand to multi-passenger platforms, competitive pressure could rise quickly.",
+    "latestNews": "April 2026 monitor update: patent WO2025163457A1 confirms BRP is developing a hydrofoil PWC architecture with handlebar-linked lift control and sensor-assisted stabilization modes. Signals active OEM entry into hydrofoil-control IP, though no launch announced.",
+    "mediaLinks": [
+      "https://patents.google.com/patent/WO2025163457A1/en",
+      "https://www.rideapart.com/news/774250/sea-doo-patent-hydrofoil-pwc-jet-ski/",
+      "https://www.rideapart.com/news/757391/brp-sea-doo-electric-ev-hydrofoil-surfboard/"
+    ],
+    "tags": [
+      "oem",
+      "patent-stage",
+      "sea-doo",
+      "hydrofoil-pwc",
+      "ip-watch",
+      "new-entrant-watch"
+    ]
+  },
+  {
     "id": "awake-navi",
     "company": "Awake Boards",
     "location": "Stockholm, Sweden",
@@ -27,7 +67,14 @@
       "https://www.yachting-pages.com/articles/awake-unveils-navi-news.html",
       "https://uncrate.com/awake-navi-hydrofoil/"
     ],
-    "tags": ["2-person", "seated", "new-entrant-2026", "established-brand", "waterbike", "august-2026"]
+    "tags": [
+      "2-person",
+      "seated",
+      "new-entrant-2026",
+      "established-brand",
+      "waterbike",
+      "august-2026"
+    ]
   },
   {
     "id": "enautic-waveflyer",
@@ -47,8 +94,12 @@
     "pricingModel": "direct purchase",
     "fundingStatus": "Seed / early stage",
     "fundingAmount": null,
-    "keyTeam": ["Reo Baird"],
-    "patents": ["WaveDrive (patented propulsion tech)"],
+    "keyTeam": [
+      "Reo Baird"
+    ],
+    "patents": [
+      "WaveDrive (patented propulsion tech)"
+    ],
     "threatLevel": "HIGH",
     "threatReason": "Closest direct competitor — 2-seat, side-by-side, fully stabilized electric foiler. Same use case as the flying couch.",
     "latestNews": "March 2026: AquaFlights brand gaining traction — 5+ press outlets covered Vessev partnership in late March. Hired Kevyn Townley (ex-Little Ferry Company, decade of solar-ferry ops on Swan River) to lead Perth operations. AquaFlights already offering WaveFlyer boat hire + e-foil scooter. Consumer product line: RIB310 (new), Volaré, Rogue. Commercial ferry pivot may slow consumer WaveFlyer development.",
@@ -57,7 +108,13 @@
       "https://futurride.com/2024/03/13/enautic-reveals-two-electric-hydrofoil-personal-watercraft-based-on-wavedrive/",
       "https://enautic.co/waveflyer_volar"
     ],
-    "tags": ["2-person", "sit-down", "autonomous", "foiling", "direct-competitor"]
+    "tags": [
+      "2-person",
+      "sit-down",
+      "autonomous",
+      "foiling",
+      "direct-competitor"
+    ]
   },
   {
     "id": "quadrofoil",
@@ -86,7 +143,12 @@
       "https://quadrofoil.com/q2s.html",
       "https://plugboats.com/two-seater-hydrofoil-big-investment/"
     ],
-    "tags": ["2-person", "sit-straddle", "established", "slow-growth"]
+    "tags": [
+      "2-person",
+      "sit-straddle",
+      "established",
+      "slow-growth"
+    ]
   },
   {
     "id": "valo-hyperfoil",
@@ -106,7 +168,9 @@
     "pricingModel": "direct purchase; $500 deposit",
     "fundingStatus": "$7.1M raised; $124M LOI from ferry companies",
     "fundingAmount": "$7.1M",
-    "keyTeam": ["Edward Kearney (CEO)"],
+    "keyTeam": [
+      "Edward Kearney (CEO)"
+    ],
     "patents": [],
     "threatLevel": "DEAD",
     "threatReason": "Company appears defunct — domain hijacked by gambling spam, no deliveries ever made, no press since June 2025. Was never a direct Flying Couch competitor (single-seat PWC), now a non-factor.",
@@ -116,7 +180,13 @@
       "https://www.ridevalo.com/",
       "https://sfstandard.com/2024/07/07/hydrofoil-jetski-the-valo-hyperfoil-luxury-toy/"
     ],
-    "tags": ["1-person", "performance", "pwc-replacement", "defunct", "domain-hijacked"]
+    "tags": [
+      "1-person",
+      "performance",
+      "pwc-replacement",
+      "defunct",
+      "domain-hijacked"
+    ]
   },
   {
     "id": "candela-c8",
@@ -136,8 +206,13 @@
     "pricingModel": "direct purchase",
     "fundingStatus": "Well-funded; €129M total (incl. €30M round March 2026 with World Bank IFC)",
     "fundingAmount": "€129M total",
-    "keyTeam": ["Gustav Hasselskog (CEO)"],
-    "patents": ["C-Pod motor system patent", "Proprietary foil flight control"],
+    "keyTeam": [
+      "Gustav Hasselskog (CEO)"
+    ],
+    "patents": [
+      "C-Pod motor system patent",
+      "Proprietary foil flight control"
+    ],
     "threatLevel": "LOW",
     "threatReason": "Much larger, more expensive luxury boat — 8 pax, $450K+. Different market. Their C-Pod drivetrain tech is relevant IP to watch.",
     "latestNews": "April 2026: Unveiled P-12 Business — premium luxury ferry variant with plush seating, Wi-Fi, coffee bar, 40 nmi range at 25 knots. First unit commissioned for Mumbai (Gateway of India to Navi Mumbai Airport). Deploying also to Maldives, Saudi Arabia. March 2026: Raised €30M (World Bank IFC + existing investors) — total €129M. Second factory planned.",
@@ -146,7 +221,13 @@
       "https://boatingmag.com/boats/2024-candela-c-8-open-daycruiser-boat-test/",
       "https://insideevs.com/news/669059/candela-c-8-polestar-edition-debut-price/"
     ],
-    "tags": ["luxury", "8-passenger", "established", "c-pod", "drivetrain-tech"]
+    "tags": [
+      "luxury",
+      "8-passenger",
+      "established",
+      "c-pod",
+      "drivetrain-tech"
+    ]
   },
   {
     "id": "navier-n30",
@@ -166,8 +247,12 @@
     "pricingModel": "direct purchase",
     "fundingStatus": "$7.2M seed (2022)",
     "fundingAmount": "$7.2M",
-    "keyTeam": ["Sampriti Bhattacharyya (CEO)"],
-    "patents": ["Proprietary flight control system (FCS)"],
+    "keyTeam": [
+      "Sampriti Bhattacharyya (CEO)"
+    ],
+    "patents": [
+      "Proprietary flight control system (FCS)"
+    ],
     "threatLevel": "LOW",
     "threatReason": "Large luxury yacht, not a 2-person craft. But their foil flight control software is best-in-class. Market overlap: tender/sport use.",
     "latestNews": "Dec 2025: Featured in Megayacht News as next-gen superyacht tender. Pioneer II edition launched.",
@@ -176,7 +261,12 @@
       "https://megayachtnews.com/2025/12/navier-n30-electric-hydrofoiling-boat/",
       "https://cleantechnica.com/2024/10/24/a-first-ride-in-the-navier-n30-electric-flying-boat/"
     ],
-    "tags": ["luxury", "9-passenger", "long-range", "flight-control-tech"]
+    "tags": [
+      "luxury",
+      "9-passenger",
+      "long-range",
+      "flight-control-tech"
+    ]
   },
   {
     "id": "foilone-pegasus",
@@ -206,7 +296,12 @@
       "https://electrek.co/2024/10/21/foil-one-new-single-passenger-electric-hydrofoil-boat-sure-to-turn-heads/",
       "https://www.thecooldown.com/green-tech/foil-one-pegasus-hydrofoil-boat/"
     ],
-    "tags": ["1-person", "premium", "minimalist", "finland"]
+    "tags": [
+      "1-person",
+      "premium",
+      "minimalist",
+      "finland"
+    ]
   },
   {
     "id": "propel-foil",
@@ -226,7 +321,9 @@
     "pricingModel": "crowdfunding pledge",
     "fundingStatus": "Crowdfunding (Indiegogo-style); 2025",
     "fundingAmount": null,
-    "keyTeam": ["Jason Toth (Founder, ex-pro snowboarder)"],
+    "keyTeam": [
+      "Jason Toth (Founder, ex-pro snowboarder)"
+    ],
     "patents": [],
     "threatLevel": "LOW",
     "threatReason": "Entry-level modular system. Jet Kart seated mode is novel but not a foiling couch. Targets mass market, very different price point.",
@@ -236,7 +333,13 @@
       "https://newatlas.com/marine/propel-modular-five-in-one-electric-watercraft",
       "https://www.mby.com/specials/this-startup-is-crowdfunding-the-worlds-first-5-in-1-electric-watercraft-135519"
     ],
-    "tags": ["modular", "affordable", "seated-mode", "crowdfunding", "mass-market"]
+    "tags": [
+      "modular",
+      "affordable",
+      "seated-mode",
+      "crowdfunding",
+      "mass-market"
+    ]
   },
   {
     "id": "envgo-nv1",
@@ -266,7 +369,13 @@
       "https://electrek.co/2024/08/27/envgo-launches-flagship-nv1-electric-hydrofoiling-boat-with-80-miles-of-range-and-dc-charging/",
       "https://www.electrive.com/2025/05/21/envgo-demonstrates-hydrofoil-with-119km-range/"
     ],
-    "tags": ["6-passenger", "ai-controls", "aerospace", "canada", "new-entrant-2026"]
+    "tags": [
+      "6-passenger",
+      "ai-controls",
+      "aerospace",
+      "canada",
+      "new-entrant-2026"
+    ]
   },
   {
     "id": "seabubbles-smartbubble",
@@ -286,8 +395,13 @@
     "pricingModel": "commercial fleet",
     "fundingStatus": "Backed by Richard Branson / Virgin; multiple rounds",
     "fundingAmount": null,
-    "keyTeam": ["Alain Thébault (Founder)"],
-    "patents": ["Retractable foil system (4 patents)", "Neocean inverted-T foil flight control (acquired Sept 2024)"],
+    "keyTeam": [
+      "Alain Thébault (Founder)"
+    ],
+    "patents": [
+      "Retractable foil system (4 patents)",
+      "Neocean inverted-T foil flight control (acquired Sept 2024)"
+    ],
     "threatLevel": "LOW-WATCH",
     "threatReason": "8-pax commercial water taxi — not a direct Flying Couch competitor. BUT: SeaBubbles acquired Neocean's inverted-T foil flight control patents in Sept 2024. Their growing IP portfolio in foil stabilization is relevant for Kai Concepts engineering IP clearance. Watch for any consumer/leisure pivot.",
     "latestNews": "Sept 2024: Acquired Neocean's foil patents and flight control expertise. Revealed SmartBubble 8-pax model. Jan 2026: Referenced as owning Neocean's hydrofoil legacy. No consumer product planned as of reporting.",
@@ -295,7 +409,14 @@
       "https://www.prnewswire.com/news-releases/seabubbles-accelerates-sustainable-maritime-mobility-with-smartbubble-and-strategic-acquisition-302247896.html",
       "https://marinebusiness.news/news/leisure-marine/seabubbles-acquires-neoceans-foiling-technology/"
     ],
-    "tags": ["8-passenger", "commercial", "patent-holder", "inverted-t-foil", "france", "ip-watch"]
+    "tags": [
+      "8-passenger",
+      "commercial",
+      "patent-holder",
+      "inverted-t-foil",
+      "france",
+      "ip-watch"
+    ]
   },
   {
     "id": "iguana-foiler",
@@ -316,7 +437,9 @@
     "fundingStatus": "Established",
     "fundingAmount": null,
     "keyTeam": [],
-    "patents": ["Amphibious track system"],
+    "patents": [
+      "Amphibious track system"
+    ],
     "threatLevel": "LOW",
     "threatReason": "Luxury amphibious 8-pax boat — completely different category. Notable for foil + amphibious combo.",
     "latestNews": "2024-25: Specified as superyacht tender. Amphibious foiling unique in market.",
@@ -324,6 +447,11 @@
       "https://www.iguana-yachts.com/models/iguana-foiler/",
       "https://www.wallpaper.com/transportation/new-electric-boats"
     ],
-    "tags": ["luxury", "8-passenger", "amphibious", "superyacht-tender"]
+    "tags": [
+      "luxury",
+      "8-passenger",
+      "amphibious",
+      "superyacht-tender"
+    ]
   }
 ]

@@ -1,12 +1,38 @@
 [
   {
+    "id": "intel-029",
+    "date": "2026-04-11",
+    "title": "🚨 PATENT WATCH: BRP/Sea-Doo files WO2025163457A1 for hydrofoil PWC with handlebar-linked lift control",
+    "summary": "Newly verified on Google Patents: BRP (Sea-Doo) published WIPO application WO2025163457A1 ('Watercraft having a lift assembly', publication date Aug 7, 2025; priority Jan 30, 2024). Unlike BRP's earlier surfboard-style eFoil filing, this one is explicitly a straddle-seat PWC architecture with mast-mounted hydrofoil surfaces, pump-jet propulsion, and a control system linking handlebar position to foil/elevon pitch (manual + automated modes with sensors). The claims include movable/retractable foil surfaces and rider-intuitive pitch control for larger craft where weight-shift is insufficient. Relevance to Kai Concepts: MEDIUM-HIGH as adjacent IP from the largest PWC OEM. Not a direct 2-person Flying Couch competitor today, but this filing indicates Sea-Doo is actively protecting hydrofoil-PWC control architecture that could evolve into multi-passenger products.",
+    "source": "patents.google.com / rideapart.com",
+    "url": "https://patents.google.com/patent/WO2025163457A1/en",
+    "tags": [
+      "brp",
+      "sea-doo",
+      "patent",
+      "wo2025163457a1",
+      "hydrofoil-pwc",
+      "oem-entry",
+      "ip-watch"
+    ],
+    "priority": "MEDIUM"
+  },
+  {
     "id": "intel-028",
     "date": "2026-04-06",
     "title": "IP ALERT: SeaBubbles acquired Neocean's foiling tech - inverted-T foil patents now in ferry startup's hands",
     "summary": "Confirmed (Sept 2024, updated Jan 2026): French electric water taxi startup SeaBubbles acquired the patents and technology of defunct Neocean (Overboat) in September 2024, specifically targeting Neocean's expertise in 'inverted T' foil flight control systems. Neocean ceased operations March 2024 after financial difficulties. SeaBubbles is using the acquisition to accelerate development of its SmartBubble 8-pax water taxi. What this means for Kai Concepts: (1) Neocean's Overboat was a legitimate 2-person electric foiling catamaran with proven stability tech - that lineage is now inside SeaBubbles; (2) SeaBubbles' SmartBubble is a commercial 8-seat ferry, not a Flying Couch competitor, but their foil control IP portfolio just got stronger; (3) The specific inverted-T foil patents are now encumbered - Kai Concepts engineering should audit these claims before finalizing foil design. Monitor SeaBubbles for any consumer/leisure product announcements.",
     "source": "prnewswire.com / marinebusiness.news / bwmonline.com",
     "url": "https://www.prnewswire.com/news-releases/seabubbles-accelerates-sustainable-maritime-mobility-with-smartbubble-and-strategic-acquisition-302247896.html",
-    "tags": ["seabubbles", "neocean", "patent-acquisition", "inverted-t-foil", "flight-control", "ip-alert", "france"],
+    "tags": [
+      "seabubbles",
+      "neocean",
+      "patent-acquisition",
+      "inverted-t-foil",
+      "flight-control",
+      "ip-alert",
+      "france"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -16,7 +42,16 @@
     "summary": "Australian startup Vector Water Craft launched a lineup of 7 portable electric mini jet boats, getting mainstream press coverage this week (Watercraft Journal, April 1, 2026). Highlights: models range from 15kW single-seat playboats to a 70kW+ high-performance solo machine. The key model for Kai Concepts awareness: the Vector Duo 25kW 2-Seater Electric Jet Boat — a two-seat electric jet boat designed to fit in a pickup bed or large SUV (trailer-free). Top speed ~60 km/h, ~2 hr runtime, priced from approximately $11,800 USD equivalent (AUD pricing). NOT a hydrofoil — purely a surface jet boat. Relevance to Flying Couch: LOW as a direct competitor (no foil, very different experience), but it signals growing competition in the compact/portable electric 2-seat watercraft space at the affordable end. Their trailer-free pitch is interesting — Kai Concepts could adopt similar messaging. Worth monitoring if they add foil capability.",
     "source": "watercraftjournal.com / vectorwatercraft.com.au",
     "url": "https://watercraftjournal.com/portable-electric-mini-jet-boats-skip-the-ramp-and-trailer-hassle/",
-    "tags": ["vector-water-craft", "new-entrant", "australia", "2-seat", "electric-jet", "no-foil", "affordable", "portable"],
+    "tags": [
+      "vector-water-craft",
+      "new-entrant",
+      "australia",
+      "2-seat",
+      "electric-jet",
+      "no-foil",
+      "affordable",
+      "portable"
+    ],
     "priority": "LOW"
   },
   {
@@ -26,7 +61,14 @@
     "summary": "Australian eFoil maker Flite (Byron Bay) won two prestigious iF Design Awards this week: for the FLITELab* AMPJet and the Fliteboard RACE. The AMPJet is notable — it's the world's first removable jet cartridge fully integrated within a foil board structure, delivering 25kg of thrust with no external drag, usable across prone foiling, winging, and downwinding. Fliteboard RACE, co-developed with Mercury Racing, hits 34 mph (30 knots). Also noted: Flite received Gold recognition at the German Design Award 2026. Not direct competitors to Flying Couch (both are single-rider eFoils), but the design award signal matters: major international design juries are now taking electric foiling products seriously as design objects — the same credibility Kai Concepts needs. The AMPJet's propulsion tech (integrated, removable, multi-sport) is a space to watch for IP overlap.",
     "source": "boatingnz.co.nz / fliteboard.com",
     "url": "https://www.boatingnz.co.nz/2026/03/flite-wins-two-prestigious-if-design-awards-for-flitelab-ampjet-and-fliteboard-race/",
-    "tags": ["flite", "design-award", "ampjet", "mercury-racing", "market-signal", "efoil"],
+    "tags": [
+      "flite",
+      "design-award",
+      "ampjet",
+      "mercury-racing",
+      "market-signal",
+      "efoil"
+    ],
     "priority": "LOW"
   },
   {
@@ -36,7 +78,15 @@
     "summary": "ZeroJet and McConaghy Boats debuted the MC-Zero range of electric tenders at the Palm Beach International Boat Show (late March 2026). Two models: MC-Zero 450 (4.5m, twin-engine — 'world's first twin jet electric tender') and MC-Zero 325 (3.25m, single engine). Both use ZeroJet's 48V / 30kW electric jet systems and semi-solid state batteries from Australian supplier Safiery (3C discharge rate — high performance, fast discharge). Full carbon fiber construction. Not a hydrofoil — a premium electric surface tender. Relevance to Kai Concepts: LOW as a competitor (wrong category), but signals that the premium yacht tender market is actively electrifying with carbon/high-performance products. The overlap audience (superyacht/luxury boat owners as early adopters) is identical. Validates the 'electric water toy for luxury boaters' positioning Kai Concepts can own at the foiling end of the market.",
     "source": "yachting-pages.com",
     "url": "https://www.yachting-pages.com/articles/zerojet-and-mcconaghy-launch-mc-zero-news.html",
-    "tags": ["mc-zero", "zerojet", "mcconaghy", "electric-tender", "carbon", "palm-beach", "market-signal"],
+    "tags": [
+      "mc-zero",
+      "zerojet",
+      "mcconaghy",
+      "electric-tender",
+      "carbon",
+      "palm-beach",
+      "market-signal"
+    ],
     "priority": "LOW"
   },
   {
@@ -46,7 +96,14 @@
     "summary": "Candela launched the P-12 Business on April 2, 2026 — a premium interior variant of their P-12 electric hydrofoil ferry, aimed at high-end transport routes (resort transfers, urban commuter links). Features include plush seating, Wi-Fi, USB-C charging, a coffee bar, and a star ceiling lighting system. Noise level: just 63-64 dB inside at top speed (closer to a quiet conversation than a ferry). Range: 40 nmi at 25 knots. The first P-12 Business has been commissioned and is headed to Mumbai (Gateway of India to Navi Mumbai Airport, cutting 2-hour trip to 35 min), Maldives, and Saudi Arabia. While far outside the 2-person flying couch category, this shows Candela's platform is becoming deeply differentiated by cabin experience — a strong market signal that premium interior experience sells on the water. The couch/lounge design philosophy Kai Concepts is building into a small 2-person foiler is exactly what Candela is selling at the 12-passenger ferry scale. Validates the Flying Couch as the consumer-accessible version of this same premium foiling experience.",
     "source": "electrek.co / workboat365.com",
     "url": "https://electrek.co/2026/04/02/candelas-new-p-12-business-electric-ferry-is-luxury-soaring-just-above-the-waves/",
-    "tags": ["candela", "p-12-business", "ferry", "premium-interior", "market-signal", "luxury-foiling"],
+    "tags": [
+      "candela",
+      "p-12-business",
+      "ferry",
+      "premium-interior",
+      "market-signal",
+      "luxury-foiling"
+    ],
     "priority": "LOW"
   },
   {
@@ -56,7 +113,15 @@
     "summary": "Finnish boat brand Axopar and Australian eFoil maker Flite have launched the 'Flite AIR x Axopar' — a purpose-built eFoil board designed specifically for boaters to use as a water toy from their Axopar vessels. Previewed at Boot Düsseldorf January 2026, available April 2026 at $6,995. Not a direct competitor to Flying Couch (single-seat eFoil), but a strong market signal: premium boat brands are now integrating foiling boards as premium accessories/tenders. This 'foil as yacht toy' positioning is exactly the space Kai Concepts can target — a Flying Couch as THE premium water toy for luxury boat owners. The Axopar×Flite move validates that boat-owner audience. Also at Boot Düsseldorf: the Awake NAVI foiler was shown, confirming the two products shared the same show floor — the market is now watching both the seated-foiler and eFoil-accessory categories simultaneously.",
     "source": "lakelandboating.com / allatsea.net",
     "url": "https://lakelandboating.com/flite-and-axopar-launch-efoiling-board-for-boaters/",
-    "tags": ["flite", "axopar", "collaboration", "efoil-accessory", "boat-owners", "market-signal", "boot-dusseldorf"],
+    "tags": [
+      "flite",
+      "axopar",
+      "collaboration",
+      "efoil-accessory",
+      "boat-owners",
+      "market-signal",
+      "boot-dusseldorf"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -66,7 +131,15 @@
     "summary": "Los Angeles electric boat startup Arc Boat Company closed a $50M Series C round led by Eclipse, with a16z, Menlo Ventures, Lowercarbon Capital, Necessary Ventures, and Offline Ventures participating. Arc makes large electric sport/wake boats (Arc Sport, Arc One, Arc Coast) — not hydrofoils — and is now expanding into commercial and defense electric vessels. Revenue described as 'meaningful' from consumer sport boats. The Tesla-playbook parallel (high-end consumer → commercial scale) is explicit: former Tesla VP Greg Reichow at Eclipse directly cited it. Key takeaway for Kai Concepts: A-list VC money (a16z + Lowercarbon + Menlo in the same cap table) is now flowing directly into electric marine. This is the same investor cohort that funded the EV transition. The sector is no longer a curiosity — it's a fundable thesis. Raises urgency for Kai Concepts to get to a fundable milestone (working demo, early orders) before this window gets crowded.",
     "source": "techcrunch.com",
     "url": "https://techcrunch.com/2026/03/19/arc-expands-into-electric-commercial-and-defense-boats-with-50m-raise/",
-    "tags": ["arc-boat", "funding", "a16z", "series-c", "vc-signal", "electric-marine", "market-signal"],
+    "tags": [
+      "arc-boat",
+      "funding",
+      "a16z",
+      "series-c",
+      "vc-signal",
+      "electric-marine",
+      "market-signal"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -76,7 +149,14 @@
     "summary": "Critical update: ridevalo.com/hyperfoil now serves Indonesian gambling spam ('TAMBANG888') instead of product content. The main boundarylayer.tech domain now redirects to ridevalo.com (which still shows some legacy marketing copy on the homepage, but subpages are gambling content). The /hyperfoil product page — where customers would configure and order the Valo — is completely replaced. No press releases, no social media activity, no updated timeline since the June 2025 prototype launch. Combined with the 'Shipping 2025' deadline that passed with zero confirmed deliveries, this strongly suggests Boundary Layer Technologies has shut down or gone dormant, and let their domain registration lapse. Their Wefunder page still shows $3.5M in pre-sales deposits. Relevance: Valo was never a direct Flying Couch competitor (single-seat PWC), but their apparent failure removes one player from the broader electric hydrofoil PWC market and serves as a cautionary tale about execution risk in this space. The ~60 customers who placed $500-$1,000 deposits may be out of luck.",
     "source": "ridevalo.com (direct verification) / boundarylayer.tech (redirect test) / wefunder.com/valo",
     "url": "https://ridevalo.com/hyperfoil",
-    "tags": ["valo", "boundary-layer", "defunct", "domain-hijacked", "market-signal", "execution-risk"],
+    "tags": [
+      "valo",
+      "boundary-layer",
+      "defunct",
+      "domain-hijacked",
+      "market-signal",
+      "execution-risk"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -86,7 +166,14 @@
     "summary": "Follow-up on the ENAUTIC/Vessev partnership: at least 5 major outlets (Plugboats, The DCN, Boating NZ, Have a Go News, EcoNews AU) covered the story in the past two weeks. Key new detail: operations will be led by Kevyn Townley, founder of the Little Ferry Company, which ran solar-electric ferries on Perth's Swan River for nearly a decade — so this isn't just a startup play, they're hiring experienced ferry operators. AquaFlights brand already offers 'e-foil scooter and WaveFlyer boat hire', suggesting the consumer WaveFlyer is being used operationally in Perth already. The commercial pivot is gaining significant momentum. Consumer WaveFlyer product development may slow as ferry revenue takes priority.",
     "source": "plugboats.com / thedcn.com.au / boatingnz.co.nz / haveagonews.com.au",
     "url": "https://plugboats.com/australia-electric-flying-ferries/",
-    "tags": ["enautic", "aquaflights", "vessev", "perth", "commercial-ops", "experienced-operator"],
+    "tags": [
+      "enautic",
+      "aquaflights",
+      "vessev",
+      "perth",
+      "commercial-ops",
+      "experienced-operator"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -96,7 +183,12 @@
     "summary": "Boundary Layer Technologies' Valo Hyperfoil website continues to advertise 'Shipping 2025' as of March 28, 2026 — with no press coverage of actual deliveries, no customer photos, and no updated timeline. Despite ~60 orders at $59K each ($3.5M+ in deposits), the product appears to have missed its own stated timeline. No new funding or press releases since the June 2025 prototype launch. The company's larger ferry bet ($124M LOI pipeline) may be diverting engineering resources. Relevance: Valo is NOT a direct Flying Couch competitor (single-seat PWC), but their delivery struggles illustrate the execution risk that all early-stage hydrofoil startups face — and validate Kai Concepts' focus on building something manufacturable at accessible price points.",
     "source": "ridevalo.com (website review) / newatlas.com archive",
     "url": "https://www.ridevalo.com/",
-    "tags": ["valo", "delivery-delay", "execution-risk", "market-signal"],
+    "tags": [
+      "valo",
+      "delivery-delay",
+      "execution-risk",
+      "market-signal"
+    ],
     "priority": "LOW"
   },
   {
@@ -106,7 +198,14 @@
     "summary": "BRP, the Canadian powersports giant behind Sea-Doo, filed a US patent titled 'Lift-Propulsion System for a Watercraft and Watercraft Having Same' (published April 2025). The patent depicts a surfboard-shaped hull with a hydrofoil below — clearly an electric eFoil-style craft. Notably, BRP just sold off all its boat brands (Alumacraft, Manitou, Telwater) to 'focus on powersports' — and Sea-Doo is one of the three brands they kept (along with Ski-Doo and Can-Am). This patent signals BRP/Sea-Doo is actively developing an electric foiling product. They have global distribution, manufacturing scale, and instant brand recognition. If they ship an electric foiler — even a solo-rider version — it legitimizes the entire segment for the mass market. More importantly, if they eventually move into 2-person seated foilers, their scale advantage would be enormous. Not an immediate threat to Kai Concepts' niche, but a 12-24 month market development signal that OEMs are now watching this space.",
     "source": "rideapart.com / US Patent and Trademark Office",
     "url": "https://www.rideapart.com/news/757391/brp-sea-doo-electric-ev-hydrofoil-surfboard/",
-    "tags": ["brp", "sea-doo", "patent", "oem-entry", "market-signal", "eFoil"],
+    "tags": [
+      "brp",
+      "sea-doo",
+      "patent",
+      "oem-entry",
+      "market-signal",
+      "eFoil"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -116,7 +215,14 @@
     "summary": "Swedish startup Roxen Innovations announced production of its electric personal watercraft (PWC), beginning April 2026 with an initial run of 200 units (40 already pre-sold). The Roxen is NOT a hydrofoil — it's a 22kW jet-drive PWC. Key specs: 55 km/h top speed, 20 nmi range, 5.25 kWh swappable battery, 93 kg total weight (one of the lightest PWCs on the market). ABS hull, 2.49m length. Single-seat. Priced for European market. Relevance to Kai Concepts: LOW as a competitor (wrong category — no foil, single seat), but signals that the European electric PWC market is maturing rapidly. More competition for Awake NAVI customers. Notable: article explicitly links to Awake NAVI, suggesting the press is connecting these two products as part of the same 'sustainable PWC' narrative.",
     "source": "newatlas.com",
     "url": "https://newatlas.com/marine/roxen-electric-personal-watercraft/",
-    "tags": ["roxen", "new-entrant", "sweden", "electric-pwc", "non-foil", "production-2026"],
+    "tags": [
+      "roxen",
+      "new-entrant",
+      "sweden",
+      "electric-pwc",
+      "non-foil",
+      "production-2026"
+    ],
     "priority": "LOW"
   },
   {
@@ -126,7 +232,13 @@
     "summary": "Candela's P-12 electric hydrofoil ferry completed a 160-nautical-mile voyage from Gothenburg to Oslo over three days — the longest electric ship journey to date. Not a direct Kai Concepts competitor, but a powerful market signal: the press and public are now associating electric hydrofoils with practical, long-range transport. This kind of headline drives overall sector credibility and investor/buyer interest. Notably, the P-12 can achieve 25-30 knots while foiling, and uses existing shore charging infrastructure with no special swapping required. Raises the 'what is possible with electric foils' bar in media narrative.",
     "source": "newatlas.com",
     "url": "https://newatlas.com/marine/p12-hydrofoiling-electric-ferry-160-nautical-miles/",
-    "tags": ["candela", "p-12", "market-signal", "range", "media-narrative"],
+    "tags": [
+      "candela",
+      "p-12",
+      "market-signal",
+      "range",
+      "media-narrative"
+    ],
     "priority": "LOW"
   },
   {
@@ -136,7 +248,15 @@
     "summary": "Awake Boards (Stockholm, established eFoil maker) launched the NAVI — a seated electric hydrofoiler that directly overlaps with Flying Couch territory. Key specs: 55 km/h top speed, up to 3 hr ride time (XR battery), rigid carbon composite hull, reverse gear, built-in display. With detachable inflatable tube floats it carries 2 passengers; remove them for solo. Priced at €39,990 (~$46,800 USD) excluding VAT/shipping. Pre-orders open, August 2026 delivery. This is the most important new competitor to emerge since ENAUTIC WaveFlyer — same price band, overlapping use case, but waterbike/straddle ergonomics vs Flying Couch's relaxed bench/sofa seating. Awake has existing distribution, brand awareness, and supply chain (RAVIK jetboards and VINGA eFoils already shipping). The market gap for couch-style seating remains intact, but the seated foiler space just got more crowded.",
     "source": "newatlas.com / yachting-pages.com / uncrate.com",
     "url": "https://newatlas.com/boats-watersports/awake-navi-electric-foiler/",
-    "tags": ["awake", "navi", "new-competitor", "2-person", "seated", "august-2026", "priority-HIGH"],
+    "tags": [
+      "awake",
+      "navi",
+      "new-competitor",
+      "2-person",
+      "seated",
+      "august-2026",
+      "priority-HIGH"
+    ],
     "priority": "HIGH"
   },
   {
@@ -146,7 +266,12 @@
     "summary": "ENAUTIC's website now lists three consumer products: WaveFlyer RIB310 (new), WaveFlyer Volaré, and WaveFlyer Rogue. The RIB310 appears to be a rigid inflatable hull variant of their hydrofoil platform — not yet publicly detailed or covered in press. Combined with their AquaFlights commercial arm and Vessev ferry partnership (announced last week), ENAUTIC is building a comprehensive electric hydrofoil platform play. The consumer side is evolving faster than previously tracked.",
     "source": "enautic.co (website product listing)",
     "url": "https://enautic.co/",
-    "tags": ["enautic", "new-product", "rib310", "product-expansion"],
+    "tags": [
+      "enautic",
+      "new-product",
+      "rib310",
+      "product-expansion"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -156,7 +281,14 @@
     "summary": "ENAUTIC Group (makers of the WaveFlyer — our #1 direct competitor) announced a major strategic pivot: partnering with NZ's Vessev to bring commercial electric hydrofoil passenger vessels to Perth's Swan River via their AquaFlights brand. The VS-9s (25-knot, 9-pax) will initially run premium tourism experiences (wine cruises, twilight sailings, private charters) with plans for commuter routes. Led by Josh Portlock, founder of Enautic Group. Key takeaway: ENAUTIC is building a two-track strategy — WaveFlyer consumer product + AquaFlights commercial operations. This means they're better-capitalized and more strategically diversified than previously tracked. Their consumer WaveFlyer focus may actually slow down vs. the ferry revenue opportunity.",
     "source": "cyprusshippingnews.com / marinelink.com / econews.com.au",
     "url": "https://cyprusshippingnews.com/2026/03/20/electric-hydrofoiling-passenger-vessels-set-for-perth-as-vessev-enters-australian-market/",
-    "tags": ["enautic", "strategic-pivot", "commercial-ops", "vessev", "australia", "aquaflights"],
+    "tags": [
+      "enautic",
+      "strategic-pivot",
+      "commercial-ops",
+      "vessev",
+      "australia",
+      "aquaflights"
+    ],
     "priority": "HIGH"
   },
   {
@@ -166,7 +298,12 @@
     "summary": "Candela closed a €30M funding round (March 18-23, 2026), bringing total funding to €129M. World Bank IFC joined existing investors. Money goes toward a second manufacturing facility to scale P-12 ferry production. Global deployments expanding to Mumbai, Maldives, Saudi NEOM, Thailand. Not direct competition to Flying Couch, but signals massive investor confidence in electric hydrofoil sector and validates the market.",
     "source": "electrek.co / thedriven.io / electrive.com",
     "url": "https://electrek.co/2026/03/18/candela-raises-more-cash-scaling-their-flying-electric-ferries-as-global-demand-surges/",
-    "tags": ["candela", "funding", "market-signal", "p-12"],
+    "tags": [
+      "candela",
+      "funding",
+      "market-signal",
+      "p-12"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -176,7 +313,13 @@
     "summary": "Canadian startup Hydroflyer unveiled the Gen 2 FF eFoil — 10,000W motor (nearly 2x typical eFoils), top speed 60 km/h (37 mph). Handlebar control for 4-point stance, built on Unifoil foils. FF starts at $18,995 with 20% deposit; AL (entry) from $9,995. Pre-orders open, August 2026 delivery. Single-seat eFoil — not a Flying Couch competitor — but the power/price benchmark is notable. Shows eFoil performance is racing ahead.",
     "source": "newatlas.com",
     "url": "https://newatlas.com/marine/hydroflyer-gen2-ff-at-efoil/",
-    "tags": ["hydroflyer", "efoil", "new-product", "performance", "canada"],
+    "tags": [
+      "hydroflyer",
+      "efoil",
+      "new-product",
+      "performance",
+      "canada"
+    ],
     "priority": "LOW"
   },
   {
@@ -186,7 +329,13 @@
     "summary": "ENVGO (Canada) debuted the NV1 electric hydrofoil at the Palm Beach boat show (~March 2026). 25-foot, 6-passenger vessel. Dual-motor 330HP electric drivetrain, 80 kWh battery, AI-native flight controls, 80 kph / 100 km range. DC fast charging capable. Aerospace-grade engineering focus. Not a 2-person craft — too large for direct Flying Couch comparison — but their AI flight control system is worth watching. New entrant not previously tracked.",
     "source": "powerboat.news / electrek.co",
     "url": "https://powerboat.news/envgo-makes-us-debut-with-nv1-electric-hydrofoil-at-palm-beach/",
-    "tags": ["envgo", "new-entrant", "canada", "ai-controls", "6-seat"],
+    "tags": [
+      "envgo",
+      "new-entrant",
+      "canada",
+      "ai-controls",
+      "6-seat"
+    ],
     "priority": "LOW"
   },
   {
@@ -196,7 +345,11 @@
     "summary": "ENAUTIC (Australia) revealed two new WaveFlyer Rogue models in March 2024. The Rogue and Rogue-X use the same hull/foil package as the Volaré but with different ergonomics. Max speed 20 knots. Targets family fun and thrill-seekers respectively. Based on patented WaveDrive technology.",
     "source": "futurride.com",
     "url": "https://futurride.com/2024/03/13/enautic-reveals-two-electric-hydrofoil-personal-watercraft-based-on-wavedrive/",
-    "tags": ["enautic", "new-product", "2-person"],
+    "tags": [
+      "enautic",
+      "new-product",
+      "2-person"
+    ],
     "priority": "HIGH"
   },
   {
@@ -206,7 +359,11 @@
     "summary": "Boundary Layer Technologies launched its Valo Hyperfoil prototype in June 2025. Top speed revised from claimed 50 knots to 36.5 knots (42 mph) — roughly matching a base-level jet ski. ~60 orders at $59K. Shipping 2025. Company has $7.1M raised and $124M in ferry LOIs.",
     "source": "newatlas.com",
     "url": "https://newatlas.com/marine/valo-hyperfoil-prototype",
-    "tags": ["valo", "prototype", "speed-revision"],
+    "tags": [
+      "valo",
+      "prototype",
+      "speed-revision"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -216,7 +373,11 @@
     "summary": "Navier launched the N30 Pioneer II edition in late 2025. The 30-ft hydrofoiler can carry 9 passengers, reaches 30+ knots, and has 70 nmi range. Starting at ~$850K for cabin model. Being marketed as superyacht tender. Twin 90kW motors with active foil control.",
     "source": "megayachtnews.com",
     "url": "https://megayachtnews.com/2025/12/navier-n30-electric-hydrofoiling-boat/",
-    "tags": ["navier", "new-product", "superyacht-tender"],
+    "tags": [
+      "navier",
+      "new-product",
+      "superyacht-tender"
+    ],
     "priority": "LOW"
   },
   {
@@ -226,7 +387,11 @@
     "summary": "Finnish startup Foil.One revealed the Pegasus in October 2024. Single-seat electric hydrofoil with 18.8kW motor and swappable Torqeedo 5kWh battery packs. Priced at $151,355. Striking minimalist design. Coverage in Electrek.",
     "source": "electrek.co",
     "url": "https://electrek.co/2024/10/21/foil-one-new-single-passenger-electric-hydrofoil-boat-sure-to-turn-heads/",
-    "tags": ["foilone", "new-product", "single-seat"],
+    "tags": [
+      "foilone",
+      "new-product",
+      "single-seat"
+    ],
     "priority": "LOW"
   },
   {
@@ -236,7 +401,12 @@
     "summary": "Startup Propel Foil launched crowdfunding in May 2025 for a modular 5-in-1 electric watercraft. Includes eFoil, e-SUP, e-Scooter, and the Jet Kart seated mode. $4,797 pledge. Founded by Jason Toth (ex-pro snowboarder). IP68 waterproofing, jet drive, 3hr battery life.",
     "source": "newatlas.com",
     "url": "https://newatlas.com/marine/propel-modular-five-in-one-electric-watercraft",
-    "tags": ["propel", "crowdfunding", "modular", "seated-mode"],
+    "tags": [
+      "propel",
+      "crowdfunding",
+      "modular",
+      "seated-mode"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -246,7 +416,12 @@
     "summary": "Candela's C-8 continues in production with the Polestar collaboration edition at $450K+. The C-Pod motor (50kW, torpedo-shaped) is the key IP — enabling other boat makers to add hydrofoil propulsion. 8 passengers, 57 nmi range, 22kt cruise speed. Watch their C-Pod licensing strategy.",
     "source": "boatingmag.com",
     "url": "https://boatingmag.com/boats/2024-candela-c-8-open-daycruiser-boat-test/",
-    "tags": ["candela", "production", "c-pod", "drivetrain"],
+    "tags": [
+      "candela",
+      "production",
+      "c-pod",
+      "drivetrain"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -256,7 +431,11 @@
     "summary": "Slovenia's Quadrofoil received €3M in 2021 to scale production of the Q2S two-seater electric hydrofoil. Top speed 21 knots, range ~100km, motorcycle-style 2-up seating. Priced ~€20K originally. Current production status unclear — limited online activity in 2024-25.",
     "source": "plugboats.com",
     "url": "https://plugboats.com/two-seater-hydrofoil-big-investment/",
-    "tags": ["quadrofoil", "funding", "2-person"],
+    "tags": [
+      "quadrofoil",
+      "funding",
+      "2-person"
+    ],
     "priority": "MEDIUM"
   },
   {
@@ -266,7 +445,11 @@
     "summary": "New WIPO patent WO2025089965A1 filed Oct 2024 (PCT/NO2024/050216) for a hydrofoil vessel from Norway. Still pending. Worth monitoring for any claims relevant to small electric foiling craft.",
     "source": "patents.google.com",
     "url": "https://patents.google.com/patent/WO2025089965A1/en",
-    "tags": ["patent", "wipo", "norway"],
+    "tags": [
+      "patent",
+      "wipo",
+      "norway"
+    ],
     "priority": "LOW"
   },
   {
@@ -276,7 +459,11 @@
     "summary": "Extensive research confirms NO product directly matches the Kai Concepts flying couch concept: a comfortable, sofa/bench-style 2-person electric foiling platform. WaveFlyer Volaré is closest (2-seat side-by-side), but uses jet-ski ergonomics. The true luxury relaxed-seating electric foiler at accessible price points remains unclaimed.",
     "source": "internal research",
     "url": null,
-    "tags": ["market-gap", "opportunity", "kai-concepts"],
+    "tags": [
+      "market-gap",
+      "opportunity",
+      "kai-concepts"
+    ],
     "priority": "HIGH"
   }
 ]
