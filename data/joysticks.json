@@ -398,7 +398,7 @@
     "country": "USA (Carlsbad, CA)",
     "category": "Redundant-Sensor Fully Sealed Multi-Axis",
     "status": "🛒 PURCHASED FOR EVALUATION",
-    "statusNote": "Sample purchased 2026-03-30 for hands-on evaluation. True IP67, redundant Hall sensors, 3-axis (Z-twist), 12-bit, configurable — designed for marine/industrial.",
+    "statusNote": "Sample purchased 2026-03-30 for hands-on evaluation. 2026-04-11 market cleanup re-verified active DigiKey listing for HE3-30-S-A-2-BK (P/N 2524-HE3-30-S-A-2-BK-ND) with IP67 + 3-axis analog output.",
     "image": "https://ruffycontrols.com/wp-content/uploads/2020/01/HE3-Series-Joystick-1.jpg",
     "thumbnail": "../img/ruffy-he3.jpg",
     "website": "https://ruffycontrols.com/he3-series/",
@@ -456,7 +456,20 @@
       "marine"
     ],
     "purchased": true,
-    "purchaseDate": "2026-03-30"
+    "purchaseDate": "2026-03-30",
+    "distributors": [
+      {
+        "name": "DigiKey",
+        "url": "https://www.digikey.com/en/products/detail/ruffy-controls-inc/HE3-30-S-A-2-BK/17868436",
+        "notes": "Active listing verified 2026-04-11; includes 3-axis analog Hall, IP67, panel mount."
+      },
+      {
+        "name": "Ruffy Controls Direct",
+        "url": "https://ruffycontrols.com/he3-series/",
+        "notes": "Configurator page; pricing shown in Ruffy catalog snippets starts around $210.60 for base variants."
+      }
+    ],
+    "lastReviewed": "2026-04-11"
   },
   {
     "id": "ruffy-sg",
@@ -465,7 +478,7 @@
     "country": "USA (Carlsbad, CA)",
     "category": "2-Axis Hand Grip with Optional 3rd Axis Thumbwheel",
     "status": "🛒 PURCHASED FOR EVALUATION",
-    "statusNote": "Sample purchased 2026-03-30 for hands-on evaluation. KEY FEATURE: Has thumbwheel on top (optional 3rd axis in handle) — matches ThumbJoy throttle requirement natively.",
+    "statusNote": "Sample purchased 2026-03-30 for hands-on evaluation. 2026-04-11 market cleanup re-verified NauticExpo/Althen listing and DigiKey supplier page references for SG family with IP67 above-panel sealing.",
     "purchased": true,
     "purchaseDate": "2026-03-30",
     "image": "https://ruffycontrols.com/wp-content/uploads/2020/01/SG-Series-1.jpg",
@@ -513,7 +526,20 @@
       "hand-grip",
       "US-made",
       "marine"
-    ]
+    ],
+    "distributors": [
+      {
+        "name": "Althen Controls (EU)",
+        "url": "https://www.nauticexpo.com/prod/althen-controls/product-196369-562017.html",
+        "notes": "Marine marketplace listing cites IP67 sealing for SG configurations."
+      },
+      {
+        "name": "DigiKey Supplier Center",
+        "url": "https://www.digikey.com/en/supplier-centers/ruffy-controls",
+        "notes": "Supplier overview confirms SG series with IP67 above-panel sealing."
+      }
+    ],
+    "lastReviewed": "2026-04-11"
   },
   {
     "id": "volvo-penta-evc2",
@@ -1441,5 +1467,62 @@
       "rejected",
       "single-axis"
     ]
+  },
+  {
+    "id": "althen-ts1-mini",
+    "name": "Althen TS1 Mini Thumb Controller",
+    "manufacturer": "Althen Controls (Ruffy platform)",
+    "country": "Netherlands / USA platform",
+    "category": "Mini Thumb Controller",
+    "status": "NEW DISCOVERY (SATURDAY 2026-04-11) — COMPONENT REFERENCE",
+    "statusNote": "Found in NauticExpo Saturday market scan. Strong IP67 compact thumb controller option for separate throttle architecture if ThumbJoy keeps main joystick for XYZ and moves throttle off-shaft.",
+    "image": "https://www.nauticexpo.com/prod/althen-controls/product-196369-561990.html",
+    "thumbnail": "https://www.nauticexpo.com/prod/althen-controls/product-196369-561990.html",
+    "website": "https://www.nauticexpo.com/prod/althen-controls/product-196369-561990.html",
+    "datasheetUrl": "https://www.nauticexpo.com/prod/althen-controls/product-196369-561990.html",
+    "axes": "1 or 2-axis thumb controller",
+    "sensorType": "Hall Effect",
+    "output": "Analog proportional or USB",
+    "breakoutForce": "TBD",
+    "operatingForce": "Spring return",
+    "twistTorque": "N/A",
+    "mechanicalAngle": "±22.5°",
+    "twistRotation": "N/A",
+    "ipRating": "IP67 above panel",
+    "hollowShaft": "N/A",
+    "lifecycle": "2.5 million cycles",
+    "mounting": "Threaded, drop-in, or rear mount",
+    "price": "RFQ",
+    "pros": [
+      "Compact and marine-sealed IP67",
+      "Contactless Hall sensing",
+      "Useful as dedicated throttle/thumb module",
+      "Could eliminate custom Melexis wheel wiring through main joystick shaft"
+    ],
+    "cons": [
+      "Not a full XYZ joystick replacement",
+      "No Z-axis twist",
+      "Requirement #4 not applicable"
+    ],
+    "suitability": "MEDIUM (COMPONENT PATH)",
+    "suitabilityReason": "Not a base joystick candidate, but a practical fallback architecture for requirement #2 if internal shaft routing remains a blocker.",
+    "requirementsCheck": {
+      "ip67": "PASS",
+      "thumbwheel_or_melexis": "PASS",
+      "xy_with_y_gate": "N/A",
+      "z_axis_twist": "N/A",
+      "palm_compact": "PASS",
+      "buttons": "N/A",
+      "analog_or_can": "PASS"
+    },
+    "tags": [
+      "new",
+      "saturday-discovery",
+      "thumb-controller",
+      "ip67",
+      "component",
+      "architecture-fallback"
+    ],
+    "lastReviewed": "2026-04-11"
   }
 ]
