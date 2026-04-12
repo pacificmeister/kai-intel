@@ -1,5 +1,22 @@
 [
   {
+    "id": "intel-030",
+    "date": "2026-04-12",
+    "title": "Candela leadership shift: founder-CEO moves to Executive Chairman, Sofia Graflund to become CEO (June 2026)",
+    "summary": "Candela announced a planned CEO transition (board decision April 7, 2026): founder Gustav Hasselskog will move to Executive Chairman and Chief Strategy Officer Sofia Graflund will become CEO at the June 23 AGM. Candela frames this as a shift from technology validation to global operational scaling, citing 65+ P-12 ferry orders and serial production across product lines. For Kai Concepts, this is a competitive execution signal rather than a product launch: Candela is tightening leadership for scale, which could accelerate both ferry and leisure commercialization (including C-8 line expansion).",
+    "source": "mynewsdesk.com (Candela press release)",
+    "url": "https://www.mynewsdesk.com/candela-speedboat-ab/pressreleases/candela-announces-ceo-transition-to-accelerate-global-scaling-following-strong-commercial-progress-3441834",
+    "tags": [
+      "candela",
+      "leadership-change",
+      "ceo-transition",
+      "scaling",
+      "market-signal",
+      "competitive-execution"
+    ],
+    "priority": "LOW"
+  },
+  {
     "id": "intel-029",
     "date": "2026-04-11",
     "title": "🚨 PATENT WATCH: BRP/Sea-Doo files WO2025163457A1 for hydrofoil PWC with handlebar-linked lift control",
