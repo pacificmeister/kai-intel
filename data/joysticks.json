@@ -1524,5 +1524,72 @@
       "architecture-fallback"
     ],
     "lastReviewed": "2026-04-11"
+  },
+  {
+    "id": "gessmann-s16-thumbwheel",
+    "name": "W. Gessmann Thumbwheel S16",
+    "manufacturer": "W. GESSMANN GmbH",
+    "country": "Germany",
+    "category": "Single-Axis Thumbwheel Control Element",
+    "status": "NEW DISCOVERY (SUNDAY 2026-04-12) — COMPONENT REFERENCE",
+    "statusNote": "Discovered in Sunday market scan. IP67 Hall thumbwheel with scroll/push function and 5M cycle life. Useful fallback for requirement #2 if ThumbJoy keeps XYZ base joystick and externalizes throttle input.",
+    "image": "https://www.gessmann.com/products/__trashed-2/",
+    "thumbnail": "https://www.gessmann.com/products/__trashed-2/",
+    "website": "https://www.gessmann.com/products/__trashed-2/",
+    "datasheetUrl": "https://www.directindustry.com/prod/w-gessmann-gmbh/product-25091-2488005.html",
+    "axes": "Single-axis thumbwheel with scroll + push function",
+    "sensorType": "Hall effect (contactless, per product family)",
+    "output": "Unconfirmed on public page (request from Gessmann sales)",
+    "breakoutForce": "TBD",
+    "operatingForce": "Thumbwheel class",
+    "twistTorque": "N/A",
+    "mechanicalAngle": "Thumbwheel scroll travel",
+    "twistRotation": "N/A",
+    "ipRating": "IP67",
+    "hollowShaft": "N/A",
+    "lifecycle": "5 million operating cycles",
+    "mounting": "Control grip / panel integration",
+    "price": "RFQ",
+    "pros": [
+      "IP67 protection meets marine sealing baseline",
+      "5 million cycle life",
+      "-40°C to +85°C operating range",
+      "Integrated scroll + push behavior suitable for compact UI/throttle tasks",
+      "Useful as external thumb-input architecture to avoid wire-through-shaft constraints"
+    ],
+    "cons": [
+      "Not a full XYZ+twist base joystick",
+      "Output protocol not confirmed from public page",
+      "No direct CAN/J1939 details in retrieved source"
+    ],
+    "suitability": "MEDIUM (COMPONENT PATH)",
+    "suitabilityReason": "Strong component-level candidate for requirement #2, but cannot satisfy full base joystick requirements alone.",
+    "requirementsCheck": {
+      "ip67": "PASS",
+      "thumbwheel_or_melexis": "PASS",
+      "xy_with_y_gate": "N/A",
+      "z_axis_twist": "N/A",
+      "palm_compact": "PASS",
+      "buttons": "PARTIAL (push function)",
+      "analog_or_can": "UNCONFIRMED"
+    },
+    "contacts": {
+      "sales": "sales@gessmann.com",
+      "phone": "+49 7131 4067-0",
+      "website": "https://www.gessmann.com/"
+    },
+    "tags": [
+      "new",
+      "sunday-discovery",
+      "thumbwheel",
+      "ip67",
+      "component",
+      "gessmann"
+    ],
+    "lastReviewed": "2026-04-12",
+    "sources": [
+      "https://www.gessmann.com/products/__trashed-2/",
+      "https://www.directindustry.com/prod/w-gessmann-gmbh/product-25091-2488005.html"
+    ]
   }
 ]
