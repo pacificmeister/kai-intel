@@ -215,8 +215,9 @@
     ],
     "threatLevel": "LOW",
     "threatReason": "Much larger, more expensive luxury boat — 8 pax, $450K+. Different market. Their C-Pod drivetrain tech is relevant IP to watch.",
-    "latestNews": "April 2026: Candela announced a CEO transition (effective June 23 AGM): founder Gustav Hasselskog moves to Executive Chairman; Sofia Graflund (ex-Northvolt/Heart Aerospace, current CSO) becomes CEO to drive global scaling. Earlier April 2026: unveiled P-12 Business luxury ferry variant; March 2026: raised €30M (World Bank IFC + existing investors), bringing total funding to €129M with second factory plans.",
+    "latestNews": "April 2026: Boreal AS (Norway) ordered 20 Candela P-12 hydrofoil ferries for delivery 2027-2030 (largest announced deployment), reinforcing Candela's commercial-scale momentum. Earlier April 2026: CEO transition announced (effective June 23 AGM): founder Gustav Hasselskog moves to Executive Chairman; Sofia Graflund (ex-Northvolt/Heart Aerospace) becomes CEO. March 2026: raised €30M (World Bank IFC + existing investors), bringing total funding to €129M with second factory plans.",
     "mediaLinks": [
+      "https://electrek.co/2026/04/09/norway-just-orderded-20-flying-electric-ferries-in-historic-deal/",
       "https://candela.com/leisure-boats/candela-c-8/",
       "https://boatingmag.com/boats/2024-candela-c-8-open-daycruiser-boat-test/",
       "https://insideevs.com/news/669059/candela-c-8-polestar-edition-debut-price/"
@@ -226,7 +227,8 @@
       "8-passenger",
       "established",
       "c-pod",
-      "drivetrain-tech"
+      "drivetrain-tech",
+      "fleet-deployment"
     ]
   },
   {

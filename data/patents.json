@@ -1,5 +1,26 @@
 [
   {
+    "id": "pat-010",
+    "title": "Electric powered hydrofoil watercraft with multiple batteries",
+    "assignee": "Tanann LLC",
+    "number": "WO2024107186A1 (PCT/US2022/050101)",
+    "country": "International (WIPO/PCT)",
+    "filingDate": "2022-11-16",
+    "publicationDate": "2024-05-23",
+    "status": "Published / Ceased (Google legal-status indicator)",
+    "description": "Board-style electric hydrofoil filing covering multiple/removable battery-pack architecture, mast/foil integration, and battery placement concepts to extend range while managing stability.",
+    "relevance": "LOW — Appears oriented to single-rider board/eFoil form factors rather than 2-person seated craft. Still useful prior art for battery modularity concepts.",
+    "url": "https://patents.google.com/patent/WO2024107186A1/en",
+    "tags": [
+      "wipo",
+      "tanann",
+      "multi-battery",
+      "efoil",
+      "board-style",
+      "ceased"
+    ]
+  },
+  {
     "id": "pat-009",
     "title": "Watercraft Having a Lift Assembly (BRP/Sea-Doo)",
     "assignee": "Bombardier Recreational Products Inc. (BRP) / BRP US Inc.",

@@ -1,5 +1,39 @@
 [
   {
+    "id": "intel-032",
+    "date": "2026-04-13",
+    "title": "🚢 Candela lands 20-vessel Norway order for P-12 hydrofoil ferries (largest deployment announced)",
+    "summary": "Electrek reports Norwegian operator Boreal AS ordered 20 Candela P-12 electric hydrofoil ferries for staged deployment through 2030 (first deliveries expected 2027). This is a large-scale commercial validation event for Candela's foil-control platform and production capacity. It is NOT a direct Flying Couch competitor signal (ferry segment), but it may further concentrate Candela resources on B2B ferry scale rather than small leisure craft. Strategic impact for Kai Concepts: indirect market-validation of hydrofoil demand + stronger Candela balance sheet/brand momentum, while the 2-person leisure gap still appears open.",
+    "source": "electrek.co",
+    "url": "https://electrek.co/2026/04/09/norway-just-orderded-20-flying-electric-ferries-in-historic-deal/",
+    "tags": [
+      "candela",
+      "fleet-order",
+      "norway",
+      "p-12",
+      "commercial-scale",
+      "market-signal"
+    ],
+    "priority": "LOW"
+  },
+  {
+    "id": "intel-031",
+    "date": "2026-04-13",
+    "title": "🧾 Patent watch: WO2024107186A1 (Tanann) reveals multi-battery electric hydrofoil board architecture, now marked 'ceased'",
+    "summary": "Google Patents surfaced WO2024107186A1 ('Electric powered hydrofoil watercraft with multiple batteries', Tanann LLC; PCT/US2022/050101, published 2024-05-23). The filing covers e-foil style architecture with multiple/removable battery-pack concepts and mast/board integration. Current Google legal status is marked 'Ceased', reducing near-term enforcement risk. Relevance to Kai Concepts is low because claims target board-style craft, not 2-person seated foilers, but it remains useful prior-art context for battery-pack modularity around electric hydrofoils.",
+    "source": "patents.google.com",
+    "url": "https://patents.google.com/patent/WO2024107186A1/en",
+    "tags": [
+      "patent",
+      "wipo",
+      "tanann",
+      "multi-battery",
+      "efoil",
+      "low-relevance"
+    ],
+    "priority": "LOW"
+  },
+  {
     "id": "intel-030",
     "date": "2026-04-12",
     "title": "Candela leadership shift: founder-CEO moves to Executive Chairman, Sofia Graflund to become CEO (June 2026)",
