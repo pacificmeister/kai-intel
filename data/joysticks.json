@@ -1591,5 +1591,71 @@
       "https://www.gessmann.com/products/__trashed-2/",
       "https://www.directindustry.com/prod/w-gessmann-gmbh/product-25091-2488005.html"
     ]
+  },
+  {
+    "id": "apem-xf-series",
+    "name": "APEM XF Series",
+    "manufacturer": "APEM",
+    "country": "France",
+    "category": "Rugged Fingertip Proportional",
+    "status": "NEW DISCOVERY (MONDAY 2026-04-13)",
+    "statusNote": "Added from Monday discovery sweep. XF is a ruggedized fingertip class with CAN J1939/CANopen and up to IP67 above panel, but spring feel remains essentially HF55-class and no built-in vertical thumbwheel.",
+    "image": "https://www.apem.com/joysticks/fingertip-proportional/xf",
+    "thumbnail": "https://www.apem.com/joysticks/fingertip-proportional/xf",
+    "website": "https://www.apem.com/joysticks/fingertip-proportional/xf",
+    "datasheetUrl": "https://www.controldevices.com.au/product/xf-series-joystick/",
+    "axes": "Up to 3 axes (X/Y + Z twist)",
+    "sensorType": "Hall Effect (single or dual)",
+    "output": "CAN J1939, CANopen, USB, analog options",
+    "breakoutForce": "1.3 N",
+    "operatingForce": "2.8 N",
+    "twistTorque": "0.09 Nm breakout / 0.121 Nm operating",
+    "mechanicalAngle": "36° (+/-18°)",
+    "twistRotation": "60° (+/-30°)",
+    "ipRating": "Up to IP67 above panel (subject to final spec)",
+    "hollowShaft": "Unknown",
+    "lifecycle": "5 million cycles",
+    "mounting": "Panel mount, shallow class",
+    "price": "RFQ",
+    "pros": [
+      "IP67-capable panel sealing",
+      "Native CAN J1939 and CANopen options",
+      "Up to 3 axes including Z twist",
+      "ISO 25197 vehicle-grade positioning",
+      "Rated pull-force robustness (80 lbf XY, >5 Nm Z max withstand)"
+    ],
+    "cons": [
+      "Measured operating feel is essentially same class as HF55 (1.3N/2.8N, 0.09/0.121Nm)",
+      "No stock vertical thumbwheel on top",
+      "Y-gate limiter option not clearly documented in accessible sources",
+      "IP67 phrasing is 'up to', needs exact final configuration confirmation",
+      "Hollow shaft/internal routing for custom Melexis wheel not confirmed"
+    ],
+    "suitability": "MEDIUM-LOW",
+    "suitabilityReason": "Good protocol and sealing option set, but does not materially solve the current force-feel and thumbwheel-integration blockers for ThumbJoy.",
+    "requirementsCheck": {
+      "ip67": "PASS (configuration-dependent, confirm exact SKU)",
+      "thumbwheel_or_melexis": "PARTIAL (no built-in wheel; custom path unconfirmed)",
+      "xy_with_y_gate": "PARTIAL (XY supported; explicit Y-only gate not confirmed)",
+      "z_axis_twist": "PASS",
+      "palm_compact": "PASS",
+      "buttons": "PASS (up to 2 momentary pushbuttons)",
+      "analog_or_can": "PASS"
+    },
+    "tags": [
+      "new",
+      "monday-discovery",
+      "apem",
+      "ip67",
+      "can-j1939",
+      "canopen",
+      "fingertip"
+    ],
+    "sources": [
+      "https://www.apem.com/joysticks/fingertip-proportional/xf",
+      "https://www.controldevices.com.au/product/xf-series-joystick/",
+      "https://www.controldevices.co.nz/product/xf-series-joystick/"
+    ],
+    "lastReviewed": "2026-04-13"
   }
 ]
