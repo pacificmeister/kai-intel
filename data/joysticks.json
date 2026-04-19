@@ -1657,5 +1657,128 @@
       "https://www.controldevices.co.nz/product/xf-series-joystick/"
     ],
     "lastReviewed": "2026-04-13"
+  },
+  {
+    "id": "ruffy-he1-series",
+    "name": "Ruffy HE1 Series",
+    "manufacturer": "Ruffy Controls Inc.",
+    "country": "USA (California)",
+    "category": "Fingertip Precision Multi-Axis Hall Joystick",
+    "status": "NEW DISCOVERY (SUNDAY 2026-04-19)",
+    "statusNote": "Added from Sunday discovery sweep using Ruffy catalog pages. HE1 is a shallow-mount fingertip Hall joystick family sealed up to IP67 above panel with analog/USB/cursor outputs. Interesting compact base candidate but no native CAN and no confirmed built-in thumbwheel.",
+    "image": "https://ruffycontrols.com/he1-series-hall-effect-joystick/",
+    "thumbnail": "https://ruffycontrols.com/he1-series-hall-effect-joystick/",
+    "website": "https://ruffycontrols.com/he1-series-hall-effect-joystick/",
+    "datasheetUrl": "https://parts.ruffycontrols.com/",
+    "axes": "2 or 3-axis variants (fingertip class)",
+    "sensorType": "Hall Effect (contactless)",
+    "output": "Analog, USB HID, cursor-control options",
+    "breakoutForce": "TBD (low-force fingertip class)",
+    "operatingForce": "TBD",
+    "twistTorque": "Unconfirmed (3-axis variants likely include twist class; verify with Ruffy)",
+    "mechanicalAngle": "TBD",
+    "twistRotation": "Unconfirmed",
+    "ipRating": "Up to IP67 above panel (handle-dependent)",
+    "hollowShaft": "Unknown",
+    "lifecycle": "TBD",
+    "mounting": "Shallow below-panel mounting, multiple mounting options",
+    "price": "RFQ",
+    "pros": [
+      "Compact fingertip form factor with shallow mount",
+      "Up to IP67 above-panel sealing",
+      "Hall-effect contactless sensing",
+      "Multiple output modes (analog, USB, cursor)",
+      "Potentially easier packaging than heavy hand-grip joysticks"
+    ],
+    "cons": [
+      "No native CAN/J1939 or CANopen listed",
+      "No built-in vertical thumbwheel confirmed",
+      "Y-gate limiter options not yet confirmed",
+      "Z-axis twist and force curves not yet confirmed from accessible docs"
+    ],
+    "suitability": "MEDIUM-LOW",
+    "suitabilityReason": "Promising compact IP67-capable base family, but still partial against ThumbJoy requirements until twist/gating geometry and custom thumbwheel integration path are confirmed.",
+    "requirementsCheck": {
+      "ip67": "PASS (up to IP67, confirm exact config)",
+      "thumbwheel_or_melexis": "PARTIAL (custom Melexis path unknown)",
+      "xy_with_y_gate": "PARTIAL (XY likely; Y-gate unconfirmed)",
+      "z_axis_twist": "PARTIAL (3-axis offered, spring-return twist unconfirmed)",
+      "palm_compact": "PASS",
+      "buttons": "PARTIAL (handle options exist)",
+      "analog_or_can": "PASS (analog works; no CAN)"
+    },
+    "tags": [
+      "new",
+      "sunday-discovery",
+      "ruffy",
+      "ip67",
+      "fingertip",
+      "compact"
+    ],
+    "sources": [
+      "https://parts.ruffycontrols.com/",
+      "https://ruffycontrols.com/he1-series-hall-effect-joystick/"
+    ],
+    "lastReviewed": "2026-04-19"
+  },
+  {
+    "id": "apem-bl-series-paddle",
+    "name": "APEM BL Series Paddle",
+    "manufacturer": "APEM",
+    "country": "France",
+    "category": "Single-Axis Hall Paddle Controller",
+    "status": "NEW DISCOVERY (SUNDAY 2026-04-19) — COMPONENT PATH",
+    "statusNote": "Added from APEM paddle joystick technical article. BL is a compact IP67 Hall paddle with switch functions, suitable as an external throttle/control component if ThumbJoy avoids through-shaft thumbwheel wiring.",
+    "image": "https://www.apem.com/en-us/news/paddle-joystick-why-it-is-so-popular",
+    "thumbnail": "https://www.apem.com/en-us/news/paddle-joystick-why-it-is-so-popular",
+    "website": "https://www.apem.com/en-us/joysticks/fingertip-proportional/bl",
+    "datasheetUrl": "https://www.apem.com/en-us/news/paddle-joystick-why-it-is-so-popular",
+    "axes": "Single-axis rotational paddle",
+    "sensorType": "Hall Effect (contactless)",
+    "output": "Analog/PWM variants in BL family (confirm exact SKU)",
+    "breakoutForce": "TBD",
+    "operatingForce": "TBD",
+    "twistTorque": "N/A",
+    "mechanicalAngle": "Typically +/-30° paddle class (APEM article range)",
+    "twistRotation": "N/A",
+    "ipRating": "IP67",
+    "hollowShaft": "N/A",
+    "lifecycle": "Up to 10 million cycles (paddle class in APEM article)",
+    "mounting": "Compact, ~48 mm above panel (APEM BL article reference)",
+    "price": "RFQ",
+    "pros": [
+      "IP67 sealed",
+      "Very compact panel footprint",
+      "Long-life Hall-effect architecture",
+      "Strong fit as dedicated throttle/input component"
+    ],
+    "cons": [
+      "Not a full XYZ joystick",
+      "No Z-axis twist",
+      "Cannot satisfy full ThumbJoy base requirements alone"
+    ],
+    "suitability": "MEDIUM (COMPONENT PATH)",
+    "suitabilityReason": "Useful fallback for requirement #2 as a separate throttle component, but not a replacement for the main XYZ+twist joystick base.",
+    "requirementsCheck": {
+      "ip67": "PASS",
+      "thumbwheel_or_melexis": "PASS (functional throttle component path)",
+      "xy_with_y_gate": "N/A",
+      "z_axis_twist": "N/A",
+      "palm_compact": "PASS",
+      "buttons": "PARTIAL (switch variants)",
+      "analog_or_can": "PASS (analog class)"
+    },
+    "tags": [
+      "new",
+      "sunday-discovery",
+      "apem",
+      "ip67",
+      "paddle",
+      "component"
+    ],
+    "sources": [
+      "https://www.apem.com/en-us/news/paddle-joystick-why-it-is-so-popular"
+    ],
+    "lastReviewed": "2026-04-19"
   }
 ]
